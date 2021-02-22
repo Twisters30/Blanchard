@@ -254,6 +254,10 @@ html {
 	outline: 1px solid var(--color-purple);
 }
 
+/* .wrapper__container .choices__item {
+	background-image: url(/img/header-img/ddmenu/Rectangle\ 57.jpg);
+} */
+
 /* choices стили */
 
 .choices:first-child {
