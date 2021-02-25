@@ -1,4 +1,7 @@
 // Функция ymaps.ready() будет вызвана, когда
+
+// const { event } = require("jquery");
+
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
     ymaps.ready(init);
     function init(){
@@ -189,7 +192,6 @@
         })
         
       }
-      console.log(check)
 
 
       // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Плавный скрол!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -201,6 +203,50 @@
         return false;
         });
         });
+
+        // function myFunction() {
+         
+        //  let dropContent = document.querySelectorAll('.dropdown');
+        // //  let buttonArr = document.querySelectorAll('.dropdown-btn');
+        //  dropContent.forEach(function(ell){
+        //    ell.addEventListener('click', function(event) {
+        //     let AAAA = event.target.dataset;
+        //     console.log(AAAA)
+        //    })
+        //     //  dropCurrentContent.classList.toggle("show");
+            
+        //    })
+          
+        // }
+        // myFunction();
+
+
+      
+document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
+  ell.addEventListener('click', function(event) {
+    let content = document.querySelectorAll('.dropdown-content-wrapper');
+    let checkClass = event.target.parentNode.querySelectorAll(".dropdown-content-wrapper")[0].classList
+    if (!checkClass.contains('show')) {
+      content.forEach(function (item) {
+        item.classList.remove('show')
+      })
+    } 
+    checkClass.toggle("show");
+  })
+})
+   
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropdown-btn')) {
+            let dropdowns = document.querySelectorAll(".dropdown-content-wrapper");
+            for (var k = 0; k < dropdowns.length; k++) {
+              var openDropdown = dropdowns[k];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+
 
         // Смена художника
 
@@ -336,7 +382,7 @@
         document.addEventListener('DOMContentLoaded', function() {
           document.querySelectorAll('.catalog__item').forEach(function(accardeonBtn) {
             accardeonBtn.addEventListener('click', function(event) {
-              const path = event.currentTarget.dataset.path
+              const path = event.target.dataset.path
               document.querySelectorAll('.catalog__icon').forEach(function(accardeonContent) {
                 path.event.target.classList.remove('active')
                 accardeonContent.classList.remove('active')

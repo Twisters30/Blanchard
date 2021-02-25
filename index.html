@@ -3,25 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- simplebar -->
   <link rel="stylesheet" href="css/simplebar.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <!-- jquery -->
+  <link rel="stylesheet" href="js/jq/jquery-ui-1.12.1.custom/jquery-ui.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="css/choices.min.css">
+  <!-- <link rel="stylesheet" href="css/choices.min.css"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <script defer src="/js/simplebar.min.js"></script>
-  <script defer src="/js/jq/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-  <script defer src="//code.jquery.com/jquery-1.12.4.js"></script>
-  <script defer src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script defer src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- simplebar -->
+  <script defer src="js/simplebar.min.js"></script>
+  <!-- jquery -->
+  <script defer src="node_modules//jquery/dist/jquery.js"></script>
+  <script defer src="js/jq/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script defer src="node_modules/swiper/swiper-bundle.js"></script>
+  <script defer src="node_modules/swiper/swiper-bundle.min.js"></script>
   <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-  <script defer src="/js/choices.min.js"></script>
-  <script defer src="js/cotalog-img.js"></script>
+  <script defer src="js/choices.min.js"></script>
+  <!-- <script defer src="js/cotalog-img.js"></script> -->
   <script defer src="js/script.js"></script>
   <title>Blanchard</title>
 </head>
@@ -30,7 +34,7 @@
 			<div class="wrapper wrapper-top">
 				<div class="container container--top">
 					<div class="logo logo-top" aria-label="логотоп" >
-						<img class="header__logo-img" src="/img/header-img/svg/logo-header/logo.svg" alt="logo" tabindex="1">
+						<img class="header__logo-img" src="./img/header-img/svg/logo-header/logo.svg" alt="logo" tabindex="1">
 					</div>
 					<nav class="nav">
 						<ul class="nav__list">
@@ -47,28 +51,64 @@
 				</div>		
 			</div>
 			<div class="wrapper wrapper-bottom">
-				<div class="container container--bottom">
-					<div class="wrapper__container">
-						<select class="wrapper-bottom__item wrapper-bottom__item--realizm" name="Реализм">						
-						<option class="wrapper-bottom__item-opt wrapper-bottom-item-one" aria-label="Реализм" tabindex="10">Реализм</option>
-						<option class="wrapper-bottom__item-opt" aria-label="Реализм2" tabindex="11">Реализм2</option>
-						</select>
-						<select class="wrapper-bottom__item wrapper-bottom__item--impr" name="Импрессионизм">						
-						<option class="wrapper-bottom__item-opt wrapper-bottom-item-one" aria-label="Импрессионизм" tabindex="12">Импрессионизм </option>
-						<option class="wrapper-bottom__item-opt" aria-label="Реализм" tabindex="13">Реализм</option>
-						</select>
-						<select class="wrapper-bottom__item wrapper-bottom__item--postimpr" name="Постимпрессионизм">						
-						<option class="wrapper-bottom__item-opt wrapper-bottom-item-one" aria-label="Постимпрессионизм" tabindex="14">Постимпрессионизм </option>
-						<option class="wrapper-bottom__item-opt" aria-label="Реализм" tabindex="15">Реализм</option>
-						</select>				
-						<select class="wrapper-bottom__item wrapper-bottom__item--avangard" name="Авангард">						
-						<option class="wrapper-bottom__item-opt wrapper-bottom-item-one" aria-label="Авангард" tabindex="16">Авангард </option>
-						<option class="wrapper-bottom__item-opt" aria-label="Реализм" tabindex="17">Реализм</option>
-						</select>
-						<select class="wrapper-bottom__item wrapper-bottom__item--futurizm" name="Футуризм">						
-						<option class="wrapper-bottom__item-opt wrapper-bottom-item-one" aria-label="Футуризм" tabindex="18">Футуризм </option>
-						<option class="wrapper-bottom__item-opt" aria-label="Реализм" tabindex="19">Реализм</option>
-						</select>
+				<div class="container dropdown container--bottom">
+					<div class="wrapper__container__dropdown">
+						<div class="dropdown">
+							<span class="dropdown-btn__icon"></span>
+							<button class="dropdown-btn">Реализм</button>
+							<div class="dropdown-content-wrapper" data-simplebar>
+								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Тинторетто" tabindex="10">Тинторетто</div>
+								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Фридрих" tabindex="10">Фридрих</div>
+								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Леонардо" tabindex="10">Леонардо</div>
+								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
+								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Тинторетто" tabindex="10">Тинторетто</div>
+								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Фридрих" tabindex="10">Фридрих</div>
+								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Леонардо" tabindex="10">Леонардо</div>
+								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
+							</div>	
+						</div>
+
+						<div class="dropdown">
+							<span class="dropdown-btn__icon"></span>	
+							<button class="dropdown-btn">Импрессионизм</button>
+							<div class="dropdown-content-wrapper" data-simplebar>
+								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Реализм" tabindex="10">Тинторетто</div>
+								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Реализм" tabindex="10">Фридрих</div>
+								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Реализм" tabindex="10">Леонардо</div>
+								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>	
+							</div>	
+						</div>
+
+						<div class="dropdown">
+							<span class="dropdown-btn__icon"></span>
+							<button class="dropdown-btn">Постимпрессионизм</button>
+							<div class="dropdown-content-wrapper" data-simplebar>
+								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Реализм" tabindex="10">Тинторетто</div>
+								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Реализм" tabindex="10">Фридрих</div>
+								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Реализм" tabindex="10">Леонардо</div>
+								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
+							</div>		
+						</div>
+						<div class="dropdown">
+							<span class="dropdown-btn__icon"></span>	
+							<button class="dropdown-btn">Авангард</button>
+							<div class="dropdown-content-wrapper" data-simplebar>
+								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Реализм" tabindex="10">Тинторетто</div>
+								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Реализм" tabindex="10">Фридрих</div>
+								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Реализм" tabindex="10">Леонардо</div>
+								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
+							</div>		
+						</div>	
+						<div class="dropdown">
+							<span class="dropdown-btn__icon"></span>
+							<button class="dropdown-btn">Футуризм</button>
+							<div class="dropdown-content-wrapper" data-simplebar>
+								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Реализм" tabindex="10">Тинторетто</div>
+								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Реализм" tabindex="10">Фридрих</div>
+								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Реализм" tabindex="10">Леонардо</div>
+								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
+							</div>		
+						</div>		
 					</div>
 					<form class="container-bottom__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">						
 						<label >
@@ -87,9 +127,9 @@
 			<div class="swiper-container swiper-container--hero">
 				<div class="swiper-wrapper">
 					<!-- Slides -->
-					<div class="swiper-slide swiper-slide-hero" aria-label="изображение слайдера" tabindex="21" style="background-image: url(./img/header-img/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 2.jpg);"></div>
-					<div class="swiper-slide swiper-slide-hero" aria-label="изображение слайдера" tabindex="22" style="background-image: url(./img/header-img/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 1.jpg);"></div>
-					<div class="swiper-slide swiper-slide-hero" aria-label="изображение слайдера" tabindex="23" style="background-image: url(./img/header-img/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 3.jpg);"></div>
+					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__one" aria-label="изображение слайдера" tabindex="21"></div>
+					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__two" aria-label="изображение слайдера" tabindex="22"></div>
+					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__three" aria-label="изображение слайдера" tabindex="23"></div>
 				</div>
 				<div class="container">
 					<!-- Additional required wrapper -->
@@ -99,7 +139,7 @@
 					<p class="swiper-container__text" aria-label="текст баннера" tabindex="25">
 						Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
 					</p>
-					<div class="swiper-container__btn"><a class="swiper-container__btn-link" href="#" tabindex="26">Подписаться на рассылку</a></div>
+					<div class="swiper-container__btn" tabindex="-1"><a class="swiper-container__btn-link" href="#" tabindex="26">Подписаться на рассылку</a></div>
 				</div>
 				</div>				
 			</div>			
@@ -158,36 +198,36 @@
 					<div class="swiper-container gallery__swiper-container">
 						<div class="swiper-wrapper swiper-wrapper--gallery">
 							<!-- Slides -->
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="45" src="/img/galery/swiper-img/slide1.jpg" alt="Slide 1">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="46" src="/img/galery/swiper-img/slide4.jpg" alt="Slide 2">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="47" src="/img/galery/swiper-img/slide2.jpg" alt="Slide 3">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="48" src="/img/galery/swiper-img/slide5.jpg" alt="Slide 4">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="49" src="/img/galery/swiper-img/slide3.jpg" alt="Slide 5">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="50" src="/img/galery/swiper-img/slide6.jpg" alt="Slide 6">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="51" src="/img/galery/swiper-img/slide7.jpg" alt="Slide 7">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="52" src="/img/galery/swiper-img/slide8.jpg" alt="Slide 8">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="53" src="/img/galery/swiper-img/slide9.jpg" alt="Slide 9">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="54" src="/img/galery/swiper-img/slide10.jpg" alt="Slide 10">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="55" src="/img/galery/swiper-img/slide11.jpg" alt="Slide 11">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="56" src="/img/galery/swiper-img/slide12.jpg" alt="Slide 12">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="57" src="/img/galery/swiper-img/slide13.jpg" alt="Slide 13">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="58" src="/img/galery/swiper-img/slide14.jpg" alt="Slide 14">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="59" src="/img/galery/swiper-img/slide15.jpg" alt="Slide 15">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="60" src="/img/galery/swiper-img/slide16.jpg" alt="Slide 16">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="61" src="/img/galery/swiper-img/slide17.jpg" alt="Slide 17">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="62" src="/img/galery/swiper-img/slide18.jpg" alt="Slide 18">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="63" src="/img/galery/swiper-img/slide19.jpg" alt="Slide 19">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="64" src="/img/galery/swiper-img/slide20.jpg" alt="Slide 20">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="65" src="/img/galery/swiper-img/slide21.jpg" alt="Slide 21">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="66" src="/img/galery/swiper-img/slide22.jpg" alt="Slide 22">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="67" src="/img/galery/swiper-img/slide23.jpg" alt="Slide 23">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="68" src="/img/galery/swiper-img/slide24.jpg" alt="Slide 24">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="69" src="/img/galery/swiper-img/slide25.jpg" alt="Slide 25">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="70" src="/img/galery/swiper-img/slide26.jpg" alt="Slide 26">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="71" src="/img/galery/swiper-img/slide27.jpg" alt="Slide 27">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="72" src="/img/galery/swiper-img/slide28.jpg" alt="Slide 28">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="73" src="/img/galery/swiper-img/slide29.jpg" alt="Slide 29">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="74" src="/img/galery/swiper-img/slide30.jpg" alt="Slide 30">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="45" src="./img/galery/swiper-img/slide1.jpg" alt="Slide 1">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="46" src="./img/galery/swiper-img/slide4.jpg" alt="Slide 2">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="47" src="./img/galery/swiper-img/slide2.jpg" alt="Slide 3">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="48" src="./img/galery/swiper-img/slide5.jpg" alt="Slide 4">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="49" src="./img/galery/swiper-img/slide3.jpg" alt="Slide 5">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="50" src="./img/galery/swiper-img/slide6.jpg" alt="Slide 6">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="51" src="./img/galery/swiper-img/slide7.jpg" alt="Slide 7">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="52" src="./img/galery/swiper-img/slide8.jpg" alt="Slide 8">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="53" src="./img/galery/swiper-img/slide9.jpg" alt="Slide 9">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="54" src="./img/galery/swiper-img/slide10.jpg" alt="Slide 10">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="55" src="./img/galery/swiper-img/slide11.jpg" alt="Slide 11">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="56" src="./img/galery/swiper-img/slide12.jpg" alt="Slide 12">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="57" src="./img/galery/swiper-img/slide13.jpg" alt="Slide 13">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="58" src="./img/galery/swiper-img/slide14.jpg" alt="Slide 14">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="59" src="./img/galery/swiper-img/slide15.jpg" alt="Slide 15">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="60" src="./img/galery/swiper-img/slide16.jpg" alt="Slide 16">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="61" src="./img/galery/swiper-img/slide17.jpg" alt="Slide 17">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="62" src="./img/galery/swiper-img/slide18.jpg" alt="Slide 18">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="63" src="./img/galery/swiper-img/slide19.jpg" alt="Slide 19">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="64" src="./img/galery/swiper-img/slide20.jpg" alt="Slide 20">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="65" src="./img/galery/swiper-img/slide21.jpg" alt="Slide 21">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="66" src="./img/galery/swiper-img/slide22.jpg" alt="Slide 22">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="67" src="./img/galery/swiper-img/slide23.jpg" alt="Slide 23">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="68" src="./img/galery/swiper-img/slide24.jpg" alt="Slide 24">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="69" src="./img/galery/swiper-img/slide25.jpg" alt="Slide 25">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="70" src="./img/galery/swiper-img/slide26.jpg" alt="Slide 26">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="71" src="./img/galery/swiper-img/slide27.jpg" alt="Slide 27">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="72" src="./img/galery/swiper-img/slide28.jpg" alt="Slide 28">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="73" src="./img/galery/swiper-img/slide29.jpg" alt="Slide 29">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="74" src="./img/galery/swiper-img/slide30.jpg" alt="Slide 30">
 						</div>					
 						<!-- navigation buttons -->
 						<div class="swiper-nav-btn-wrapper">
@@ -205,11 +245,11 @@
 				<div class="catalog__wrapper-tab">
 					<h2 class="catalog__header section-heading" tabindex="78">Каталог</h2>
 					<ul class="catalog__tab-list">
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="fr" tabindex="79" aria-label="кнопка выбора языка Франция"><img class="catalog__tab-btn-img" src="/img/catalog/image-france.png" alt="img counry-flag"></button></li>
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="ger" tabindex="80" aria-label="кнопка выбора языка Германи"><img class="catalog__tab-btn-img" src="/img/catalog/image-ger.png" alt="img counry-flag"></button></li>
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="italy" tabindex="81" aria-label="кнопка выбора языка Италия"><img class="catalog__tab-btn-img" src="/img/catalog/image-italy.png" alt="img counry-flag"></button></li>
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="rus" tabindex="82" aria-label="кнопка выбора языка Россия"><img class="catalog__tab-btn-img" src="/img/catalog/image-rus.png" alt="img counry-flag"></button></li>
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="belg" tabindex="83" aria-label="кнопка выбора языка Бельгия"><img class="catalog__tab-btn-img" src="/img/catalog/image-belg.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="fr" tabindex="79" aria-label="кнопка выбора языка Франция"><img class="catalog__tab-btn-img" src="./img/catalog/image-france.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="ger" tabindex="80" aria-label="кнопка выбора языка Германи"><img class="catalog__tab-btn-img" src="./img/catalog/image-ger.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="italy" tabindex="81" aria-label="кнопка выбора языка Италия"><img class="catalog__tab-btn-img" src="./img/catalog/image-italy.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="rus" tabindex="82" aria-label="кнопка выбора языка Россия"><img class="catalog__tab-btn-img" src="./img/catalog/image-rus.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="belg" tabindex="83" aria-label="кнопка выбора языка Бельгия"><img class="catalog__tab-btn-img" src="./img/catalog/image-belg.png" alt="img counry-flag"></button></li>
 					</ul>
 				</div>
 				<div class="catalog__tab-wrapper-text">
@@ -243,30 +283,30 @@
 				<div class="catalog__container-accardeon">
 					<div class="catalog__painter">
 						<!-- IMG -->
-					<img class="catalog__painter-img hide" tabindex="89" aria-label="изображение художника Больтраффио, Джованни" data-cat="Beltraffio" src="/img/catalog/Beltraffio.jpg" alt="image painter">
-					<img class="catalog__painter-img" tabindex="90" aria-label="изображение художника Доменико Гирландайо" data-cat="image-picture" src="/img/catalog/image-picture.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="91" aria-label="изображение художника " data-cat="Francesco-italy" src="/img/catalog/Francesco-italy.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="92" aria-label="изображение художника " data-cat="Bergognone-italy" src="/img/catalog/Bergognone-italy.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="93" aria-label="изображение художника Бенедетто ди Биндо" data-cat="Benedetto-italy" src="/img/catalog/Benedetto-italy.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="94" aria-label="изображение художника Бонсиньори, Франческо" data-cat="Bonsignori" src="/img/catalog/Bonsignori.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="95" aria-label="изображение художника Боттичини, Рафаэлло" data-cat="Botticini" src="/img/catalog/Botticini.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="96" aria-label="изображение художника Брамантино" data-cat="Bramantino" src="/img/catalog/Bramantino.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="97" aria-label="изображение художника Бреа, Людовико" data-cat="Brea" src="/img/catalog/Brea.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="98" aria-label="изображение художника Бьяджо д’Антонио Туччи" data-cat="Biagiodantonio" src="/img/catalog/Biagiodantonio.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="99" aria-label="изображение художника Веккьетта" data-cat="Vecchietta" src="/img/catalog/Vecchietta.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="100" aria-label="изображение художника Андреа Верроккьо" data-cat="Verrocchio" src="/img/catalog/Verrocchio.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="101" aria-label="изображение художника Беноццо Гоццоли" data-cat="Gozzoli" src="/img/catalog/Gozzoli.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="102" aria-label="изображение художника Граначчи, Франческо" data-cat="Granacci" src="/img/catalog/Granacci.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="103" aria-label="изображение художника Грегорио ди Чекко" data-cat="Cecco" src="/img/catalog/Cecco.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="104" aria-label="изображение художника Джованни да Удине" data-cat="GiovannidaUdine" src="/img/catalog/GiovannidaUdine.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="105" aria-label="изображение художника Джованни ди Паоло" data-cat="diPaolo" src="/img/catalog/diPaolo.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="106" aria-label="изображение художника Джорджоне" data-cat="Giorgione" src="/img/catalog/Giorgione.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="107" aria-label="изображение художника Парентино, Бернардо" data-cat="BernardoParentino" src="/img/catalog/BernardoParentino.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="108" aria-label="изображение художника Пезеллино" data-cat="pesello" src="/img/catalog/pesello.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="109" aria-label="изображение художника Пьетро Перуджино" data-cat="Perugino" src="/img/catalog/Perugino.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="110" aria-label="изображение художника Перуцци, Бальдассаре" data-cat="peruzzi" src="/img/catalog/peruzzi.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="111" aria-label="изображение художника Пизанелло" data-cat="pisanello" src="/img/catalog/pisanello.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="112" aria-label="изображение художника Пинтуриккьо" data-cat="Pintoricchio" src="/img/catalog/Pintoricchio.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="89" aria-label="изображение художника Больтраффио, Джованни" data-cat="Beltraffio" src="./img/catalog/Beltraffio.jpg" alt="image painter">
+					<img class="catalog__painter-img" tabindex="90" aria-label="изображение художника Доменико Гирландайо" data-cat="image-picture" src="./img/catalog/image-picture.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="91" aria-label="изображение художника " data-cat="Francesco-italy" src="./img/catalog/Francesco-italy.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="92" aria-label="изображение художника " data-cat="Bergognone-italy" src="./img/catalog/Bergognone-italy.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="93" aria-label="изображение художника Бенедетто ди Биндо" data-cat="Benedetto-italy" src="./img/catalog/Benedetto-italy.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="94" aria-label="изображение художника Бонсиньори, Франческо" data-cat="Bonsignori" src="./img/catalog/Bonsignori.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="95" aria-label="изображение художника Боттичини, Рафаэлло" data-cat="Botticini" src="./img/catalog/Botticini.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="96" aria-label="изображение художника Брамантино" data-cat="Bramantino" src="./img/catalog/Bramantino.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="97" aria-label="изображение художника Бреа, Людовико" data-cat="Brea" src="./img/catalog/Brea.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="98" aria-label="изображение художника Бьяджо д’Антонио Туччи" data-cat="Biagiodantonio" src="./img/catalog/Biagiodantonio.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="99" aria-label="изображение художника Веккьетта" data-cat="Vecchietta" src="./img/catalog/Vecchietta.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="100" aria-label="изображение художника Андреа Верроккьо" data-cat="Verrocchio" src="./img/catalog/Verrocchio.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="101" aria-label="изображение художника Беноццо Гоццоли" data-cat="Gozzoli" src="./img/catalog/Gozzoli.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="102" aria-label="изображение художника Граначчи, Франческо" data-cat="Granacci" src="./img/catalog/Granacci.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="103" aria-label="изображение художника Грегорио ди Чекко" data-cat="Cecco" src="./img/catalog/Cecco.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="104" aria-label="изображение художника Джованни да Удине" data-cat="GiovannidaUdine" src="./img/catalog/GiovannidaUdine.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="105" aria-label="изображение художника Джованни ди Паоло" data-cat="diPaolo" src="./img/catalog/diPaolo.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="106" aria-label="изображение художника Джорджоне" data-cat="Giorgione" src="./img/catalog/Giorgione.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="107" aria-label="изображение художника Парентино, Бернардо" data-cat="BernardoParentino" src="./img/catalog/BernardoParentino.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="108" aria-label="изображение художника Пезеллино" data-cat="pesello" src="./img/catalog/pesello.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="109" aria-label="изображение художника Пьетро Перуджино" data-cat="Perugino" src="./img/catalog/Perugino.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="110" aria-label="изображение художника Перуцци, Бальдассаре" data-cat="peruzzi" src="./img/catalog/peruzzi.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="111" aria-label="изображение художника Пизанелло" data-cat="pisanello" src="./img/catalog/pisanello.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="112" aria-label="изображение художника Пинтуриккьо" data-cat="Pintoricchio" src="./img/catalog/Pintoricchio.jpg" alt="image painter">
 					<!-- ING end -->
 					
 						<!-- Name -->
@@ -659,7 +699,7 @@
 				<div class="events__container-cards">
 					<div class="events__wrapper-card">
 						<figure>
-							<img class="events__cards-img" tabindex="294" src="/img/events/p1.jpg" alt="image picture">
+							<img class="events__cards-img" tabindex="294" src="./img/events/p1.jpg" alt="image picture">
 							<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="295">
 								Музей им. Щусева <br>
 								с 20 марта по 30 апреля
@@ -681,7 +721,7 @@
 					
 					<div class="events__wrapper-card">
 						<figure>
-							<img class="events__cards-img" tabindex="299" src="/img/events/p2.jpg" alt="image picture">
+							<img class="events__cards-img" tabindex="299" src="./img/events/p2.jpg" alt="image picture">
 							<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="300">
 								ММОМА <br>
 								24 марта 19:00
@@ -702,7 +742,7 @@
 
 					<div class="events__wrapper-card">
 						<figure>
-							<img class="events__cards-img" tabindex="304" src="/img/events/p3.jpg" alt="image picture">
+							<img class="events__cards-img" tabindex="304" src="./img/events/p3.jpg" alt="image picture">
 							<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="305">
 								Еврейский музей <br>
 								с 31 марта по 21 апреля
@@ -723,7 +763,7 @@
 					<span id="show-more">
 						<div class="events__wrapper-card">
 							<figure>
-								<img class="events__cards-img" tabindex="309" src="/img/events/p4.jpg" alt="image picture">
+								<img class="events__cards-img" tabindex="309" src="./img/events/p4.jpg" alt="image picture">
 								<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="310">
 									Третьяковка на Крымском валу 
 									с 30 марта по 30 апреля
@@ -743,7 +783,7 @@
 	
 						<div class="events__wrapper-card">
 							<figure>
-								<img class="events__cards-img" tabindex="314" src="/img/events/p5.jpg" alt="image picture">
+								<img class="events__cards-img" tabindex="314" src="./img/events/p5.jpg" alt="image picture">
 								<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="315">
 									ММАМ <br>
 									с 8 апреля по 20 мая
@@ -1012,14 +1052,14 @@
 					<!-- Additional required wrapper -->
 					<div class="swiper-wrapper project__swiper-wrapper">
 						<!-- Slides -->
-						<div class="swiper-slide project__swiper-slide"><img src="/img/project/logo1.svg" aria-label="логотип партнёров" tabindex="407" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="/img/project/logo2.svg" aria-label="логотип партнёров" tabindex="408" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="/img/project/logo3.svg" aria-label="логотип партнёров" tabindex="409" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="/img/project/logo4.svg" aria-label="логотип партнёров" tabindex="410" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="/img/project/logo5.svg" aria-label="логотип партнёров" tabindex="411" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="/img/project/logo6.svg" aria-label="логотип партнёров" tabindex="412" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="/img/project/logo7.svg" aria-label="логотип партнёров" tabindex="413" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="/img/project/logo8.svg" aria-label="логотип партнёров" tabindex="414" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo1.svg" aria-label="логотип партнёров" tabindex="407" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo2.svg" aria-label="логотип партнёров" tabindex="408" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo3.svg" aria-label="логотип партнёров" tabindex="409" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo4.svg" aria-label="логотип партнёров" tabindex="410" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo5.svg" aria-label="логотип партнёров" tabindex="411" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo6.svg" aria-label="логотип партнёров" tabindex="412" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo7.svg" aria-label="логотип партнёров" tabindex="413" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo8.svg" aria-label="логотип партнёров" tabindex="414" alt="logo"></div>
 					</div>		
 					<div class="swiper-pagination project__swiper-pagination" tabindex="415"></div>
 					<div class="swiper-button-prev swiper-button-prev--project" aria-label="кнопка слайдера назад" tabindex="416"></div>
@@ -1058,7 +1098,7 @@
 			<div class="container">
 				<div class="footer__content">
 					<div class="logo">
-						<img src="/img/footer/Лого.svg" aria-label="логотип" tabindex="430" alt="logo">
+						<img src="./img/footer/Лого.svg" aria-label="логотип" tabindex="430" alt="logo">
 					</div>
 					<div class="footer__social-wrap">
 						<span class="footer__social-item"><a class="footer__social-link footer__link--vk" aria-label="иконка социальной сети вк" tabindex="431" href="https://vk.com" target="_blank"></a></span>
