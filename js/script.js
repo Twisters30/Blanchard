@@ -153,17 +153,18 @@
 
     // Показать ещё
     let showMoreBtn = document.getElementById('btn-all-events')
-    let showMore = document.getElementById('show-more')
-   showMoreBtn.onclick = function showM0re() {
-      if (showMore.style.display == 'none') {
-        showMore.style.display = 'flex'
+    let showMore = document.querySelector('.read-more')
+   showMoreBtn.onclick = function showContent() {
+      if (showMore.classList.contains('read-more')) {        
+        showMore.classList.remove('read-more')
+        showMore.classList.add('show-more')
         showMoreBtn.innerHTML = 'Скрыть'
       } else {
         showMoreBtn.innerHTML = 'Все события'
-        showMore.style.display = 'none'
+        showMore.classList.remove('show-more')
+        showMore.classList.add('read-more')
       }  
     }
-    // showM0re();
     
     
    
@@ -248,55 +249,21 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
         }
 
 
-        // Смена художника
+let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    let icon = document.querySelectorAll('.catalog__icon');
+    let hasClass = event.target.parentNode.querySelectorAll('.catalog__icon')[0].classList
+    if (!hasClass.contains('active')) {
+      icon.forEach(function (ellem) {
+        ellem.classList.remove('active')
+      })
+    }
+    hasClass.toggle('active')
+  })
+  
+})
 
-        // function swapPainer() {
-        //   let btnLng = document.querySelectorAll('.catalog__painter-link').forEach(function(painterBtn) {
-        //     painterBtn.addEventListener('click', function(event) {
-        //       const path = event.target.currentTarget.dataset.path
-        //       console.log(path)
-        //     })
-        //   })
-          // let boxImgPainer = document.querySelector('.catalog__painter-img')
-          // // .src='/img/catalog/Benedetto-di-Bindo.jpg'
-          // let dataAtr = this.getAttibute('data-img');
-        // }
 
-
-        // Catalog image
-
-        
-
-  //  function FilterImage() {
-  //   let imgShowBox = document.querySelector('.catalog__painter-img');
-  //       let btnPainter = document.querySelectorAll('.catalog__painter-list-item');
-        
-  //      function filter(image, items) {
-  //        items.forEach((item) => {
-  //          const isItemFiltered = !item.classList.contains(image)
-  //          if (isItemFiltered) {
-  //            item.classList.add('hide')
-  //          } else item.classList.remove('hide')
-  //        })
-  //      }
-  //   for (let key in imgCotalog) {
-  //     let img = document.createElement('img');
-  //     img.setAttribute('data-key', key);
-  //     img.src = 'img/catalog'+key+'.jpg';
-  //     imgShowBox.append(img);
-  // }
-      
-  //       btnPainter.forEach((button) => {
- 
-  //         button.addEventListener('click', (event) => {
-  //           // console.log(event.target.dataset.key)
-  //           let painterAttr = event.target.dataset.key
-  //           filter(painterAttr, imgShowBox)
-  //         })
-  //         })
-  //  }
-        
-  //  FilterImage();
     
    
    $(function() {
@@ -379,19 +346,19 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
 
         // ACARDEON FLIP ICON
 
-        document.addEventListener('DOMContentLoaded', function() {
-          document.querySelectorAll('.catalog__item').forEach(function(accardeonBtn) {
-            accardeonBtn.addEventListener('click', function(event) {
-              const path = event.target.dataset.path
-              document.querySelectorAll('.catalog__icon').forEach(function(accardeonContent) {
-                path.event.target.classList.remove('active')
-                accardeonContent.classList.remove('active')
+        // document.addEventListener('DOMContentLoaded', function() {
+        //   document.querySelectorAll('.catalog__item').forEach(function(accardeonBtn) {
+        //     accardeonBtn.addEventListener('click', function(event) {
+        //       const path = event.target.dataset.path
+        //       document.querySelectorAll('.catalog__icon').forEach(function(accardeonContent) {
+        //         path.event.target.classList.remove('active')
+        //         accardeonContent.classList.remove('active')
              
-              })
-              document.querySelector(`[data-target="${path}"]`).classList.add('active')
-            })
-          })
-        })
+        //       })
+        //       document.querySelector(`[data-target="${path}"]`).classList.add('active')
+        //     })
+        //   })
+        // })
       
       // const choicesGallery = document.querySelector('.wrapper__container .choices');
       // console.log(choicesGallery.innerHTML);
