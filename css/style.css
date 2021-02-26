@@ -1052,6 +1052,7 @@ html {
 	line-height: 32px;
 	color: var(--color-black);
 	font-family: var(--font-open-sans-semi-bold);
+	outline: none;
 }
 
 .ui-accordion .ui-accordion-header {
@@ -1071,6 +1072,8 @@ html {
 	-webkit-transform: rotate(180deg);
 	    -ms-transform: rotate(180deg);
 	        transform: rotate(180deg);
+			background-color: var(--color-purple) !important;
+			background-image: url(../img/catalog/accardeon-arrow-is-active.svg) !important;
 }
 
 .catalog__icon {
