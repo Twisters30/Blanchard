@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,98 +23,93 @@
   <script defer src="js/jq/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
   <script defer src="node_modules/swiper/swiper-bundle.js"></script>
   <script defer src="node_modules/swiper/swiper-bundle.min.js"></script>
-  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=vashAPI-key&lang=ru_RU">
+  </script>
   <script defer src="js/choices.min.js"></script>
   <!-- <script defer src="js/cotalog-img.js"></script> -->
   <script defer src="js/script.js"></script>
   <title>Blanchard</title>
 </head>
 <body>
-  <header class="header">	
+  <header class="header">
 			<div class="wrapper wrapper-top">
 				<div class="container container--top">
-					<div class="logo logo-top" aria-label="логотоп" >
-						<img class="header__logo-img" src="./img/header-img/svg/logo-header/logo.svg" alt="logo" tabindex="1">
+					<div class="logo logo-top" >
+						<img class="header__logo-img" src="./img/header-img/svg/logo-header/logo.svg" alt="logo" aria-label="логотоп" tabindex="0">
 					</div>
 					<nav class="nav">
 						<ul class="nav__list">
-							<li class="nav__item"><a class="nav__link scrollto link-underline" aria-label="О нас" href="#about" tabindex="2">О нас</a></li>
-							<li class="nav__item"><a class="nav__link scrollto link-underline" aria-label="Галерея" href="#gallery" tabindex="3">Галерея</a></li>
-							<li class="nav__item"><a class="nav__link scrollto link-underline" aria-label="Каталог" href="#catalog" tabindex="4">Каталог</a></li>
-							<li class="nav__item"><a class="nav__link scrollto link-underline" aria-label="События" href="#events" tabindex="5">События</a></li>
-							<li class="nav__item"><a class="nav__link scrollto link-underline" aria-label="Издания" href="#editions" tabindex="6">Издания</a></li>
-							<li class="nav__item"><a class="nav__link scrollto link-underline" aria-label="Проекты" href="#project" tabindex="7">Проекты</a></li>
-							<li class="nav__item"><a class="nav__link scrollto link-underline" aria-label="Контакты" href="#contacts" tabindex="8">Контакты</a></li>
+							<li class="nav__item"><a class="nav__link scrollto" href="#about">О нас</a></li>
+							<li class="nav__item"><a class="nav__link scrollto" href="#gallery">Галерея</a></li>
+							<li class="nav__item"><a class="nav__link scrollto" href="#catalog">Каталог</a></li>
+							<li class="nav__item"><a class="nav__link scrollto" href="#events">События</a></li>
+							<li class="nav__item"><a class="nav__link scrollto" href="#editions">Издания</a></li>
+							<li class="nav__item"><a class="nav__link scrollto" href="#project">Проекты</a></li>
+							<li class="nav__item"><a class="nav__link scrollto" href="#contacts">Контакты</a></li>
 						</ul>
 					</nav>
-					<div class="register-form"><a class="register-form-link link-underline" aria-label="Войти" href="#" tabindex="9"><span class="register-form__icon"></span>Войти</a></div>
+					<a class="register-form-link" href="#" tabindex="0">Войти</a>
 				</div>		
 			</div>
 			<div class="wrapper wrapper-bottom">
 				<div class="container dropdown container--bottom">
 					<div class="wrapper__container__dropdown">
 						<div class="dropdown">
-							<span class="dropdown-btn__icon"></span>
 							<button class="dropdown-btn">Реализм</button>
-							<div class="dropdown-content-wrapper" data-simplebar>
-								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Тинторетто" tabindex="10">Тинторетто</div>
-								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Фридрих" tabindex="10">Фридрих</div>
-								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Леонардо" tabindex="10">Леонардо</div>
-								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
-								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Тинторетто" tabindex="10">Тинторетто</div>
-								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Фридрих" tabindex="10">Фридрих</div>
-								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Леонардо" tabindex="10">Леонардо</div>
-								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
-							</div>	
+							<ul class="dropdown-content-wrapper" data-simplebar>
+								<li class="dropdown-content wrapper-bottom-item-one" tabindex="0">Тинторетто</li>
+								<li class="dropdown-content wrapper-bottom-item-two" tabindex="0">Фридрих</li>
+								<li class="dropdown-content wrapper-bottom-item-three" tabindex="0">Леонардо</li>
+								<li class="dropdown-content wrapper-bottom-item-four" tabindex="0">Верроккьо</li>
+								<li class="dropdown-content wrapper-bottom-item-one" tabindex="0">Тинторетто</li>
+								<li class="dropdown-content wrapper-bottom-item-two" tabindex="0">Фридрих</li>
+								<li class="dropdown-content wrapper-bottom-item-three" tabindex="0">Леонардо</li>
+								<li class="dropdown-content wrapper-bottom-item-four" tabindex="0">Верроккьо</li>
+							</ul>	
 						</div>
 
 						<div class="dropdown">
-							<span class="dropdown-btn__icon"></span>	
 							<button class="dropdown-btn">Импрессионизм</button>
-							<div class="dropdown-content-wrapper" data-simplebar>
-								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Реализм" tabindex="10">Тинторетто</div>
-								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Реализм" tabindex="10">Фридрих</div>
-								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Реализм" tabindex="10">Леонардо</div>
-								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>	
-							</div>	
+							<ul class="dropdown-content-wrapper" data-simplebar>
+								<li class="dropdown-content wrapper-bottom-item-one" tabindex="0">Тинторетто</li>
+								<li class="dropdown-content wrapper-bottom-item-two" tabindex="0">Фридрих</li>
+								<li class="dropdown-content wrapper-bottom-item-three" tabindex="0">Леонардо</li>
+								<li class="dropdown-content wrapper-bottom-item-four" tabindex="0">Верроккьо</li>	
+							</ul>	
 						</div>
 
 						<div class="dropdown">
-							<span class="dropdown-btn__icon"></span>
 							<button class="dropdown-btn">Постимпрессионизм</button>
-							<div class="dropdown-content-wrapper" data-simplebar>
-								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Реализм" tabindex="10">Тинторетто</div>
-								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Реализм" tabindex="10">Фридрих</div>
-								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Реализм" tabindex="10">Леонардо</div>
-								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
-							</div>		
+							<ul class="dropdown-content-wrapper" data-simplebar>
+								<li class="dropdown-content wrapper-bottom-item-one" tabindex="0">Тинторетто</li>
+								<li class="dropdown-content wrapper-bottom-item-two" tabindex="0">Фридрих</li>
+								<li class="dropdown-content wrapper-bottom-item-three" tabindex="0">Леонардо</li>
+								<li class="dropdown-content wrapper-bottom-item-four" tabindex="0">Верроккьо</li>
+							</ul>		
 						</div>
 						<div class="dropdown">
-							<span class="dropdown-btn__icon"></span>	
 							<button class="dropdown-btn">Авангард</button>
-							<div class="dropdown-content-wrapper" data-simplebar>
-								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Реализм" tabindex="10">Тинторетто</div>
-								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Реализм" tabindex="10">Фридрих</div>
-								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Реализм" tabindex="10">Леонардо</div>
-								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
-							</div>		
+							<ul class="dropdown-content-wrapper" data-simplebar>
+								<li class="dropdown-content wrapper-bottom-item-one" tabindex="0">Тинторетто</li>
+								<li class="dropdown-content wrapper-bottom-item-two" tabindex="0">Фридрих</li>
+								<li class="dropdown-content wrapper-bottom-item-three" tabindex="0">Леонардо</li>
+								<li class="dropdown-content wrapper-bottom-item-four" tabindex="0">Верроккьо</li>
+							</ul>		
 						</div>	
 						<div class="dropdown">
-							<span class="dropdown-btn__icon"></span>
 							<button class="dropdown-btn">Футуризм</button>
-							<div class="dropdown-content-wrapper" data-simplebar>
-								<div class="dropdown-content wrapper-bottom-item-one" aria-label="Реализм" tabindex="10">Тинторетто</div>
-								<div class="dropdown-content wrapper-bottom-item-two" aria-label="Реализм" tabindex="10">Фридрих</div>
-								<div class="dropdown-content wrapper-bottom-item-three" aria-label="Реализм" tabindex="10">Леонардо</div>
-								<div class="dropdown-content wrapper-bottom-item-four" aria-label="Реализм" tabindex="10">Верроккьо</div>
-							</div>		
+							<ul class="dropdown-content-wrapper" data-simplebar>
+								<li class="dropdown-content wrapper-bottom-item-one" tabindex="0">Тинторетто</li>
+								<li class="dropdown-content wrapper-bottom-item-two" tabindex="0">Фридрих</li>
+								<li class="dropdown-content wrapper-bottom-item-three" tabindex="0">Леонардо</li>
+								<li class="dropdown-content wrapper-bottom-item-four" tabindex="0">Верроккьо</li>
+							</ul>		
 						</div>		
 					</div>
 					<form class="container-bottom__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">						
 						<label >
-							<span class="container-bottom__input-saerch-icon"></span>
-							<input class="container-bottom__input-saerch" type="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту" tabindex="20">
-							<input class="container-bottom__input-submit" type="submit">
+							<input class="container-bottom__input-saerch" type="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту" tabindex="0">
+							<span class="container-bottom__input-search-icon"></span>
 						</label>
 					</form>
 				</div>
@@ -127,21 +122,21 @@
 			<div class="swiper-container swiper-container--hero">
 				<div class="swiper-wrapper">
 					<!-- Slides -->
-					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__one" aria-label="изображение слайдера" tabindex="21"></div>
-					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__two" aria-label="изображение слайдера" tabindex="22"></div>
-					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__three" aria-label="изображение слайдера" tabindex="23"></div>
+					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__one" tabindex="0"></div>
+					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__two" tabindex="0"></div>
+					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__three" tabindex="0"></div>
 				</div>
 				<div class="container">
 					<!-- Additional required wrapper -->
 				
 				<div class="swiper-container__content">
-					<h1 class="swiper-container__header" tabindex="24">Прикоснитесь к прекрасному</h1>
-					<p class="swiper-container__text" aria-label="текст баннера" tabindex="25">
+					<h1 class="swiper-container__header" tabindex="0">Прикоснитесь к прекрасному</h1>
+					<p class="swiper-container__text" tabindex="0">
 						Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
 					</p>
 					<div class="wrapper-swiper-container__btn">
 						<div class="swiper-container__btn" tabindex="-1">
-							<a class="swiper-container__btn-link" href="#" tabindex="26">Подписаться на рассылку</a>
+							<a class="swiper-container__btn-link" href="#">Подписаться на рассылку</a>
 						</div>
 					</div>
 				</div>
@@ -152,8 +147,8 @@
 		<section class="about" id="about">
 			<div class="container">
 				<div class="about__wrapper">
-					<h2 class="about__header section-heading" tabindex="27">О нас</h2>
-					<p class="about__content" tabindex="28" aria-label="Текст секции о нас">
+					<h2 class="about__header section-heading">О нас</h2>
+					<p class="about__content" tabindex="0">
 						Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
 						Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития.
 						Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. 
@@ -168,76 +163,76 @@
 				<div class="gallery__wrapper">
 					<div class="gallery__wrapper-container">
 						<div class="gallery__wrapper-choices">
-							<h2 class="gallery__header section-heading" tabindex="29">Галерея</h2>
+							<h2 class="gallery__header section-heading">Галерея</h2>
 							<div class="gallery__wrapper__selector">
-								<label class="gallery__label" for="" tabindex="30">Фильтровать по:</label>
+								<label class="gallery__label" tabindex="0">Фильтровать по:</label>
 									<select class="gallery__selector">
 										<optgroup label="Автор">
-											<option class="gallery__item" aria-label="выподающее меню" value="Автор" tabindex="31" placeholder="Автор"></option>
-											<option class="gallery__item" aria-label="выподающее меню" value="Автор" tabindex="32">Казимир Малевич</option>
-											<option class="gallery__item" aria-label="выподающее меню" value="Автор" tabindex="33">Ян Вермер</option>
-											<option class="gallery__item" aria-label="выподающее меню" value="Автор" tabindex="34">Пабло Пикассо</option>
+											<option class="gallery__item" value="Автор" tabindex="0">Автор</option>
+											<option class="gallery__item" value="Автор" tabindex="0">Казимир Малевич</option>
+											<option class="gallery__item" value="Автор" tabindex="0">Ян Вермер</option>
+											<option class="gallery__item" value="Автор" tabindex="0">Пабло Пикассо</option>
 										</optgroup>
 										<optgroup label="Направление">
-											<option class="gallery__item" aria-label="выподающее меню" value="Направление" tabindex="35">Кубизм</option>
-											<option class="gallery__item" aria-label="выподающее меню" value="Направление" tabindex="36">Модернизм</option>
-											<option class="gallery__item" aria-label="выподающее меню" value="Направление" tabindex="37">Сюрреализм</option>
+											<option class="gallery__item" value="Направление" tabindex="0">Кубизм</option>
+											<option class="gallery__item" value="Направление" tabindex="0">Модернизм</option>
+											<option class="gallery__item" value="Направление" tabindex="0">Сюрреализм</option>
 										</optgroup>
 										<optgroup label="Техника">											
-											<option class="gallery__item" aria-label="выподающее меню" value="Техника" tabindex="38">Эмаль</option>
-											<option class="gallery__item" aria-label="выподающее меню" value="Техника" tabindex="39">Гуашь</option>
-											<option class="gallery__item" aria-label="выподающее меню" value="Техника" tabindex="40">Пастель</option>
-											<option class="gallery__item" aria-label="выподающее меню" value="Техника" tabindex="41">Фреска</option>
-											<option class="gallery__item" aria-label="выподающее меню" value="Техника" tabindex="42">Клеевая живопись</option>
+											<option class="gallery__item" value="Техника" tabindex="0">Эмаль</option>
+											<option class="gallery__item" value="Техника" tabindex="0">Гуашь</option>
+											<option class="gallery__item" value="Техника" tabindex="0">Пастель</option>
+											<option class="gallery__item" value="Техника" tabindex="0">Фреска</option>
+											<option class="gallery__item" value="Техника" tabindex="0">Клеевая живопись</option>
 										</optgroup>
 									</select>								
 							</div>
 						</div>
 						<div class="gallery__wrapper-discription">
-							<p class="gallery__download-discription" tabindex="43" aria-label="рекомендация для скачиванию">
-								Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__link-authorization link-underline" href="#" tabindex="44">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
+							<p class="gallery__download-discription" tabindex="0">
+								Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__link-authorization" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
 							</p>
 						</div>
 					</div>
 					<div class="swiper-container gallery__swiper-container">
 						<div class="swiper-wrapper swiper-wrapper--gallery">
 							<!-- Slides -->
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="45" src="./img/galery/swiper-img/slide1.jpg" alt="Slide 1">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="46" src="./img/galery/swiper-img/slide4.jpg" alt="Slide 2">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="47" src="./img/galery/swiper-img/slide2.jpg" alt="Slide 3">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="48" src="./img/galery/swiper-img/slide5.jpg" alt="Slide 4">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="49" src="./img/galery/swiper-img/slide3.jpg" alt="Slide 5">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="50" src="./img/galery/swiper-img/slide6.jpg" alt="Slide 6">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="51" src="./img/galery/swiper-img/slide7.jpg" alt="Slide 7">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="52" src="./img/galery/swiper-img/slide8.jpg" alt="Slide 8">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="53" src="./img/galery/swiper-img/slide9.jpg" alt="Slide 9">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="54" src="./img/galery/swiper-img/slide10.jpg" alt="Slide 10">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="55" src="./img/galery/swiper-img/slide11.jpg" alt="Slide 11">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="56" src="./img/galery/swiper-img/slide12.jpg" alt="Slide 12">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="57" src="./img/galery/swiper-img/slide13.jpg" alt="Slide 13">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="58" src="./img/galery/swiper-img/slide14.jpg" alt="Slide 14">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="59" src="./img/galery/swiper-img/slide15.jpg" alt="Slide 15">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="60" src="./img/galery/swiper-img/slide16.jpg" alt="Slide 16">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="61" src="./img/galery/swiper-img/slide17.jpg" alt="Slide 17">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="62" src="./img/galery/swiper-img/slide18.jpg" alt="Slide 18">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="63" src="./img/galery/swiper-img/slide19.jpg" alt="Slide 19">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="64" src="./img/galery/swiper-img/slide20.jpg" alt="Slide 20">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="65" src="./img/galery/swiper-img/slide21.jpg" alt="Slide 21">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="66" src="./img/galery/swiper-img/slide22.jpg" alt="Slide 22">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="67" src="./img/galery/swiper-img/slide23.jpg" alt="Slide 23">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="68" src="./img/galery/swiper-img/slide24.jpg" alt="Slide 24">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="69" src="./img/galery/swiper-img/slide25.jpg" alt="Slide 25">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="70" src="./img/galery/swiper-img/slide26.jpg" alt="Slide 26">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="71" src="./img/galery/swiper-img/slide27.jpg" alt="Slide 27">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="72" src="./img/galery/swiper-img/slide28.jpg" alt="Slide 28">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="73" src="./img/galery/swiper-img/slide29.jpg" alt="Slide 29">
-							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="74" src="./img/galery/swiper-img/slide30.jpg" alt="Slide 30">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide1.jpg" alt="Slide 1">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide4.jpg" alt="Slide 2">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide2.jpg" alt="Slide 3">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide5.jpg" alt="Slide 4">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide3.jpg" alt="Slide 5">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide6.jpg" alt="Slide 6">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide7.jpg" alt="Slide 7">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide8.jpg" alt="Slide 8">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide9.jpg" alt="Slide 9">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide10.jpg" alt="Slide 10">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide11.jpg" alt="Slide 11">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide12.jpg" alt="Slide 12">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide13.jpg" alt="Slide 13">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide14.jpg" alt="Slide 14">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide15.jpg" alt="Slide 15">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide16.jpg" alt="Slide 16">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide17.jpg" alt="Slide 17">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide18.jpg" alt="Slide 18">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide19.jpg" alt="Slide 19">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide20.jpg" alt="Slide 20">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide21.jpg" alt="Slide 21">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide22.jpg" alt="Slide 22">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide23.jpg" alt="Slide 23">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide24.jpg" alt="Slide 24">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide25.jpg" alt="Slide 25">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide26.jpg" alt="Slide 26">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide27.jpg" alt="Slide 27">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide28.jpg" alt="Slide 28">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide29.jpg" alt="Slide 29">
+							<img class="swiper-slide swiper-slide--gallery" aria-label="слайд" tabindex="0" src="./img/galery/swiper-img/slide30.jpg" alt="Slide 30">
 						</div>					
 						<!-- navigation buttons -->
 						<div class="swiper-nav-btn-wrapper">
-							<div class="swiper-button-prev swiper-button-prev--gallery" aria-label="кнопка слайдера назад" tabindex="75"></div>
-							<div class="swiper-pagination--gallery" tabindex="76"></div>
-   							<div class="swiper-button-next swiper-button-next--gallery" aria-label="кнопка слайдера вперёд" tabindex="77"></div>
+							<div class="swiper-button-prev swiper-button-prev--gallery" tabindex="0"></div>
+							<div class="swiper-pagination--gallery"></div>
+   							<div class="swiper-button-next swiper-button-next--gallery" tabindex="0"></div>
 						</div>
 					</div>
 				</div>
@@ -247,37 +242,37 @@
 		<section class="catalog" id="catalog">
 			<div class="container">
 				<div class="catalog__wrapper-tab">
-					<h2 class="catalog__header section-heading" tabindex="78">Каталог</h2>
+					<h2 class="catalog__header section-heading">Каталог</h2>
 					<ul class="catalog__tab-list">
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="fr" tabindex="79" aria-label="кнопка выбора языка Франция"><img class="catalog__tab-btn-img" src="./img/catalog/image-france.png" alt="img counry-flag"></button></li>
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="ger" tabindex="80" aria-label="кнопка выбора языка Германи"><img class="catalog__tab-btn-img" src="./img/catalog/image-ger.png" alt="img counry-flag"></button></li>
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="italy" tabindex="81" aria-label="кнопка выбора языка Италия"><img class="catalog__tab-btn-img" src="./img/catalog/image-italy.png" alt="img counry-flag"></button></li>
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="rus" tabindex="82" aria-label="кнопка выбора языка Россия"><img class="catalog__tab-btn-img" src="./img/catalog/image-rus.png" alt="img counry-flag"></button></li>
-						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="belg" tabindex="83" aria-label="кнопка выбора языка Бельгия"><img class="catalog__tab-btn-img" src="./img/catalog/image-belg.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="fr" tabindex="0" aria-label="кнопка выбора языка Франция"><img class="catalog__tab-btn-img" src="./img/catalog/image-france.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="ger" tabindex="0" aria-label="кнопка выбора языка Германи"><img class="catalog__tab-btn-img" src="./img/catalog/image-ger.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="italy" tabindex="0" aria-label="кнопка выбора языка Италия"><img class="catalog__tab-btn-img" src="./img/catalog/image-italy.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="rus" tabindex="0" aria-label="кнопка выбора языка Россия"><img class="catalog__tab-btn-img" src="./img/catalog/image-rus.png" alt="img counry-flag"></button></li>
+						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="belg" tabindex="0" aria-label="кнопка выбора языка Бельгия"><img class="catalog__tab-btn-img" src="./img/catalog/image-belg.png" alt="img counry-flag"></button></li>
 					</ul>
 				</div>
 				<div class="catalog__tab-wrapper-text">
-					<p class="catalog__tab-text tab-active" tabindex="84" aria-label="описание на фрацузском языке" data-target="fr">
+					<p class="catalog__tab-text tab-active" tabindex="0" data-target="fr">
 						Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры,
 					   будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
 					   нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
 					</p>
-					<p class="catalog__tab-text" tabindex="85" aria-label="описание на немецком языке" data-target="ger">
+					<p class="catalog__tab-text" tabindex="0" data-target="ger">
 						Акционеры GER крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры,
 					   будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
 					   нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
 					</p>
-					<p class="catalog__tab-text" tabindex="86" aria-label="описание на итальянском языке" data-target="italy">
+					<p class="catalog__tab-text" tabindex="0" data-target="italy">
 						Акционеры Italy крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры,
 					   будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
 					   нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
 					</p>
-					<p class="catalog__tab-text" tabindex="87" aria-label="описание на русском языке" data-target="rus">
+					<p class="catalog__tab-text" tabindex="0" data-target="rus">
 						Акционеры RUS крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры,
 					   будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
 					   нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
 					</p>
-					<p class="catalog__tab-text" tabindex="88" aria-label="описание на бельгийском языке" data-target="belg">
+					<p class="catalog__tab-text" tabindex="0" data-target="belg">
 						Акционеры Belg крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры,
 					   будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
 					   нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
@@ -287,123 +282,123 @@
 				<div class="catalog__container-accardeon">
 					<div class="catalog__painter">
 						<!-- IMG -->
-					<img class="catalog__painter-img hide" tabindex="89" aria-label="изображение художника Больтраффио, Джованни" data-cat="Beltraffio" src="./img/catalog/Beltraffio.jpg" alt="image painter">
-					<img class="catalog__painter-img" tabindex="90" aria-label="изображение художника Доменико Гирландайо" data-cat="image-picture" src="./img/catalog/image-picture.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="91" aria-label="изображение художника " data-cat="Francesco-italy" src="./img/catalog/Francesco-italy.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="92" aria-label="изображение художника " data-cat="Bergognone-italy" src="./img/catalog/Bergognone-italy.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="93" aria-label="изображение художника Бенедетто ди Биндо" data-cat="Benedetto-italy" src="./img/catalog/Benedetto-italy.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="94" aria-label="изображение художника Бонсиньори, Франческо" data-cat="Bonsignori" src="./img/catalog/Bonsignori.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="95" aria-label="изображение художника Боттичини, Рафаэлло" data-cat="Botticini" src="./img/catalog/Botticini.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="96" aria-label="изображение художника Брамантино" data-cat="Bramantino" src="./img/catalog/Bramantino.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="97" aria-label="изображение художника Бреа, Людовико" data-cat="Brea" src="./img/catalog/Brea.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="98" aria-label="изображение художника Бьяджо д’Антонио Туччи" data-cat="Biagiodantonio" src="./img/catalog/Biagiodantonio.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="99" aria-label="изображение художника Веккьетта" data-cat="Vecchietta" src="./img/catalog/Vecchietta.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="100" aria-label="изображение художника Андреа Верроккьо" data-cat="Verrocchio" src="./img/catalog/Verrocchio.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="101" aria-label="изображение художника Беноццо Гоццоли" data-cat="Gozzoli" src="./img/catalog/Gozzoli.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="102" aria-label="изображение художника Граначчи, Франческо" data-cat="Granacci" src="./img/catalog/Granacci.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="103" aria-label="изображение художника Грегорио ди Чекко" data-cat="Cecco" src="./img/catalog/Cecco.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="104" aria-label="изображение художника Джованни да Удине" data-cat="GiovannidaUdine" src="./img/catalog/GiovannidaUdine.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="105" aria-label="изображение художника Джованни ди Паоло" data-cat="diPaolo" src="./img/catalog/diPaolo.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="106" aria-label="изображение художника Джорджоне" data-cat="Giorgione" src="./img/catalog/Giorgione.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="107" aria-label="изображение художника Парентино, Бернардо" data-cat="BernardoParentino" src="./img/catalog/BernardoParentino.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="108" aria-label="изображение художника Пезеллино" data-cat="pesello" src="./img/catalog/pesello.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="109" aria-label="изображение художника Пьетро Перуджино" data-cat="Perugino" src="./img/catalog/Perugino.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="110" aria-label="изображение художника Перуцци, Бальдассаре" data-cat="peruzzi" src="./img/catalog/peruzzi.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="111" aria-label="изображение художника Пизанелло" data-cat="pisanello" src="./img/catalog/pisanello.jpg" alt="image painter">
-					<img class="catalog__painter-img hide" tabindex="112" aria-label="изображение художника Пинтуриккьо" data-cat="Pintoricchio" src="./img/catalog/Pintoricchio.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Больтраффио, Джованни" data-cat="Beltraffio" src="./img/catalog/Beltraffio.jpg" alt="image painter">
+					<img class="catalog__painter-img" tabindex="0" aria-label="изображение художника Доменико Гирландайо" data-cat="image-picture" src="./img/catalog/image-picture.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника " data-cat="Francesco-italy" src="./img/catalog/Francesco-italy.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника " data-cat="Bergognone-italy" src="./img/catalog/Bergognone-italy.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Бенедетто ди Биндо" data-cat="Benedetto-italy" src="./img/catalog/Benedetto-italy.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Бонсиньори, Франческо" data-cat="Bonsignori" src="./img/catalog/Bonsignori.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Боттичини, Рафаэлло" data-cat="Botticini" src="./img/catalog/Botticini.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Брамантино" data-cat="Bramantino" src="./img/catalog/Bramantino.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Бреа, Людовико" data-cat="Brea" src="./img/catalog/Brea.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Бьяджо д’Антонио Туччи" data-cat="Biagiodantonio" src="./img/catalog/Biagiodantonio.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Веккьетта" data-cat="Vecchietta" src="./img/catalog/Vecchietta.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Андреа Верроккьо" data-cat="Verrocchio" src="./img/catalog/Verrocchio.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Беноццо Гоццоли" data-cat="Gozzoli" src="./img/catalog/Gozzoli.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Граначчи, Франческо" data-cat="Granacci" src="./img/catalog/Granacci.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Грегорио ди Чекко" data-cat="Cecco" src="./img/catalog/Cecco.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Джованни да Удине" data-cat="GiovannidaUdine" src="./img/catalog/GiovannidaUdine.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Джованни ди Паоло" data-cat="diPaolo" src="./img/catalog/diPaolo.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Джорджоне" data-cat="Giorgione" src="./img/catalog/Giorgione.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Парентино, Бернардо" data-cat="BernardoParentino" src="./img/catalog/BernardoParentino.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Пезеллино" data-cat="pesello" src="./img/catalog/pesello.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Пьетро Перуджино" data-cat="Perugino" src="./img/catalog/Perugino.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Перуцци, Бальдассаре" data-cat="peruzzi" src="./img/catalog/peruzzi.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Пизанелло" data-cat="pisanello" src="./img/catalog/pisanello.jpg" alt="image painter">
+					<img class="catalog__painter-img hide" tabindex="0" aria-label="изображение художника Пинтуриккьо" data-cat="Pintoricchio" src="./img/catalog/Pintoricchio.jpg" alt="image painter">
 					<!-- ING end -->
 					
 						<!-- Name -->
 
-					<h3 class="catalog__painter-header hide" tabindex="113" data-cat="Beltraffio">Больтраффио, Джованни</h3>	
-					<h3 class="catalog__painter-header hide" tabindex="114" data-cat="Bergognone-italy">Бергоньоне, Амброджо</h3>	
-					<h3 class="catalog__painter-header" tabindex="115" data-cat="image-picture">Доменико Гирландайо</h3>
-					<h3 class="catalog__painter-header hide" tabindex="116" data-cat="Benedetto-italy">Бенедетто ди Биндо</h3>
-					<h3 class="catalog__painter-header hide" tabindex="117" data-cat="Francesco-italy">Биссоло, Франческо</h3>
-					<h3 class="catalog__painter-header hide" tabindex="118" data-cat="Bonsignori">Бонсиньори, Франческо</h3>
-					<h3 class="catalog__painter-header hide" tabindex="119" data-cat="Botticini">Боттичини, Рафаэлло</h3>
-					<h3 class="catalog__painter-header hide" tabindex="120" data-cat="Bramantino">Брамантино</h3>
-					<h3 class="catalog__painter-header hide" tabindex="121" data-cat="Brea">Бреа, Людовико</h3>
-					<h3 class="catalog__painter-header hide" tabindex="122" data-cat="Biagiodantonio">Бьяджо д’Антонио Туччи</h3>
-					<h3 class="catalog__painter-header hide" tabindex="123" data-cat="Vecchietta">Веккьетта</h3>
-					<h3 class="catalog__painter-header hide" tabindex="124" data-cat="Verrocchio">Андреа Верроккьо</h3>
-					<h3 class="catalog__painter-header hide" tabindex="125" data-cat="Gozzoli">Беноццо Гоццоли</h3>
-					<h3 class="catalog__painter-header hide" tabindex="126" data-cat="Granacci">Граначчи, Франческо</h3>
-					<h3 class="catalog__painter-header hide" tabindex="127" data-cat="Cecco">Грегорио ди Чекко</h3>
-					<h3 class="catalog__painter-header hide" tabindex="128" data-cat="GiovannidaUdine">Джованни да Удине</h3>
-					<h3 class="catalog__painter-header hide" tabindex="129" data-cat="diPaolo">Джованни ди Паоло</h3>
-					<h3 class="catalog__painter-header hide" tabindex="130" data-cat="Giorgione">Джорджоне</h3>
-					<h3 class="catalog__painter-header hide" tabindex="131" data-cat="BernardoParentino">Парентино, Бернардо</h3>
-					<h3 class="catalog__painter-header hide" tabindex="132" data-cat="pesello">Пезеллино</h3>
-					<h3 class="catalog__painter-header hide" tabindex="133" data-cat="Perugino">Пьетро Перуджино</h3>
-					<h3 class="catalog__painter-header hide" tabindex="134" data-cat="peruzzi">Перуцци, Бальдассаре</h3>
-					<h3 class="catalog__painter-header hide" tabindex="135" data-cat="pisanello">Пизанелло</h3>
-					<h3 class="catalog__painter-header hide" tabindex="136" data-cat="Pintoricchio">Пинтуриккьо</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Beltraffio">Больтраффио, Джованни</h3>	
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Bergognone-italy">Бергоньоне, Амброджо</h3>	
+					<h3 class="catalog__painter-header" tabindex="0" data-cat="image-picture">Доменико Гирландайо</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Benedetto-italy">Бенедетто ди Биндо</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Francesco-italy">Биссоло, Франческо</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Bonsignori">Бонсиньори, Франческо</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Botticini">Боттичини, Рафаэлло</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Bramantino">Брамантино</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Brea">Бреа, Людовико</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Biagiodantonio">Бьяджо д’Антонио Туччи</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Vecchietta">Веккьетта</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Verrocchio">Андреа Верроккьо</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Gozzoli">Беноццо Гоццоли</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Granacci">Граначчи, Франческо</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Cecco">Грегорио ди Чекко</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="GiovannidaUdine">Джованни да Удине</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="diPaolo">Джованни ди Паоло</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Giorgione">Джорджоне</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="BernardoParentino">Парентино, Бернардо</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="pesello">Пезеллино</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Perugino">Пьетро Перуджино</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="peruzzi">Перуцци, Бальдассаре</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="pisanello">Пизанелло</h3>
+					<h3 class="catalog__painter-header hide" tabindex="0" data-cat="Pintoricchio">Пинтуриккьо</h3>
 					<!-- Name end -->
 
 					<!-- Years lived -->
-					<span class="catalog__painter-years-lived hide" tabindex="137" aria-label="годы жизни Больтраффио, Джованни" data-cat="Beltraffio">1453 — 1523.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="138" aria-label="годы жизни Бергоньоне, Амброджо" data-cat="Bergognone-italy">1453 — 1523.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="139" aria-label="годы жизни Бенедетто ди Биндо" data-cat="Benedetto-italy">1380-е — 1417.</span>
-					<span class="catalog__painter-years-lived" tabindex="140" aria-label="годы жизни Доменико Гирландайо" data-cat="image-picture">2 июня 1448 — 11 января 1494.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="141" aria-label="годы жизни Биссоло, Франческо" data-cat="Francesco-italy">1470 г — 20 апреля 1554 г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="142" aria-label="годы жизни Бонсиньори, Франческо" data-cat="Bonsignori">1460 г. - 2 июля 1519 г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="143" aria-label="годы жизни Боттичини, Рафаэлло" data-cat="Botticini">1474 г. - 1525 г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="144" aria-label="годы жизни Брамантино" data-cat="Bramantino">1465г. - 1530г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="145" aria-label="годы жизни Бреа, Людовико" data-cat="Brea">1450г. - 1523.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="146" aria-label="годы жизни Бьяджо д’Антонио Туччи" data-cat="Biagiodantonio">1445г. - 1510г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="147" aria-label="годы жизни Веккьетта" data-cat="Vecchietta">1412г. - 6 июня 1480г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="148" aria-label="годы жизни Андреа Верроккьо" data-cat="Verrocchio">1435г. - 1488г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="149" aria-label="годы жизни Беноццо Гоццоли" data-cat="Gozzoli">1420г. - 4 октября 1497г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="150" aria-label="годы жизни Граначчи, Франческо" data-cat="Granacci">23 июля 1469г. - 30 ноября 1543г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="151" aria-label="годы жизни Грегорио ди Чекко" data-cat="Cecco">1390-е - 1 июля 1424г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="152" aria-label="годы жизни Джованни да Удине" data-cat="GiovannidaUdine">15 октября 1487г. - 	1564г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="153" aria-label="годы жизни Джованни ди Паоло" data-cat="diPaolo">1403г. - 1482г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="154" aria-label="годы жизни Джорджоне" data-cat="Giorgione">1477/1478г. - 1510г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="155" aria-label="годы жизни Парентино, Бернардо" data-cat="BernardoParentino">около 1437г. - 28 октября 1531г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="156" aria-label="годы жизни Пезеллино" data-cat="pesello">1422г. - июль 1457г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="157" aria-label="годы жизни Пьетро Перуджино" data-cat="Perugino">1448г. - 1523г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="158" aria-label="годы жизни Перуцци, Бальдассаре" data-cat="peruzzi">7 марта 1481г. - 6 января 1537г.</span>
-					<span class="catalog__painter-years-lived hide" tabindex="159" aria-label="годы жизни Пизанелло" data-cat="pisanello">1395г - 1455г</span>
-					<span class="catalog__painter-years-lived hide" tabindex="160" aria-label="годы жизни Пинтуриккьо" data-cat="Pintoricchio">1454г. - 11 декабря 1513г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Beltraffio">1453 — 1523.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Bergognone-italy">1453 — 1523.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Benedetto-italy">1380-е — 1417.</span>
+					<span class="catalog__painter-years-lived" tabindex="0" data-cat="image-picture">2 июня 1448 — 11 января 1494.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Francesco-italy">1470 г — 20 апреля 1554 г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Bonsignori">1460 г. - 2 июля 1519 г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Botticini">1474 г. - 1525 г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Bramantino">1465г. - 1530г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Brea">1450г. - 1523.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Biagiodantonio">1445г. - 1510г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Vecchietta">1412г. - 6 июня 1480г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Verrocchio">1435г. - 1488г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Gozzoli">1420г. - 4 октября 1497г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Granacci">23 июля 1469г. - 30 ноября 1543г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Cecco">1390-е - 1 июля 1424г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="GiovannidaUdine">15 октября 1487г. - 	1564г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="diPaolo">1403г. - 1482г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Giorgione">1477/1478г. - 1510г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="BernardoParentino">около 1437г. - 28 октября 1531г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="pesello">1422г. - июль 1457г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Perugino">1448г. - 1523г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="peruzzi">7 марта 1481г. - 6 января 1537г.</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="pisanello">1395г - 1455г</span>
+					<span class="catalog__painter-years-lived hide" tabindex="0" data-cat="Pintoricchio">1454г. - 11 декабря 1513г.</span>
 					<!-- Years lived end-->
 
 					<!-- Discr -->
 
-					<p class="catalog__discription-painer hide" tabindex="161" aria-label="биография художника Больтраффио, Джованни" data-cat="Beltraffio">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Beltraffio">
 						Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях Фоппы, 
 						Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. 
 						Его первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 году 
 						совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. 
 					</p>	
 
-					<p class="catalog__discription-painer hide" tabindex="162" aria-label="биография художника Бергоньоне, Амброджо" data-cat="Bergognone-italy">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Bergognone-italy">
 						Прозвище говорит о его тяготении к бургундской школе, по манере ему близок Винченцо Фоппа. 
 						Испытал влияние Леонардо да Винчи. Наиболее известен работами 1486—1494 в монастырской обители картезианцев Чертоза ди Павия. 
 						Позднее работал в Милане в базилике Сант-Эусторджо и церкви Сан-Сатиро, после 1497 — в Лоди, в 1512 — в Бергамо, незадолго до смерти — снова в Милане, 
 						в базилике Сан-Симпличано.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="163" aria-label="биография художника Бенедетто ди Биндо" data-cat="Benedetto-italy">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Benedetto-italy">
 						Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов,
 						включая работы в Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней готики,
 						в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его 
 						персонажей напоминают произведения Джованни да Милано.
 					</p>
-					<p class="catalog__discription-painer" tabindex="164" aria-label="биография художника Доменико Гирландайо" data-cat="image-picture">
+					<p class="catalog__discription-painer" tabindex="0" data-cat="image-picture">
 						Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской,
 						где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло,
 						 со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="165" aria-label="биография художника Биссоло, Франческо" data-cat="Francesco-italy">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Francesco-italy">
 						Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции. 
 						Помогал учителю в работе над украшением Большого зала Совета 
 						Дворца дожей (Венеция). Принимал участие в создании украшений Церкви Иль Реденторе в Венеции.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="166" aria-label="биография художника Бонсиньори, Франческо" data-cat="Bonsignori">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Bonsignori">
 						Среди известных творений этого периода самыми ранними произведениями художника являются полотна «Мадонна со спящим младенцем» 1483 года и «Алтарь Даль Бово», 
 						или «Мадонна на троне с предстоящими святыми и донатором Альтабеллой Авогадро» 1484 года, которые ныне входят в собрание Общественного музея Вероны.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="167" aria-label="биография художника Боттичини, Рафаэлло" data-cat="Botticini">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Botticini">
 						Рафаэлло принадлежал к флорентийской артистической династии — его дед, Джованни ди Доменико, был известен как художник, 
 						расписывавший игральные карты (хотя учёные не исключают, что он мог заниматься и более серьёзной живописью); его отец — Франческо ди Джованни, 
 						был известным флорентийским мастером. Первые художественные навыки Рафаэлло получил в мастерской отца; 
@@ -415,7 +410,7 @@
 						и довольствовавшийся заказами, которые ему давали провинциальные храмы. Его искусство было эклектичным, 
 						и наряду с влиянием отца включало связь с искусством Перуджино, Ридольфо Гирландайо, Лоренцо ди Креди, Фра Бартоломео и др.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="168" aria-label="биография художника Брамантино" data-cat="Bramantino">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Bramantino">
 						Бартоломео Суарди родился около 1465 года в Милане[1] (по другой версии — в Бергамо[2]).
 						В Милане, где «царил» Леонардо, Брамантино создал яркий, острый стиль, хотя и страдавший иногда недостатками в передаче перспективы и неточностью изображения архитектурных элементов.
 						Брамантино сформировался под влиянием Бутиноне и графического стиля Падуи и Феррары. Впоследствии он многому научился у Браманте, у которого долгое время состоял помощником (чем и объясняется его прозвище Брамантино — букв. «Маленький Браманте»[3]) и у которого перенял любовь к монументальным формам и драматизму. Некоторые искусствоведы полагают, что Браманте поручал Брамантино, как живописцу, осуществление своих замыслов[3].
@@ -423,90 +418,90 @@
 						Переехав в Рим в 1508 году, где он расписывал лоджии в Ватикане, Брамантино начал работать в новой манере, близкой к маньеристскому стилю.
 						Брамантино умер в 1530 году.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="169" aria-label="биография художника Бреа, Людовико" data-cat="Brea">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Brea">
 						Людовико (Луи) Бреа (итал. Ludovico Brea, фр. Louis Brea), прибл. 1450, Ницца, 
 						Генуэзская республика — прибл. 1522/1525 — ренессансный художник итало-лигурийского происхождения, 
 						работы которого в основном сосредоточены в прибрежных городах современных Лигурии (Италия) и восточной части Приморских Альп (Франция).
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="170" aria-label="биография художника Бьяджо д’Антонио Туччи" data-cat="Biagiodantonio">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Biagiodantonio">
 						Бьяджо д’Антонио Туччи (итал. Biagio di Antonio Tucci; 1446, Флоренция — 1 июня 1516, там же) — итальянский художник эпохи Возрождения. 
 						Его творчество было вдохновлено работами Филиппо Липпи, Андреа Верроккьо, Доменико Гирландайо.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="171" aria-label="биография художника Веккьетта" data-cat="Vecchietta">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Vecchietta">
 						О Веккьетте сообщает в своих «Жизнеописаниях» Джорджо Вазари и описывает его как человека мрачного и нелюдимого, вечно погружённого в раздумья, 
 						и потому прожившего недолго. Позднейшие исследователи пытались имя этого художника увязать с какими-либо архивными данными. Сейчас общепризнанной считается версия, 
 						что описанный Вазари Веккьетта — это Лоренцо ди Пьетро ди Джованни, который был крещён в Сиене в 1410 году. 
 						Имя этого человека появляется в документах в 1428 году среди членов гильдии художников Сиены.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="172" aria-label="биография художника Андреа Верроккьо" data-cat="Verrocchio">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Verrocchio">
 						В эпоху Раннего Возрождения художники работали почти исключительно по заказам, поэтому в то время была велика роль меценатов. 
 						Эта практика особенно распространилась во Флоренции XV века, где художественные мастерские осуществляли любые заказы покровителей — 
 						от росписи посуды до архитектурных проектов.
 						Верроккьо считался непревзойденным декоратором и режиссёром придворных празднеств.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="173" aria-label="биография художника Джорджоне" data-cat="Gozzoli">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Gozzoli">
 						Бено́ццо Го́ццоли (итал. Benozzo Gozzoli; настоящее имя Беноццо ди Лезе ди Сандро (итал. Benozzo di Lese di Sandro); 1420. Флоренция — 1497, Пистоя) — итальянский художник, 
 						автор многочисленных циклов фресок, представитель флорентийской школы живописи.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="174" aria-label="биография художника Граначчи, Франческо" data-cat="Granacci">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Granacci">
 						Франческо Граначчи учился в мастерской Доменико Гирландайо и помогал ему в написании его картин, используя вместо темперы масляные краски. 
 						По заказу Лоренцо Медичи Граначчи участвовал в росписи флорентийского Сан-Марко. Позднее он работал с Леонардо да Винчи, 
 						Микеланджело и Рафаэлем.В 1508 году Граначчи переехал в Рим, где вместе с другими художниками помогал Микеланджело в росписи Сикстинской капеллы.
 						На стиль Граначчи оказали влияние Филиппино Липпи и Фра Бартоломео.
 						Граначчи упоминается в «Жизнеописаниях художников» Джорджо Вазари.Также упоминается в романе о Микеланджело Ирвинга Стоуна «Муки и радости».
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="175" aria-label="биография художника Грегорио ди Чекко" data-cat="Cecco">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Cecco">
 						О Грегорио очень мало сведений. Известно, что он был приёмным сыном и учеником Таддео ди Бартоло, работал в его мастерской, 
 						а единственным достоверным произведением является алтарь, написанный им в 1423 году для капеллы Франческо Толомеи в сиенском соборе, 
 						на котором стоит его подпись. В начале XX века его путали с упоминаемым в документах Джорджо ди Кеко ди Лука (Giorgio di Checo di Lucha), 
 						поскольку Миланези в 1853 году неправильно транскрибировал имя Грегорио.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="176" aria-label="биография художника Джованни да Удине" data-cat="GiovannidaUdine">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="GiovannidaUdine">
 						Джованни да Удине (итал. Giovanni da Udine), также Джованни Нанни (Giovanni Nani / Nanni; 1487, Удине — 1561, Рим) — итальянский живописец, архитектор и декоратор.
 						Учился сначала у Джованни Мартино (итал. Pellegrino da San Daniele) в Удине, затем переехал в Венецию, где стал учеником Джорджоне. В 1514 году переехал в Рим, 
 						где поступил в мастерскую Рафаэля и считался одним из наиболее талантливых его учеников. Джорджо Вазари отмечал его стремление к гротеску и большую любовь к изображению природы — как растений и животных, так и неодушевлённых предметов. 
 						После смерти Рафаэля работал на кардинала Джулио Медичи (будущего папу Климента VII) по украшению Вилла Мадама, 
 						завершив работу к 1525 году; находился в конфликте с Джулио Романо.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="177" aria-label="биография художника Джованни ди Паоло" data-cat="diPaolo">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="diPaolo">
 						О Грегорио очень мало сведений. Известно, что он был приёмным сыном и учеником Таддео ди Бартоло, 
 						работал в его мастерской, а единственным достоверным произведением является алтарь, написанный им в 1423 году для капеллы Франческо Толомеи в сиенском соборе, 
 						на котором стоит его подпись. В начале XX века его путали с упоминаемым в документах Джорджо ди Кеко ди Лука (Giorgio di Checo di Lucha), 
 						поскольку Миланези в 1853 году неправильно транскрибировал имя Грегорио.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="178" aria-label="биография художника Джорджоне" data-cat="Giorgione">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Giorgione">
 						Джорджо Барбарелли да Кастельфранко, более известный как Джорджоне (итал. Giorgio Barbarelli da Castelfranco, Giorgione; 1477/1478—1510) — итальянский художник, 
 						представитель венецианской школы живописи; 
 						один из величайших мастеров Высокого Возрождения.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="179" aria-label="биография художника Парентино, Бернардо" data-cat="BernardoParentino">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="BernardoParentino">
 						Бернардо Парентино написал Сцены жизни святого Бенедикта для монастыря святой Жустины в Падуе и Рождество, 
 						которое находится в галерее Академии в Венеции. Также он создал Искушение святого Антония — ряд связанных общей темой картин, которые находятся в галерее Дориа-Памфили. 
 						Ему принадлежит также работа Поклонение волхвов. Для манеры художника характерно сильное внимание к деталям[3].
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="180" aria-label="биография художника Пезеллино" data-cat="pesello">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="pesello">
 						Первая работа, которую можно уверенно датировать — это пределла алтаря, заказанного для капеллы дель Новициато в церкви Санта Кроче (Флоренция). 
 						Сам алтарь был расписан Фра Филиппо Липпи в 1440-45гг (ныне в Галерее Уффици, Флоренция; картины пределлы в Лувре, Париж и в Уффици, Флоренция). 
 						Этот случай считают первым свидетельством сотрудничества двух мастеров. Фра Филиппо в то время было 36 лет, 
 						а Пезеллино порядка 20и. Манера старшего мастера решающим образом повлияла на формирование стиля Франческо.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="181" aria-label="биография художника Пьетро Перуджино" data-cat="Perugino">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Perugino">
 						Пьетро Перуджино (итал. Pietro Perugino, дословно «Перуджийский», настоящее имя Пьетро ди Кристофоро Ваннуччи — Pietro di Cristoforo Vannucci; 
 						1446—1524) — итальянский живописец эпохи Возрождения, 
 						представитель умбрийской школы.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="182" aria-label="биография художника Перуцци, Бальдассаре" data-cat="peruzzi">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="peruzzi">
 						Родился в небольшом городке близ Сиены. С 1503 года работал в Риме. 
 						Быстро получил признание как архитектор и мастер иллюзорных росписей, создающих эффект продолжения архитектурного пространства. 
 						Поэтому Перуцци считают создателем римской школы фасадных росписей, в основном гризайлью, но они не сохранились до нашего времени. 
 						Вначале Перуцци работал вместе с Донато Браманте, 
 						но затем перешёл к Рафаэлю. Биографы считают автором знаменитого «Письма Рафаэля» папе Льву Х — введения к Археологическому плану античного Рима — именно Перуцци.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="183" aria-label="биография художника Пизанелло" data-cat="pisanello">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="pisanello">
 						Анто́нио ди Пу́ччо Пиза́но, или Анто́нио Пизане́лло (итал. Antonio di Puccio Pisano, Antonio Pisanello; ок. 1392—1395, Пиза — вероятно,
 						 1455, Рим) — один из наиболее выдающихся художников эпохи Возрождения и раннего итальянского кватроченто.
 					</p>
-					<p class="catalog__discription-painer hide" tabindex="184" aria-label="биография художника Пинтуриккьо" data-cat="Pintoricchio">
+					<p class="catalog__discription-painer hide" tabindex="0" data-cat="Pintoricchio">
 						Пинтури́ккьо (вариант написания — Пинтури́ккио; итал. Pinturicchio; собственно Бернардино ди Бетто (или ди Бенедетто) ди Бьяджо, Bernardino di Betto di Biagio, 1454, 
 						Перуджа — 11 декабря 1513, Сиена) — итальянский живописец эпохи Возрождения.
 					</p>
@@ -515,181 +510,181 @@
 					</div>
 					<div class="catalog__accardeon" id="catalog__accardeon">
 						<div class="catalog__item acardion-1" data-path="acardeon-one">
-							<h3 class="catalog__years-lived" tabindex="185">
+							<h3 class="catalog__years-lived">
 								C 1400 по 1499 гг.
-								<span tabindex="186" class="catalog__icon catalog__icon-1 active" data-target="acardeon-one"></span>
+								<span tabindex="0" class="catalog__icon catalog__icon-1 active" data-target="acardeon-one"></span>
 							</h3>
 						</div>																					
 						<div class="catalog__wrapper-painter-list">
 							<ul class="catalog__painter-list">
-								<li class="catalog__painter-list-item"><button data-key="Benedetto-italy" tabindex="187" class="catalog__painter-link link-underline purple-link">Бенедетто ди Биндо</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Bergognone-italy" tabindex="188" class="catalog__painter-link link-underline purple-link">Бергоньоне, Амброджо</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Francesco-italy" tabindex="189" class="catalog__painter-link link-underline purple-link">Биссоло, Франческо</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Beltraffio" tabindex="190" class="catalog__painter-link link-underline purple-link">Больтраффио, Джованни</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Bonsignori" tabindex="191" class="catalog__painter-link link-underline purple-link">Бонсиньори, Франческо</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Botticini" tabindex="192" class="catalog__painter-link link-underline purple-link">Боттичини, Рафаэлло</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Bramantino" tabindex="193" class="catalog__painter-link link-underline purple-link">Брамантино</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Brea" tabindex="194" class="catalog__painter-link link-underline purple-link">Бреа, Людовико</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Biagiodantonio" tabindex="195" class="catalog__painter-link link-underline purple-link">Бьяджо д’Антонио Туччи</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Vecchietta" tabindex="196" class="catalog__painter-link link-underline purple-link">Веккьетта</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Verrocchio" tabindex="197" class="catalog__painter-link link-underline purple-link">Андреа Верроккьо</button></li>
-								<li class="catalog__painter-list-item"><button data-key="image-picture" tabindex="198" class="catalog__painter-link link-underline purple-link">Доменико Гирландайо</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Gozzoli" tabindex="199" class="catalog__painter-link link-underline purple-link">Беноццо Гоццоли</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Granacci" tabindex="200" class="catalog__painter-link link-underline purple-link">Граначчи, Франческо</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Cecco" tabindex="201" class="catalog__painter-link link-underline purple-link">Грегорио ди Чекко</button></li>
-								<li class="catalog__painter-list-item"><button data-key="GiovannidaUdine" tabindex="202" class="catalog__painter-link link-underline purple-link">Джованни да Удине</button></li>
-								<li class="catalog__painter-list-item"><button data-key="diPaolo" tabindex="203" class="catalog__painter-link link-underline purple-link">Джованни ди Паоло</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Giorgione" tabindex="204" class="catalog__painter-link link-underline purple-link">Джорджоне</button></li>
-								<li class="catalog__painter-list-item"><button data-key="BernardoParentino" tabindex="205" class="catalog__painter-link link-underline purple-link">Парентино, Бернардо</button></li>
-								<li class="catalog__painter-list-item"><button data-key="pesello" tabindex="206" class="catalog__painter-link link-underline purple-link">Пезеллино</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Perugino" tabindex="207" class="catalog__painter-link link-underline purple-link">Пьетро Перуджино</button></li>
-								<li class="catalog__painter-list-item"><button data-key="peruzzi" tabindex="208" class="catalog__painter-link link-underline purple-link">Перуцци, Бальдассаре</button></li>
-								<li class="catalog__painter-list-item"><button data-key="pisanello" tabindex="209" class="catalog__painter-link link-underline purple-link">Пизанелло</button></li>
-								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" tabindex="210" class="catalog__painter-link link-underline purple-link">Пинтуриккьо</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Benedetto-italy" tabindex="0" class="catalog__painter-link purple-link">Бенедетто ди Биндо</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Bergognone-italy" tabindex="0" class="catalog__painter-link purple-link">Бергоньоне, Амброджо</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Francesco-italy" tabindex="0" class="catalog__painter-link purple-link">Биссоло, Франческо</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Beltraffio" tabindex="0" class="catalog__painter-link purple-link">Больтраффио, Джованни</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Bonsignori" tabindex="0" class="catalog__painter-link purple-link">Бонсиньори, Франческо</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Botticini" tabindex="0" class="catalog__painter-link purple-link">Боттичини, Рафаэлло</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Bramantino" tabindex="0" class="catalog__painter-link purple-link">Брамантино</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Brea" tabindex="0" class="catalog__painter-link purple-link">Бреа, Людовико</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Biagiodantonio" tabindex="0" class="catalog__painter-link purple-link">Бьяджо д’Антонио Туччи</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Vecchietta" tabindex="0" class="catalog__painter-link purple-link">Веккьетта</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Verrocchio" tabindex="0" class="catalog__painter-link purple-link">Андреа Верроккьо</button></li>
+								<li class="catalog__painter-list-item"><button data-key="image-picture" tabindex="0" class="catalog__painter-link purple-link">Доменико Гирландайо</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Gozzoli" tabindex="0" class="catalog__painter-link purple-link">Беноццо Гоццоли</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Granacci" tabindex="0" class="catalog__painter-link purple-link">Граначчи, Франческо</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Cecco" tabindex="0" class="catalog__painter-link purple-link">Грегорио ди Чекко</button></li>
+								<li class="catalog__painter-list-item"><button data-key="GiovannidaUdine" tabindex="0" class="catalog__painter-link purple-link">Джованни да Удине</button></li>
+								<li class="catalog__painter-list-item"><button data-key="diPaolo" tabindex="0" class="catalog__painter-link purple-link">Джованни ди Паоло</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Giorgione" tabindex="0" class="catalog__painter-link purple-link">Джорджоне</button></li>
+								<li class="catalog__painter-list-item"><button data-key="BernardoParentino" tabindex="0" class="catalog__painter-link purple-link">Парентино, Бернардо</button></li>
+								<li class="catalog__painter-list-item"><button data-key="pesello" tabindex="0" class="catalog__painter-link purple-link">Пезеллино</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Perugino" tabindex="0" class="catalog__painter-link purple-link">Пьетро Перуджино</button></li>
+								<li class="catalog__painter-list-item"><button data-key="peruzzi" tabindex="0" class="catalog__painter-link purple-link">Перуцци, Бальдассаре</button></li>
+								<li class="catalog__painter-list-item"><button data-key="pisanello" tabindex="0" class="catalog__painter-link purple-link">Пизанелло</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" tabindex="0" class="catalog__painter-link purple-link">Пинтуриккьо</button></li>
 							</ul>				
 						</div>
 						<div class="catalog__item acardion-2" data-path="acardeon-two">
-							<h3 class="catalog__years-lived" tabindex="211">
+							<h3 class="catalog__years-lived" tabindex="0">
 								C 1500 по 1599 гг.
 								<span class="catalog__icon catalog__icon-2" data-target="acardeon-two"></span>
 							</h3>
 						</div>																					
 						<div class="catalog__wrapper-painter-list">
 							<ul class="catalog__painter-list">
-								<li class="catalog__painter-list-item"><button tabindex="212" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>			
-								<li class="catalog__painter-list-item"><button tabindex="213" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="214" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="215" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="216" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="217" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="218" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="219" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="221" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="222" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="223" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="224" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="225" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="226" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="227" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="228" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="229" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="230" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="231" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="232" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="233" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="234" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="235" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="236" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="237" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="238" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="239" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="240" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="241" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="242" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>			
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+							<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
 							</ul>			
 						</div>
 
 						<div class="catalog__item acardion-3" data-path="acardeon-three">
-							<h3 class="catalog__years-lived" tabindex="243">
+						<h3 class="catalog__years-lived">
 								C 1600 по 1699 гг.
 								<span class="catalog__icon catalog__icon-3" data-target="acardeon-three"></span>
 							</h3>
 						</div>																					
 						<div class="catalog__wrapper-painter-list"> 
 							<ul class="catalog__painter-list">								
-								<li class="catalog__painter-list-item"><button tabindex="243" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="244" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="245" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="246" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="247" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="248" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="249" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="250" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="251" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
 							</ul>				
 						</div>
 
 						<div class="catalog__item acardion-4" data-path="acardeon-four">
-							<h3 class="catalog__years-lived" tabindex="252">
+							<h3 class="catalog__years-lived">
 								C 1700 по 1799 гг.
 								<span class="catalog__icon catalog__icon-4" data-target="acardeon-four"></span>
 							</h3>
 						</div>																					
 						<div class="catalog__wrapper-painter-list"> 
 							<ul class="catalog__painter-list">								
-								<li class="catalog__painter-list-item"><button tabindex="253" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="254" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="255" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="256" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="257" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="258" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="259" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="260" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="261" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="262" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
 							</ul>				
 						</div>
 
 						<div class="catalog__item acardion-5" data-path="acardeon-five">
-							<h3 class="catalog__years-lived" tabindex="263">
+							<h3 class="catalog__years-lived">
 								C 1800 по 1899 гг.
 								<span class="catalog__icon catalog__icon-5" data-target="acardeon-five"></span>
 							</h3>
 						</div>																					
 						<div class="catalog__wrapper-painter-list"> 
 							<ul class="catalog__painter-list">								
-								<li class="catalog__painter-list-item"><button tabindex="263" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="264" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="265" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="266" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="267" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="268" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="269" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="270" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="271" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="272" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
 							</ul>				
 						</div>
 
 						<div class="catalog__item acardion-6" data-path="acardeon-six">
-							<h3 class="catalog__years-lived" tabindex="273">
+							<h3 class="catalog__years-lived">
 								C 1900 по 1999 гг.
 								<span class="catalog__icon catalog__icon-6" data-target="acardeon-six"></span>
 							</h3>
 						</div>																					
 						<div class="catalog__wrapper-painter-list"> 
 							<ul class="catalog__painter-list">								
-								<li class="catalog__painter-list-item"><button tabindex="273" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="274" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="275" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="276" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="277" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="278" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="279" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="280" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="281" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="282" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="283" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
 							</ul>				
 						</div>
 
 						<div class="catalog__item acardion-7" data-path="acardeon-seven">
-							<h3 class="catalog__years-lived" tabindex="284">
+							<h3 class="catalog__years-lived">
 								C 2000 г.
 								<span class="catalog__icon catalog__icon-2" data-target="acardeon-seven"></span>
 							</h3>
 						</div>																					
 						<div class="catalog__wrapper-painter-list"> 
 							<ul class="catalog__painter-list">								
-								<li class="catalog__painter-list-item"><button tabindex="284" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="285" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="286" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="287" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="288" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="289" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="290" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="291" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
-								<li class="catalog__painter-list-item"><button tabindex="292" data-key="Pintoricchio" class="catalog__painter-link link-underline purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
+								<li class="catalog__painter-list-item"><button data-key="Pintoricchio" class="catalog__painter-link purple-link">lorem</button></li>
 							</ul>				
 						</div>
 					</div>
@@ -699,19 +694,19 @@
 
 		<section class="events" id="events">
 			<div class="container">
-				<h2 class="events__header section-heading" tabindex="293">События</h2>
+				<h2 class="events__header section-heading">События</h2>
 				<div class="events__container-cards">
 					<div class="events__wrapper-card">
 						<figure>
-							<img class="events__cards-img" tabindex="294" src="./img/events/p1.jpg" alt="image picture">
-							<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="295">
+							<img class="events__cards-img" tabindex="0" src="./img/events/p1.jpg" alt="image picture">
+							<figcaption class="events__name-museum" tabindex="0">
 								Музей им. Щусева <br>
 								с 20 марта по 30 апреля
 							</figcaption>
 						</figure>
 						<div class="event__wrapper__card-bottom">
-							<h3 class="events__header-card" tabindex="296">Книжная гравюра в живом восприятии</h3>
-							<div class="events__card-discription" aria-label="автор картины" tabindex="297">
+							<h3 class="events__header-card">Книжная гравюра в живом восприятии</h3>
+							<div class="events__card-discription" tabindex="0">
 								Один из ведущих флорентийских художников Кватроченто,
 								основатель художественной <br> династии, которую продолжили его брат Давид и сын Ридольфо.
 								Глава художественной мастерской, где юный Микеланджело.
@@ -719,98 +714,98 @@
 							
 							</div>
 							<div class="event__wrapper-link">
-								<a class="events__link" href="#" tabindex="298">Подробнее</a>
+								<a class="events__link" href="#">Подробнее</a>
 							</div>
 					</div>
 					
 					<div class="events__wrapper-card">
 						<figure>
-							<img class="events__cards-img" tabindex="299" src="./img/events/p2.jpg" alt="image picture">
-							<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="300">
+							<img class="events__cards-img" tabindex="0" src="./img/events/p2.jpg" alt="image picture">
+							<figcaption class="events__name-museum" tabindex="0">
 								ММОМА <br>
 								24 марта 19:00
 							</figcaption>
 						</figure>
 						<div class="event__wrapper__card-bottom">
-							<h3 class="events__header-card" tabindex="301">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
-							<div class="events__card-discription" aria-label="автор картины" tabindex="302">
+							<h3 class="events__header-card">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+							<div class="events__card-discription" tabindex="0">
 								Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта:
 								постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки новых принципов формирования...
 							</div>
 							
 						</div>
 						<div class="event__wrapper-link">
-							<a class="events__link" tabindex="303" href="#">Подробнее</a>
+							<a class="events__link" href="#">Подробнее</a>
 						</div>
 					</div>
 
-					<div class="events__wrapper-card">
+					<div class="events__wrapper-card" id="events-cards">
 						<figure>
-							<img class="events__cards-img" tabindex="304" src="./img/events/p3.jpg" alt="image picture">
-							<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="305">
+							<img class="events__cards-img" tabindex="0" src="./img/events/p3.jpg" alt="image picture">
+							<figcaption class="events__name-museum" tabindex="0">
 								Еврейский музей <br>
 								с 31 марта по 21 апреля
 							</figcaption>
 						</figure>
 						<div class="event__wrapper__card-bottom">
-							<h3 class="events__header-card" tabindex="306">Выставка «Формация 2020»</h3>
-							<div class="events__card-discription" aria-label="автор картины" tabindex="307">
+							<h3 class="events__header-card">Выставка «Формация 2020»</h3>
+							<div class="events__card-discription" tabindex="0">
 								Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
 								Также как перспективное планирование играет определяющее значение <br> для новых принципов формирования <br> материально-технической и кадровой базы.
 							</div>
 						</div>
 						<div class="event__wrapper-link">
-							<a class="events__link" href="#" tabindex="308">Подробнее</a>
+							<a class="events__link" href="#">Подробнее</a>
 						</div>
 					</div>
 
-					<span class="read-more">
+					<div class="read-more">
 						<div class="events__wrapper-card">
 							<figure>
-								<img class="events__cards-img" tabindex="309" src="./img/events/p4.jpg" alt="image picture">
-								<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="310">
+								<img class="events__cards-img" tabindex="0" src="./img/events/p4.jpg" alt="image picture">
+								<figcaption class="events__name-museum" tabindex="0">
 									Третьяковка на Крымском валу 
 									с 30 марта по 30 апреля
 								</figcaption>
 							</figure>
 							<div class="event__wrapper__card-bottom">
-								<h3 class="events__header-card" tabindex="311">XXIV Международная биеннале молодого искусства</h3>
-								<div class="events__card-discription" aria-label="автор картины" tabindex="312">
+								<h3 class="events__header-card">XXIV Международная биеннале молодого искусства</h3>
+								<div class="events__card-discription" tabindex="0">
 									Внезапно, реплицированные с зарубежных источников, современные исследования представляют собой не что иное,
 									как квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены исключительно в разрезе маркетинговых и финансовых...
 								</div>
 							</div>
 							<div class="event__wrapper-link">
-								<a class="events__link" href="#" tabindex="313">Подробнее</a>
+								<a class="events__link" href="#" tabindex="0">Подробнее</a>
 							</div>
 						</div>
 	
 						<div class="events__wrapper-card">
 							<figure>
-								<img class="events__cards-img" tabindex="314" src="./img/events/p5.jpg" alt="image picture">
-								<figcaption class="events__name-museum" aria-label="описание мероприятия" tabindex="315">
+								<img class="events__cards-img" tabindex="0" src="./img/events/p5.jpg" alt="image picture">
+								<figcaption class="events__name-museum" tabindex="0">
 									ММАМ <br>
 									с 8 апреля по 20 мая
 								</figcaption>
 							</figure>
 							<div class="event__wrapper__card-bottom">
-								<h3 class="events__header-card" tabindex="316">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-								<div class="events__card-discription" aria-label="автор картины" tabindex="317">
+								<h3 class="events__header-card">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+								<div class="events__card-discription" tabindex="0">
 									Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
 									которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.
 								</div>
 							</div>
 							<div class="event__wrapper-link">
-								<a class="events__link" href="#" tabindex="318">Подробнее</a>
+								<a class="events__link" href="#">Подробнее</a>
 							</div>
 						</div>
-					</span>
+					</div>
 				</div>				
-					<div class="wrapper-btn-all-events">
-						<button class="events__btn-all-events" id="btn-all-events" tabindex="319">
-							Все события
-						</button>	
-					</div>			
+					
+						<div class="events__btn-all__wrapper-link">
+							<a class="events__btn-all-events scrollto" id="btn-all-events" href="#events-cards">Все события</a>
+						</div>
+					
 			</div>
 		</section>
 
@@ -818,67 +813,67 @@
 				<div class="container">					
 					<div class="editions__wrapper-content">					
 						<div class="checkbox__wrapper">
-							<h2 class="editions__header section-heading" tabindex="320">Издания</h2>
-							<h3 class="checkbox__header" tabindex="321">Категории</h3>
+							<h2 class="editions__header section-heading" tabindex="0">Издания</h2>
+							<h3 class="checkbox__header" tabindex="0">Категории</h3>
 							<form class="checkbox__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-								<label class="checkbox__label" tabindex="322">
-									<input class="checkbox__input-item" tabindex="323"  type="checkbox" name="check">									
-									<span class="checkbox__text" aria-label="текст чекбокса" tabindex="323">Бестселлеры</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0"  type="checkbox" name="check">									
+									<span class="checkbox__text" tabindex="0">Бестселлеры</span>             
 								</label>
-								<label class="checkbox__label" tabindex="324">
-									<input class="checkbox__input-item" tabindex="325" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса" tabindex="326">Искусство</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text" tabindex="0">Искусство</span>             
 								</label>
-								<label class="checkbox__label" tabindex="327">
-									<input class="checkbox__input-item" tabindex="328" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса" tabindex="329">Архитектура</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text" tabindex="0">Архитектура</span>             
 								</label>
-								<label class="checkbox__label" tabindex="330">
-									<input class="checkbox__input-item" tabindex="331" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса" tabindex="332">Дизайн</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text" tabindex="0">Дизайн</span>             
 								</label>
-								<label class="checkbox__label" tabindex="333">
-									<input class="checkbox__input-item" tabindex="334" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса" tabindex="335">Мода</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text" tabindex="0">Мода</span>             
 								</label>
-								<label class="checkbox__label" tabindex="336">
-									<input class="checkbox__input-item" tabindex="337" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса" tabindex="338">Детям</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text" tabindex="0">Детям</span>             
 								</label>
-								<label class="checkbox__label" tabindex="339">
-									<input class="checkbox__input-item" tabindex="340" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса" tabindex="341">Художественная литература</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text" tabindex="0">Художественная литература</span>             
 								</label>
-								<label class="checkbox__label" tabindex="342">
+								<label class="checkbox__label" tabindex="0">
 									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса">Публицистика</span>             
+									<span class="checkbox__text">Публицистика</span>             
 								</label>
-								<label class="checkbox__label" tabindex="343">
-									<input class="checkbox__input-item" tabindex="344" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса" tabindex="345">Путеводители</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text" tabindex="0">Путеводители</span>             
 								</label>
-								<label class="checkbox__label" tabindex="346">
-									<input class="checkbox__input-item" tabindex="347" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса"  tabindex="348">Философия</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text"  tabindex="0">Философия</span>             
 								</label>
-								<label class="checkbox__label" tabindex="349">
-									<input class="checkbox__input-item" tabindex="350" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса"  tabindex="351">Учебная литература</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text"  tabindex="0">Учебная литература</span>             
 								</label>
-								<label class="checkbox__label" tabindex="352">
-									<input class="checkbox__input-item" tabindex="353" type="checkbox" name="check" aria-checked="undefined">									
-									<span class="checkbox__text" aria-label="текст чекбокса"  tabindex="354">Журналы и газеты</span>             
+								<label class="checkbox__label" tabindex="0">
+									<input class="checkbox__input-item" tabindex="0" type="checkbox" name="check" aria-checked="undefined">									
+									<span class="checkbox__text" tabindex="0">Журналы и газеты</span>             
 								</label>
-								<label class="checkbox__label filter-price" tabindex="355">
-									<h3 class="checkbox__header-price"  tabindex="356">Цена</h3>
+								<div class="checkbox__label filter-price" tabindex="0">
+									<div class="checkbox__header-price"  tabindex="0">Цена</div>
 									<div class="checkbox__filter-price">
-										<span class="span-from-to" tabindex="357">От</span>
-										<input class="input-number" aria-label="цена от" tabindex="358" type="number" name="price">
-										<span class="span-from-to"  tabindex="359">до</span>
-										<input class="input-number" aria-label="цена до"  tabindex="360" type="number" name="price">
-										<span class="span-rubles" tabindex="361">руб.</span>
+										<span class="span-from-to" tabindex="0">От</span>
+										<input class="input-number" aria-label="цена от" tabindex="0" type="number" name="price">
+										<span class="span-from-to"  tabindex="0">до</span>
+										<input class="input-number" aria-label="цена до"  tabindex="0" type="number" name="price">
+										<span class="span-rubles" tabindex="0">руб.</span>
 									</div>
-								</label>
+								</div>
 							</form>
 						</div>
 						<div class="swiper-container editions__swiper-container">
@@ -886,37 +881,37 @@
 							<div class="swiper-wrapper editions__swiper-wrapper">
 								<!-- Slides -->							
 									<div class="swiper-slide editions__swiper-content-conteiner">
-										<img class="editions__swiper-img"  tabindex="362" src="img/Editions/Pe1.jpg" alt="picture">
+										<img class="editions__swiper-img"  tabindex="0" src="img/Editions/Pe1.jpg" alt="picture">
 										<div class="editions__slide-discriprion">
-											<h3 class="editions__swiper-slide-name-book"  tabindex="363">
+											<h3 class="editions__swiper-slide-name-book">
 											Искусство цвета <br>
-											<span class="editions__swiper-slide-book-author" aria-label="Имя автора книги"  tabindex="364">Иттен, Иоханнес</span> 
+											<span class="editions__swiper-slide-book-author" tabindex="0">Иттен, Иоханнес</span> 
 											</h3>
-											<p class="editions__swiper-book-price" aria-label="Цена книги"  tabindex="365">
+											<p class="editions__swiper-book-price" tabindex="0">
 												620руб.
 											</p>	
 										</div>
 										<div class="editions__swiper-wrapper-link">
-											<a class="editions__swiper-link"  tabindex="366" href="#">
+											<a class="editions__swiper-link" href="#">
 												Заказать
 											</a>
 										</div>
 									</div>
 									
 									<div class="swiper-slide editions__swiper-content-conteiner">
-										<img class="editions__swiper-img" tabindex="367" src="img/Editions/Pe2.jpg" alt="picture">
+										<img class="editions__swiper-img" tabindex="0" src="img/Editions/Pe2.jpg" alt="picture">
 										<div class="editions__slide-discriprion">
-											<h3 class="editions__swiper-slide-name-book"  tabindex="367">
+											<h3 class="editions__swiper-slide-name-book">
 											Типографика <br>
-											<span class="editions__swiper-slide-book-author" aria-label="Имя автора книги"  tabindex="368">
+											<span class="editions__swiper-slide-book-author" tabindex="0">
 												Рудер, Эмиль </span> 
 											</h3>
-											<p class="editions__swiper-book-price" aria-label="Цена книги"  tabindex="369">
+											<p class="editions__swiper-book-price" tabindex="0">
 												2 450 руб
 											</p>	
 										</div>
 										<div class="editions__swiper-wrapper-link">
-											<a class="editions__swiper-link" href="#"  tabindex="370">
+											<a class="editions__swiper-link" href="#">
 												Заказать
 											</a>
 										</div>
@@ -925,102 +920,102 @@
 									<div class="swiper-slide editions__swiper-content-conteiner">
 										<img class="editions__swiper-img" src="img/Editions/Pe3.jpg" alt="picture">
 										<div class="editions__slide-discriprion">
-											<h3 class="editions__swiper-slide-name-book"  tabindex="371">
+											<h3 class="editions__swiper-slide-name-book">
 												Книга про буквы <br>
-											<span class="editions__swiper-slide-book-author" aria-label="Имя автора книги"  tabindex="372">
+											<span class="editions__swiper-slide-book-author" tabindex="0">
 												Гордон, Юрий </span> 
 											</h3>
-											<p class="editions__swiper-book-price" aria-label="Цена книги"  tabindex="373">
+											<p class="editions__swiper-book-price" tabindex="0">
 												2 200 руб.
 											</p>	
 										</div>
 										<div class="editions__swiper-wrapper-link">
-											<a class="editions__swiper-link" href="#"  tabindex="374">
+											<a class="editions__swiper-link" href="#">
 												Заказать
 											</a>
 										</div>
 									</div>
 									
 									<div class="swiper-slide editions__swiper-content-conteiner">
-										<img class="editions__swiper-img"  tabindex="375" src="img/Editions/Pe4.jpg" alt="picture">
+										<img class="editions__swiper-img"  tabindex="0" src="img/Editions/Pe4.jpg" alt="picture">
 										<div class="editions__slide-discriprion">
-											<h3 class="editions__swiper-slide-name-book"  tabindex="376">
+											<h3 class="editions__swiper-slide-name-book">
 											Николай Ильин <br>
-											<span class="editions__swiper-slide-book-author" aria-label="Имя автора книги"  tabindex="377">
+											<span class="editions__swiper-slide-book-author" tabindex="0">
 												Кричевский, Владимир </span> 
 											</h3>
-											<p class="editions__swiper-book-price" aria-label="Цена книги"  tabindex="378">
+											<p class="editions__swiper-book-price" tabindex="0">
 												1 100 руб
 											</p>	
 										</div>
 										<div class="editions__swiper-wrapper-link">
-											<a class="editions__swiper-link" href="#"  tabindex="379">
+											<a class="editions__swiper-link" href="#">
 												Заказать
 											</a>
 										</div>
 									</div>
 									
 									<div class="swiper-slide editions__swiper-content-conteiner">
-										<img class="editions__swiper-img"  tabindex="380" src="img/Editions/Pe5.jpg" alt="picture">
+										<img class="editions__swiper-img"  tabindex="0" src="img/Editions/Pe5.jpg" alt="picture">
 										<div class="editions__slide-discriprion">
-											<h3 class="editions__swiper-slide-name-book"  tabindex="381">
+											<h3 class="editions__swiper-slide-name-book">
 												Модульные сетки в граф... <br>
-											<span class="editions__swiper-slide-book-author" aria-label="Имя автора книги"  tabindex="382">
+											<span class="editions__swiper-slide-book-author" tabindex="0">
 												Мюллер-Брокманн, Йозеф</span> 
 											</h3>
-											<p class="editions__swiper-book-price" aria-label="Цена книги"  tabindex="383">
+											<p class="editions__swiper-book-price" tabindex="0">
 												1 450 руб
 											</p>	
 										</div>
-										<div class="editions__swiper-wrapper-link"  tabindex="384">
-											<a class="editions__swiper-link" href="#"  tabindex="385">
+										<div class="editions__swiper-wrapper-link">
+											<a class="editions__swiper-link" href="#">
 												Заказать
 											</a>
 										</div>
 									</div>
 									
 									<div class="swiper-slide editions__swiper-content-conteiner">
-										<img class="editions__swiper-img"  tabindex="386" src="img/Editions/Pe6.jpg" alt="picture">
+										<img class="editions__swiper-img"  tabindex="0" src="img/Editions/Pe6.jpg" alt="picture">
 										<div class="editions__slide-discriprion">
-											<h3 class="editions__swiper-slide-name-book"  tabindex="387">
+											<h3 class="editions__swiper-slide-name-book">
 												Эволюция графических ст... <br>
-											<span class="editions__swiper-slide-book-author" aria-label="Имя автора книги"  tabindex="388">
+											<span class="editions__swiper-slide-book-author" tabindex="0">
 												Хеллер, Чваст</span>
 											</h3>
-											<p class="editions__swiper-book-price" aria-label="Цена книги"  tabindex="389">
+											<p class="editions__swiper-book-price" tabindex="0">
 												3 200 руб
 											</p>	
 										</div>
 										<div class="editions__swiper-wrapper-link">
-											<a class="editions__swiper-link" href="#"  tabindex="390">
+											<a class="editions__swiper-link" href="#">
 												Заказать
 											</a>
 										</div>
 									</div>
 									
 									<div class="swiper-slide editions__swiper-content-conteiner">
-										<img class="editions__swiper-img"  tabindex="391" src="img/Editions/Pe7.jpg" alt="picture">
+										<img class="editions__swiper-img"  tabindex="0" src="img/Editions/Pe7.jpg" alt="picture">
 										<div class="editions__slide-discriprion">
-											<h3 class="editions__swiper-slide-name-book"  tabindex="392">
+											<h3 class="editions__swiper-slide-name-book">
 												Искусство и визуальное в... <br>
-											<span class="editions__swiper-slide-book-author" aria-label="Имя автора книги"  tabindex="393">
+											<span class="editions__swiper-slide-book-author" tabindex="0">
 												Арнхейм, Рудольф </span> 
 											</h3>
-											<p class="editions__swiper-book-price" aria-label="Цена книги"  tabindex="394">
+											<p class="editions__swiper-book-price" tabindex="0">
 												2 200 руб
 											</p>	
 										</div>
 										<div class="editions__swiper-wrapper-link">
-											<a class="editions__swiper-link" href="#"  tabindex="395">
+											<a class="editions__swiper-link" href="#">
 												Заказать
 											</a>
 										</div>
 									</div>
 							</div>
 							<div class="swiper-nav-btn-wrapper swiper-nav-btn-wrapper--edition">
-								<div class="swiper-button-prev swiper-button-prev--edition" aria-label="кнопка слайдера назад" tabindex="396"></div>
-								<div class="swiper-pagination--gallery swiper-pagination--edition"  tabindex="397"></div>
-								<div class="swiper-button-next swiper-button-next--edition" aria-label="кнопка слайдера вперёд"  tabindex="398"></div>
+								<div class="swiper-button-prev swiper-button-prev--edition" tabindex="0"></div>
+								<div class="swiper-pagination--gallery swiper-pagination--edition"></div>
+								<div class="swiper-button-next swiper-button-next--edition" tabindex="0"></div>
 							</div>
 						</div>
 					</div>
@@ -1028,75 +1023,75 @@
 		</section>
 		<section class="project" id="project">
 			<div class="container">
-				<h2 class="project__header section-heading"  tabindex="399">Проекты</h2>
+				<h2 class="project__header section-heading">Проекты</h2>
 				<div class="project__wrapper-content">
-					<p class="project__content" aria-label="описание блока проекты" tabindex="400">
+					<p class="project__content" tabindex="0">
 						Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
 						фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не 
 						уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
 						Прежде всего, постоянное <br> информационно-пропагандистское 
-						<span class="project__icon-tooltip" aria-label="иконка подсказки" tabindex="401"></span>
-						<span class="project__popup" aria-label="текст подсказки">						
+						<span class="project__icon-tooltip" tabindex="0"></span>
+						<span class="project__popup">						
 						Пример современных тенденций - современная методология разработки!
 						</span>
 						 обеспечение нашей деятельности однозначно 
 						фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия
 						представителей оппозиции могут быть рассмотрены
-						<span class="project__icon-tooltip" aria-label="иконка подсказки" tabindex="403"></span>
-						<span class="popup-2" aria-label="текст подсказки">
+						<span class="project__icon-tooltip" tabindex="0"></span>
+						<span class="popup-2">
 							Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции
 						</span>
-						 исключительно в разрезе маркетинговых и финансовых <span class="project__icon-tooltip" aria-label="иконка подсказки" tabindex="404"></span>
-							<span class="popup-3" aria-label="текст подсказки">В стремлении повысить качество </span>
+						 исключительно в разрезе маркетинговых и финансовых <span class="project__icon-tooltip" tabindex="0"></span>
+							<span class="popup-3">В стремлении повысить качество </span>
 						предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
 						призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными 
-						до степени совершенной неузнаваемости. Подробнее: <a class="project__link link-underline" href="#" tabindex="405">blanchard-art.ru/projects/about</a>
+						до степени совершенной неузнаваемости. Подробнее: <a class="project__link" href="#">blanchard-art.ru/projects/about</a>
 					</p>
 				</div>
-				<h2 class="project__header-swiper" tabindex="406">Партнёры проектов:</h2>
+				<h2 class="project__header-swiper">Партнёры проектов:</h2>
 				<div class="swiper-container project__swiper-container" >
 					<!-- Additional required wrapper -->
 					<div class="swiper-wrapper project__swiper-wrapper">
 						<!-- Slides -->
-						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo1.svg" aria-label="логотип партнёров" tabindex="407" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo2.svg" aria-label="логотип партнёров" tabindex="408" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo3.svg" aria-label="логотип партнёров" tabindex="409" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo4.svg" aria-label="логотип партнёров" tabindex="410" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo5.svg" aria-label="логотип партнёров" tabindex="411" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo6.svg" aria-label="логотип партнёров" tabindex="412" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo7.svg" aria-label="логотип партнёров" tabindex="413" alt="logo"></div>
-						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo8.svg" aria-label="логотип партнёров" tabindex="414" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo1.svg" aria-label="логотип партнёров" tabindex="0" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo2.svg" aria-label="логотип партнёров" tabindex="0" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo3.svg" aria-label="логотип партнёров" tabindex="0" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo4.svg" aria-label="логотип партнёров" tabindex="0" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo5.svg" aria-label="логотип партнёров" tabindex="0" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo6.svg" aria-label="логотип партнёров" tabindex="0" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo7.svg" aria-label="логотип партнёров" tabindex="0" alt="logo"></div>
+						<div class="swiper-slide project__swiper-slide"><img src="./img/project/logo8.svg" aria-label="логотип партнёров" tabindex="0" alt="logo"></div>
 					</div>		
-					<div class="swiper-pagination project__swiper-pagination" tabindex="415"></div>
-					<div class="swiper-button-prev swiper-button-prev--project" aria-label="кнопка слайдера назад" tabindex="416"></div>
-					<div class="swiper-button-next swiper-button-next--project" aria-label="кнопка слайдера вперёд" tabindex="417"></div>
+					<div class="swiper-pagination project__swiper-pagination" ></div>
+					<div class="swiper-button-prev swiper-button-prev--project" tabindex="0"></div>
+					<div class="swiper-button-next swiper-button-next--project" tabindex="0"></div>
 				</div>
 			</div>
 		</section>
 		<section class="contacts" id="contacts">
 			<div class="container-fw">
-				<h2 class="contacts-header section-heading" tabindex="418">Контакты</h2>
+				<h2 class="contacts-header section-heading">Контакты</h2>
 				<div class="contacts__wrapper-content">
 					<div class="contacts__wrapper-form">
 						<div class="contacts__wrapper-form-content">
-							<h3 class="contacts__adres" tabindex="419">Шоурум №4</h3>
-							<h3 class="contacts__adres-dscr" aria-label="адресс" tabindex="420">Леонтьевский переулок, дом 5, строение 1</h3>
-							<form class="contacts__form" aria-label="форма обратной связи" tabindex="421" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-							<label class="contacts__callback" tabindex="422" for="name">Заказать обратный звонок
-								<input class="contacts__input" tabindex="423" type="text" id="name" name="Имя" placeholder="Имя">
+							<h3 class="contacts__adres">Шоурум №4</h3>
+							<h3 class="contacts__adres-dscr" tabindex="0">Леонтьевский переулок, дом 5, строение 1</h3>
+							<form class="contacts__form" aria-label="форма обратной связи" tabindex="0" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+							<label class="contacts__callback" tabindex="0" for="name">Заказать обратный звонок
+								<input class="contacts__input" tabindex="0" type="text" id="name" name="Имя" placeholder="Имя">
 							</label>
 							
-							<input class="contacts__input" tabindex="424" type="tel" id="phone" name="phone" placeholder="Телефон">					
-							<button class="contacts__btn" tabindex="425">Заказать</button>
+							<input class="contacts__input" tabindex="0" type="tel" id="phone" name="phone" placeholder="Телефон">					
+							<button class="contacts__btn" tabindex="0">Заказать</button>
 							</form>
-							<p class="contacts__connect" aria-label="связаться через соцсети" tabindex="426">Связаться в один клик</p>
+							<p class="contacts__connect" tabindex="0">Связаться в один клик</p>
 							<div class="contacts__socials-container">
-								<span class="contacts__whatsup"><a class="contacts__whatsup-link" aria-label="иконка ватсап" tabindex="427" href="https://www.whatsapp.com" target="_blank"></a></span>
-								<span class="contacts__telegram"><a class="contacts__telegram-link" aria-label="иконка телеграмм" tabindex="428" href="https://web.telegram.org" target="_blank"></a></span>
+								<span class="contacts__whatsup"><a class="contacts__whatsup-link" href="https://www.whatsapp.com" target="_blank"></a></span>
+								<span class="contacts__telegram"><a class="contacts__telegram-link" href="https://web.telegram.org" target="_blank"></a></span>
 							</div>
 						</div>
 					</div>
-					<div aria-label="яндекс карта" id="map" tabindex="429" style="width: 1920px; height: 700px"></div>
+					<div id="map" tabindex="0" style="width: 1920px; height: 700px"></div>
 				</div>
 			</div>
 		</section>
@@ -1104,12 +1099,12 @@
 			<div class="container">
 				<div class="footer__content">
 					<div class="logo">
-						<img src="./img/footer/Лого.svg" aria-label="логотип" tabindex="430" alt="logo">
+						<img src="./img/footer/Лого.svg" aria-label="логотип" tabindex="0" alt="logo">
 					</div>
 					<div class="footer__social-wrap">
-						<span class="footer__social-item"><a class="footer__social-link footer__link--vk" aria-label="иконка социальной сети вк" tabindex="431" href="https://vk.com" target="_blank"></a></span>
-						<span class="footer__social-item"><a class="footer__social-link footer__link--telegram" aria-label="иконка социальной сети телеграмм" tabindex="432" href="https://web.telegram.org" target="_blank"></a></span>
-						<span class="footer__social-item"><a class="footer__social-link footer__link--facebook" aria-label="иконка социальной сети фэйсбук" tabindex="433" href="https://facebook.com" target="_blank"></a></span>
+						<span class="footer__social-item"><a class="footer__social-link footer__link--vk" href="https://vk.com" target="_blank"></a></span>
+						<span class="footer__social-item"><a class="footer__social-link footer__link--telegram" href="https://web.telegram.org" target="_blank"></a></span>
+						<span class="footer__social-item"><a class="footer__social-link footer__link--facebook" href="https://facebook.com" target="_blank"></a></span>
 					</div>
 				</div>
 			</div>
