@@ -30,15 +30,13 @@
   <script defer src="js/script.js"></script>
   <title>Blanchard</title>
 </head>
-<body>
+<body class="preload">
   <header class="header">
 			<div class="wrapper wrapper-top">
 				<div class="container container--top">
-					<div class="logo logo-top">
-						<a href="#">
+						<a class="logo" href="#">
 							<img class="header__logo-img" src="./img/header-img/svg/logo-header/logo.svg" alt="logo">
 						</a>
-					</div>
 					<nav class="nav nav--mr">
 						<ul class="nav__list">
 							<li class="nav__item"><a class="nav__link scrollto" href="#about">О нас</a></li>
@@ -59,52 +57,50 @@
 						<li class="dropdown">
 							<button class="dropdown-btn">Реализм</button>
 							<ul class="dropdown-content-wrapper" data-simplebar>
-								<li class="dropdown-content wrapper-bottom-item-one">Тинторетто</li>
-								<li class="dropdown-content wrapper-bottom-item-two">Фридрих</li>
-								<li class="dropdown-content wrapper-bottom-item-three">Леонардо</li>
-								<li class="dropdown-content wrapper-bottom-item-four">Верроккьо</li>
-								<li class="dropdown-content wrapper-bottom-item-one">Тинторетто</li>
-								<li class="dropdown-content wrapper-bottom-item-two">Фридрих</li>
-								<li class="dropdown-content wrapper-bottom-item-three">Леонардо</li>
-								<li class="dropdown-content wrapper-bottom-item-four">Верроккьо</li>
+								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
+								<li class="dropdown-content dropdown-item-two">Фридрих</li>
+								<li class="dropdown-content dropdown-item-three">Леонардо</li>
+								<li class="dropdown-content dropdown-item-four">Верроккьо</li>
+								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
+								<li class="dropdown-content dropdown-item-two">Фридрих</li>
+								<li class="dropdown-content dropdown-item-three">Леонардо</li>
+								<li class="dropdown-content dropdown-item-four">Верроккьо</li>
 							</ul>	
 						</li>
-
 						<li class="dropdown">
 							<button class="dropdown-btn">Импрессионизм</button>
 							<ul class="dropdown-content-wrapper" data-simplebar>
-								<li class="dropdown-content wrapper-bottom-item-one">Тинторетто</li>
-								<li class="dropdown-content wrapper-bottom-item-two">Фридрих</li>
-								<li class="dropdown-content wrapper-bottom-item-three">Леонардо</li>
-								<li class="dropdown-content wrapper-bottom-item-four">Верроккьо</li>	
+								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
+								<li class="dropdown-content dropdown-item-two">Фридрих</li>
+								<li class="dropdown-content dropdown-item-three">Леонардо</li>
+								<li class="dropdown-content dropdown-item-four">Верроккьо</li>	
 							</ul>	
 						</li>
-
 						<li class="dropdown">
 							<button class="dropdown-btn">Постимпрессионизм</button>
 							<ul class="dropdown-content-wrapper" data-simplebar>
-								<li class="dropdown-content wrapper-bottom-item-one">Тинторетто</li>
-								<li class="dropdown-content wrapper-bottom-item-two">Фридрих</li>
-								<li class="dropdown-content wrapper-bottom-item-three">Леонардо</li>
-								<li class="dropdown-content wrapper-bottom-item-four">Верроккьо</li>
+								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
+								<li class="dropdown-content dropdown-item-two">Фридрих</li>
+								<li class="dropdown-content dropdown-item-three">Леонардо</li>
+								<li class="dropdown-content dropdown-item-four">Верроккьо</li>
 							</ul>		
 						</li>
 						<li class="dropdown">
 							<button class="dropdown-btn">Авангард</button>
 							<ul class="dropdown-content-wrapper" data-simplebar>
-								<li class="dropdown-content wrapper-bottom-item-one">Тинторетто</li>
-								<li class="dropdown-content wrapper-bottom-item-two">Фридрих</li>
-								<li class="dropdown-content wrapper-bottom-item-three">Леонардо</li>
-								<li class="dropdown-content wrapper-bottom-item-four">Верроккьо</li>
+								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
+								<li class="dropdown-content dropdown-item-two">Фридрих</li>
+								<li class="dropdown-content dropdown-item-three">Леонардо</li>
+								<li class="dropdown-content dropdown-item-four">Верроккьо</li>
 							</ul>		
 						</li>	
 						<li class="dropdown">
 							<button class="dropdown-btn">Футуризм</button>
 							<ul class="dropdown-content-wrapper" data-simplebar>
-								<li class="dropdown-content wrapper-bottom-item-one">Тинторетто</li>
-								<li class="dropdown-content wrapper-bottom-item-two">Фридрих</li>
-								<li class="dropdown-content wrapper-bottom-item-three">Леонардо</li>
-								<li class="dropdown-content wrapper-bottom-item-four">Верроккьо</li>
+								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
+								<li class="dropdown-content dropdown-item-two">Фридрих</li>
+								<li class="dropdown-content dropdown-item-three">Леонардо</li>
+								<li class="dropdown-content dropdown-item-four">Верроккьо</li>
 							</ul>		
 						</li>		
 					</ul>
@@ -121,23 +117,26 @@
 	
 	<main>
 		<section class="hero">
-			<div class="swiper-container swiper-container--hero">
+			<div class="swiper-container hero__wrapper">
 				<div class="swiper-wrapper">
 					<!-- Slides -->
-					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__one"></div>
-					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__two"></div>
-					<div class="swiper-slide swiper-slide-hero swiper-slide-hero__three"></div>
+					<div class="swiper-slide hero__slide hero__slide--one"></div>
+					<div class="swiper-slide hero__slide hero__slide--two"></div>
+					<div class="swiper-slide hero__slide hero__slide--three"></div>
 				</div>
 				<div class="container">
 					<!-- Additional required wrapper -->
-				
-				<div class="swiper-container__content">
-					<h2 class="swiper-container__header">Прикоснитесь к прекрасному</h2>
-					<p class="swiper-container__text">
+				<div class="hero__content">
+					<h2 class="hero__header">
+						Прикоснитесь к прекрасному
+					</h2>
+					<p class="hero__text">
 						Мы вынуждены отталкиваться от того, 
 						что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
 					</p>				
-						<a class="swiper-container__btn-link" href="#">Подписаться на рассылку</a>		
+						<a class="hero__btn-link" href="#">
+							Подписаться на рассылку
+						</a>
 				</div>
 				</div>				
 			</div>			
@@ -187,11 +186,11 @@
 									</select>								
 							</div>
 						</div>
-						<div class="gallery__wrapper-discription">
+						
 							<p class="gallery__download-discription">
 								Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__link-authorization" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
 							</p>
-						</div>
+						
 					</div>
 					<div class="swiper-container gallery__swiper-container">
 						<div class="swiper-wrapper swiper-wrapper--gallery">
@@ -693,9 +692,11 @@
 
 		<section class="events" id="events">
 			<div class="container">
-				<h2 class="events__header">События</h2>
+				<h2 class="events__header section-heading">
+					События
+				</h2>
 				<div class="events__container-cards">
-					<div class="events__wrapper-card section-heading">
+					<div class="events__wrapper-card">
 						<figure>
 							<img class="events__cards-img" src="./img/events/p1.jpg" alt="image picture">
 							<figcaption class="events__name-museum">
@@ -1067,7 +1068,7 @@
 		</section>
 		<section class="contacts" id="contacts">
 			<div class="container-fw">
-				<h2 class="contacts-header section-heading">Контакты</h2>
+				<h2 class="contacts-header">Контакты</h2>
 				<div class="contacts__wrapper-content">
 					<div class="contacts__wrapper-form">
 						<div class="contacts__wrapper-form-content">
@@ -1095,11 +1096,9 @@
 		<footer class="footer" id="footer">
 			<div class="container">
 				<div class="footer__content">
-					<div class="logo">
-						<a href="#">
+						<a class="logo" href="#">
 							<img src="./img/footer/Лого.svg" aria-label="логотип" alt="logo">
 						</a>
-					</div>
 					<div class="footer__social-wrap">
 						<span class="footer__social-item"><a class="footer__social-link footer__link--vk" href="https://vk.com" target="_blank"></a></span>
 						<span class="footer__social-item"><a class="footer__social-link footer__link--telegram" href="https://web.telegram.org" target="_blank"></a></span>

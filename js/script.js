@@ -29,7 +29,7 @@
           myMap.geoObjects.add(myPlacemark);
     };
 
-    let heroSwiper = new Swiper('.swiper-container--hero', {
+    let heroSwiper = new Swiper('.hero__wrapper', {
 
         spaceBetween: 500,
 
@@ -205,26 +205,30 @@
         });
         });
 
-        // function myFunction() {
-         
-        //  let dropContent = document.querySelectorAll('.dropdown');
-        // //  let buttonArr = document.querySelectorAll('.dropdown-btn');
-        //  dropContent.forEach(function(ell){
-        //    ell.addEventListener('click', function(event) {
-        //     let AAAA = event.target.dataset;
-        //     console.log(AAAA)
-        //    })
-        //     //  dropCurrentContent.classList.toggle("show");
-            
-        //    })
-          
-        // }
-        // myFunction();
+// Dropdown предотвращение анимации
+
+// $(document).ready(function(){
+//   $("body").removeClass("preload");
+// });
+
+document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
+  // Если должен быть найден один элемент
+  if((e = document.querySelector("body")) !== null)
+    e.classList.remove('preload'); // Аналог выборки и присвоения класса
+});
 
 
-      
+      // !!!!Header dropdown!!!!!!!! <------|_|
+let dropDownBtn = document.querySelectorAll('.dropdown-btn')
+// console.log(dropDownBtn.classNames)
 document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
   ell.addEventListener('click', function(event) {
+    if(!ell.classList.contains('btn-flip')) {
+      dropDownBtn.forEach(function(btnItem) {  
+        btnItem.classList.remove('btn-flip')
+      })
+      
+    }
     let content = document.querySelectorAll('.dropdown-content-wrapper');
     let checkClass = event.target.parentNode.querySelectorAll(".dropdown-content-wrapper")[0].classList
     if (!checkClass.contains('show')) {
@@ -232,21 +236,28 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
         item.classList.remove('show')
       })
     } 
-    checkClass.toggle("show");
+    ell.classList.toggle('btn-flip')
+    checkClass.toggle('show');
   })
 })
-   
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropdown-btn')) {
-            let dropdowns = document.querySelectorAll(".dropdown-content-wrapper");
-            for (var k = 0; k < dropdowns.length; k++) {
-              var openDropdown = dropdowns[k];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
-          }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-btn')) {
+      let dropdowns = document.querySelectorAll(".dropdown-content-wrapper");
+      document.querySelectorAll('.dropdown-btn').forEach( function (item) {
+        if ( item.classList.contains('btn-flip')) {
+          item.classList.remove('btn-flip')
+          
         }
+      })
+      for (var k = 0; k < dropdowns.length; k++) {
+        var openDropdown = dropdowns[k];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
 
 
 let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(function(item) {
@@ -264,8 +275,6 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
 })
 
 
-    
-   
    $(function() {
 
     let filter = $("[data-key]");
