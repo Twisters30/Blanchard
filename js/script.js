@@ -63,7 +63,7 @@
         },
       });
 
-      let editionsSwiper = new Swiper('.editions__swiper-container', {
+      let editionsSwiper = new Swiper('.editions-goods__container', {
 
         spaceBetween: 50,
         simulateTouch: false,
@@ -87,7 +87,7 @@
         },
       });
 
-      let projectSwiper = new Swiper('.project__swiper-container', {
+      let projectSwiper = new Swiper('.project__container', {
 
         spaceBetween: 50,
         simulateTouch: false,
@@ -111,14 +111,6 @@
         },
       });
 
-    // const element = document.querySelector('.wrapper-bottom__list');
-    
-    // const choices = new Choices(element, {
-    //   searchEnabled: false,
-    //   itemSelectText: '',
-      
-    // });
-
     const multiDefault = () => {
       const elements = document.querySelectorAll('.wrapper-bottom__item');
       elements.forEach(el => {
@@ -134,7 +126,7 @@
       const elements = document.querySelectorAll('.gallery__selector');
       elements.forEach(el => {
         const choicesGallery = new Choices(el, {
-          searchEnabled: true,
+          searchEnabled: false,
           itemSelectText: '',
           placeholderValue: '',
           classNames: {
@@ -166,11 +158,6 @@
       }  
     }
     
-    
-   
-
-
-      // let checkedText = document.querySelector('.')
       let checkBox = document.querySelectorAll('.checkbox__text');
       for (let i = 0; i < checkBox.length; i++) {
         checkBox[i].addEventListener('click', function (event) {
@@ -206,28 +193,23 @@
         });
 
 // Dropdown предотвращение анимации
-
-// $(document).ready(function(){
-//   $("body").removeClass("preload");
-// });
-
-document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
-  // Если должен быть найден один элемент
+document.addEventListener('DOMContentLoaded', function(){ 
   if((e = document.querySelector("body")) !== null)
-    e.classList.remove('preload'); // Аналог выборки и присвоения класса
+    e.classList.remove('preload');
 });
 
 
+
+
       // !!!!Header dropdown!!!!!!!! <------|_|
-let dropDownBtn = document.querySelectorAll('.dropdown-btn')
-// console.log(dropDownBtn.classNames)
+let idDropdownOne = document.querySelector('#dropdown-one');
+let dropDownBtn = document.querySelectorAll('.dropdown-btn') 
 document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
   ell.addEventListener('click', function(event) {
     if(!ell.classList.contains('btn-flip')) {
-      dropDownBtn.forEach(function(btnItem) {  
+        dropDownBtn.forEach(function(btnItem) {  
         btnItem.classList.remove('btn-flip')
-      })
-      
+      }) 
     }
     let content = document.querySelectorAll('.dropdown-content-wrapper');
     let checkClass = event.target.parentNode.querySelectorAll(".dropdown-content-wrapper")[0].classList
@@ -237,7 +219,11 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
       })
     } 
     ell.classList.toggle('btn-flip')
-    checkClass.toggle('show');
+    if(checkClass.contains('show')) {
+      checkClass.remove('show');   
+    } else {  
+      checkClass.add('show');
+    }
   })
 })
 
@@ -317,28 +303,7 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
       })
     })
 
-    // $(function() {
-
-    //   let tabAc = $("data-tab]")
-    //   tabAc.on('click', function(event) {
-    //       let acard = $(this).data('tab');
-      
-        
-    //     $("[data-arrow]").each(function() {
-    //       let icon = $(this).data('arrow');
-    //       if (icon == acard) {
-    //         $(this).addClass('active')
-    //       } else {
-    //         $(this).removeClass('active')
-    //       }
-    //     });
-    //   });
-  
-    //  });
-            
-            
-  
-         
+     
         // TABS CATALOG
         document.addEventListener('DOMContentLoaded', function() {
           document.querySelectorAll('.catalog__tab-btn').forEach(function(tabsBtn) {
@@ -353,123 +318,32 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
         })
 
 
-        // ACARDEON FLIP ICON
+// selector
 
-        // document.addEventListener('DOMContentLoaded', function() {
-        //   document.querySelectorAll('.catalog__item').forEach(function(accardeonBtn) {
-        //     accardeonBtn.addEventListener('click', function(event) {
-        //       const path = event.target.dataset.path
-        //       document.querySelectorAll('.catalog__icon').forEach(function(accardeonContent) {
-        //         path.event.target.classList.remove('active')
-        //         accardeonContent.classList.remove('active')
-             
-        //       })
-        //       document.querySelector(`[data-target="${path}"]`).classList.add('active')
-        //     })
-        //   })
-        // })
-      
-      // const choicesGallery = document.querySelector('.wrapper__container .choices');
-      // console.log(choicesGallery.innerHTML);
-      
+        jQuery(($) => {
+    $('.select').on('click', '.select__head', function () {
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+            $(this).next().fadeOut();
+        } else {
+            $('.select__head').removeClass('open');
+            $('.select__list').fadeOut();
+            $(this).addClass('open');
+            $(this).next().fadeIn();
+        }
+    });
 
-      
-     
-      // if (checkBoxCol.checked) {
-      //   checkedTextCol.style.color = '#9D5CD0'
-      // }
-    
-  
-    
+    $('.select').on('click', '.select__item', function () {
+        $('.select__head').removeClass('open');
+        $(this).parent().fadeOut();
+        $(this).parent().prev().text($(this).text());
+        $(this).parent().prev().prev().val($(this).text());
+    });
 
-//     const miltiIcons = () => {
-//     window.addEventListener('DOMContentLoaded', function(event) {
-//     const elIcons = document.querySelectorAll('.catalog__item');
-//       if (event.target == 'catalog__icon') {
-//     elIcons.forEach(el =>  {
-//       addEventListener('click', function() {        
-//         el.querySelector('.catalog__icon').classList.toggle('active')
-      
-//     })
-//     })
-//   } 
-//   })
-//   }
-
-// miltiIcons();
-
-// let arrAcc = document.querySelectorAll('.catalog__accardeon').forEach(el => {
-//   el.addEventListener('click', function(event) {
-//     let currentTarget = event.target.getElementsByTagName("*");
-
-//   for (let item of currentTarget) {
-//     if (item.classList == "catalog__icon") {
-//       item.classList.toggle('active')
-//     }
-    
-//       console.log(item);
-//   }
-//   })
- 
-// })
-  
- 
-  // console.log(currentTarget)
-  // let icon = document.querySelector('.catalog__icon').addEventListener('click', function (event) {
-  //   let currentIcon = event.target.getAttribute('data-target')
-  //   console.log(currentIcon , currentTarget)
-  //   for (let k = 0; k < currentIcon.length; k++) {
-      
-  //     for (let i = 0; i < currentTarget.length; i++) {
-    
-  //       if (currentTarget[i].getAttribute('data-target') == currentIcon[k].getAttribute('data-target')) {
-  //         // currentIcon[k].classList.toggle('active')
-  //       }
-  //     }
-  //   }
-  // }) 
-
-
-  
-
-    
-  
-
-// arrAcc.forEach (el => {
-//   addEventListener('click', function(event) {
-//     let iconName = event.target.classList.contains('catalog__icon')
-//     console.log(iconName)
-//     if (iconName) {
-//       iconSetArray.classList.toggle('active')
-//     }
-//   });
-// })
-//   if (event.target.classList.contains('catalog__icon')) {
-//     event.target.toggle('is-active')
-//   // } else if (event.target.toggleClass.contains('is-active')) {
-//   //   event.target.classList.remove('is-active')
-//   // }
-//   }
-// });
-
-  // icons.addEventListener('click', function (event) {
-  //   if (event.target == 'catalog__icon') {
-  //     event.target.classList.add('is-active');
-  //   }
-  // })
-
-// $(function() {
-//   $("#selectBackground ul li a").click(function() {
-//       $("catalog__icon").removeClass("active");         
-//       $(this).toggleClass("active");
-//   })
-// });
-
-// $(document).ready(function(){    
-//   $('.catalog__icon').toggle("is-active")
-//   });
-
-//   $('.catalog__icon').on('hidden', function () {
-//      $(".is-close").removeClass("is-close").addClass("is-active");
-//   });
-// });
+    $(document).click(function (e) {
+        if (!$(e.target).closest('.select').length) {
+            $('.select__head').removeClass('open');
+            $('.select__list').fadeOut();
+        }
+    });
+});
