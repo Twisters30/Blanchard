@@ -347,3 +347,4 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
         }
     });
 });
+

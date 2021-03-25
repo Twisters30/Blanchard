@@ -118,27 +118,26 @@
 	<main>
 		<section class="hero">
 			<div class="swiper-container hero__wrapper">
-				<div class="swiper-wrapper">
+				<div class="swiper-wrapper hero__slider">
 					<!-- Slides -->
 					<div class="swiper-slide hero__slide hero__slide--one"></div>
 					<div class="swiper-slide hero__slide hero__slide--two"></div>
 					<div class="swiper-slide hero__slide hero__slide--three"></div>
-				</div>
-				<div class="container">
-					<!-- Additional required wrapper -->
-				<div class="hero__content">
-					<h2 class="hero__header">
-						Прикоснитесь к прекрасному
-					</h2>
-					<p class="hero__text">
-						Мы вынуждены отталкиваться от того, 
-						что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
-					</p>				
-						<a class="hero__btn-link" href="#">
-							Подписаться на рассылку
-						</a>
-				</div>
-				</div>				
+				</div>							
+			</div>
+			<div class="container">
+			<div class="hero__content">
+				<h2 class="hero__header">
+					Прикоснитесь к прекрасному
+				</h2>
+				<p class="hero__text">
+					Мы вынуждены отталкиваться от того, 
+					что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+				</p>				
+					<a class="hero__btn-link" href="#">
+						Подписаться на рассылку
+					</a>
+			</div>
 			</div>			
 		</section>
 
@@ -176,7 +175,12 @@
 							</div>
 						</div>
 							<p class="gallery__download-discription">
-								Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="gallery__link-authorization" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
+								Вам предоставляется 10 бесплатных скачиваний. 
+								Для увеличения количества скачиваний 
+								<a class="gallery__link-authorization" href="#">
+									авторизуйтесь
+								</a>,
+								либо воспользуйтесь лицензией. 
 							</p>
 					</div>
 					<div class="swiper-container gallery__swiper-container">
@@ -225,8 +229,8 @@
 		</section>
 
 		<section class="catalog" id="catalog">
-			<div class="container">
-				<div class="catalog__wrapper-tab section-heading">
+			<div class="container catalog--container">
+				<div class="catalog__wrapper-tab">
 					<h2 class="catalog__header">Каталог</h2>
 					<ul class="catalog__tab-list">
 						<li class="catalog__tab-item"><button class="catalog__tab-btn" data-path="fr"><img class="catalog__tab-btn-img" src="./img/catalog/image-france.png" alt="img counry-flag"></button></li>
@@ -997,12 +1001,13 @@
 										</div>
 									</div>
 							</div>
-							<div class="slider-nav-btn-wrapper slider-nav-btn-wrapper--edition">
+							
+						</div>
+						<div class="slider-nav-btn-wrapper slider-nav-btn-wrapper--edition">
 								<div class="swiper-button-prev swiper-button-prev--edition"></div>
 								<div class="swiper-pagination--gallery swiper-pagination--edition"></div>
 								<div class="swiper-button-next swiper-button-next--edition"></div>
 							</div>
-						</div>
 					</div>
 				</div>		
 		</section>
@@ -1062,11 +1067,9 @@
 							<h3 class="contacts__adres">Шоурум №4</h3>
 							<h3 class="contacts__adres-dscr">Леонтьевский переулок, дом 5, строение 1</h3>
 							<form class="contacts__form" aria-label="форма обратной связи" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-							<label class="contacts__callback" for="name">Заказать обратный звонок
-								<input class="contacts__input" type="text" id="name" name="Имя" placeholder="Имя">
-							</label>
-							
-							<input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Телефон">					
+							<p class="contacts__callback">Заказать обратный звонок</p>							
+								<input class="contacts__input" type="text" id="name" name="Имя" placeholder="Имя*">							
+							<input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Телефон*">					
 							<button class="contacts__btn">Заказать</button>
 							</form>
 							<p class="contacts__connect">Связаться в один клик</p>
