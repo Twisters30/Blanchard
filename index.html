@@ -56,7 +56,7 @@
 					<ul class="wrapper__container-dropdown">
 						<li class="dropdown">
 							<button class="dropdown-btn" data-drop-btn="one" id="btn-one">Реализм</button>
-							<ul class="dropdown-content-wrapper dropdown-one" data-dropdown="one" id="dropdown-one" data-simplebar>
+							<ul class="dropdown-content-wrapper dropdown-one" data-dropdown="one" id="dropdown-one">
 								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
 								<li class="dropdown-content dropdown-item-two">Фридрих</li>
 								<li class="dropdown-content dropdown-item-three">Леонардо</li>
@@ -69,7 +69,7 @@
 						</li>
 						<li class="dropdown">
 							<button class="dropdown-btn" data-drop-btn="two">Импрессионизм</button>
-							<ul class="dropdown-content-wrapper" data-dropdown="two" id="dropdown-two" data-simplebar>
+							<ul class="dropdown-content-wrapper" data-dropdown="two" id="dropdown-two">
 								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
 								<li class="dropdown-content dropdown-item-two">Фридрих</li>
 								<li class="dropdown-content dropdown-item-three">Леонардо</li>
@@ -78,7 +78,7 @@
 						</li>
 						<li class="dropdown">
 							<button class="dropdown-btn" data-drop-btn="three">Постимпрессионизм</button>
-							<ul class="dropdown-content-wrapper" data-dropdown="three" id="dropdown-three" data-simplebar>
+							<ul class="dropdown-content-wrapper" data-dropdown="three" id="dropdown-three">
 								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
 								<li class="dropdown-content dropdown-item-two">Фридрих</li>
 								<li class="dropdown-content dropdown-item-three">Леонардо</li>
@@ -87,7 +87,7 @@
 						</li>
 						<li class="dropdown">
 							<button class="dropdown-btn" data-drop-btn="four">Авангард</button>
-							<ul class="dropdown-content-wrapper" data-dropdown="four" id="dropdown-four" data-simplebar>
+							<ul class="dropdown-content-wrapper" data-dropdown="four" id="dropdown-four">
 								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
 								<li class="dropdown-content dropdown-item-two">Фридрих</li>
 								<li class="dropdown-content dropdown-item-three">Леонардо</li>
@@ -96,7 +96,7 @@
 						</li>	
 						<li class="dropdown">
 							<button class="dropdown-btn" data-drop-btn="six">Футуризм</button>
-							<ul class="dropdown-content-wrapper" data-dropdown="six" id="dropdown-six" data-simplebar>
+							<ul class="dropdown-content-wrapper" data-dropdown="six" id="dropdown-six">
 								<li class="dropdown-content dropdown-item-one">Тинторетто</li>
 								<li class="dropdown-content dropdown-item-two">Фридрих</li>
 								<li class="dropdown-content dropdown-item-three">Леонардо</li>
@@ -117,6 +117,20 @@
 	
 	<main>
 		<section class="hero">
+			<div class="container hero__container">
+				<div class="hero__content">
+					<h2 class="hero__header">
+						Прикоснитесь к прекрасному
+					</h2>
+					<p class="hero__text">
+						Мы вынуждены отталкиваться от того, 
+						что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+					</p>			
+						<a class="hero__btn-link scrollto" href="#contacts">
+							Подписаться на рассылку
+						</a>
+				</div>
+				</div>	
 			<div class="swiper-container hero__wrapper">
 				<div class="swiper-wrapper hero__slider">
 					<!-- Slides -->
@@ -124,21 +138,7 @@
 					<div class="swiper-slide hero__slide hero__slide--two"></div>
 					<div class="swiper-slide hero__slide hero__slide--three"></div>
 				</div>							
-			</div>
-			<div class="container">
-			<div class="hero__content">
-				<h2 class="hero__header">
-					Прикоснитесь к прекрасному
-				</h2>
-				<p class="hero__text">
-					Мы вынуждены отталкиваться от того, 
-					что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
-				</p>				
-					<a class="hero__btn-link" href="#">
-						Подписаться на рассылку
-					</a>
-			</div>
-			</div>			
+			</div>	
 		</section>
 
 		<section class="about" id="about">
@@ -178,8 +178,8 @@
 								Вам предоставляется 10 бесплатных скачиваний. 
 								Для увеличения количества скачиваний 
 								<a class="gallery__link-authorization" href="#">
-									авторизуйтесь
-								</a>,
+									авторизуйтесь,
+								</a>
 								либо воспользуйтесь лицензией. 
 							</p>
 					</div>

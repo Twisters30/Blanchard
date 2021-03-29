@@ -348,3 +348,8 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
     });
 });
 
+
+  document.querySelectorAll('.dropdown-content-wrapper').forEach(el => {
+    new SimpleBar(el)
+  });
+  
