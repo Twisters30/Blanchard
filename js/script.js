@@ -39,7 +39,7 @@
 
       });
 
-      let gallerySwiper = new Swiper('.gallery__swiper-container', {
+      let gallerySwiper = new Swiper('.gallery__slider-container', {
 
         spaceBetween: 50,
         simulateTouch: false,
@@ -348,8 +348,21 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
     });
 });
 
-
-  document.querySelectorAll('.dropdown-content-wrapper').forEach(el => {
-    new SimpleBar(el)
-  });
+document.querySelectorAll('.dropdown-content-wrapper').forEach(el => {
+  new SimpleBar(el)
+});
   
+// document.querySelectorAll('.gallery__figure').forEach(ell => {
+//   ell.addEventListener('mouseenter',function (event) {
+//     if(event.target.classList.contains('gallery__figure')) {
+//       this.classList.add('is-hover')
+//       console.log('да')
+//     } 
+//     false
+//   })
+//   ell.addEventListener('mouseleave', function (event) {
+//     if(event.target.classList.contains('is-hover')) {
+//       event.target.classList.remove('is-hover')
+//     }
+//   })
+// })
