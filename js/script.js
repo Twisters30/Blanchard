@@ -1,5 +1,6 @@
 // Функция ymaps.ready() будет вызвана, когда
 
+
 // const { event } = require("jquery");
 
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
@@ -232,8 +233,7 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
       let dropdowns = document.querySelectorAll(".dropdown-content-wrapper");
       document.querySelectorAll('.dropdown-btn').forEach( function (item) {
         if ( item.classList.contains('btn-flip')) {
-          item.classList.remove('btn-flip')
-          
+          item.classList.remove('btn-flip')       
         }
       })
       for (var k = 0; k < dropdowns.length; k++) {
@@ -245,6 +245,7 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
     }
   }
 
+  // acardeon icon
 
 let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(function(item) {
   item.addEventListener('click', function(event) {
@@ -257,8 +258,16 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
     }
     hasClass.toggle('active')
   })
-  
 })
+
+// let catalogAccardeon = document.querySelectorAll('.catalog__item');
+// catalogAccardeon.forEach(function (ell) {
+//   ell.addEventListener('click', function (event) {
+//     console.log(event.target.classList)
+//   })
+// })
+
+
 
 
    $(function() {
@@ -269,7 +278,7 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
       
       $("[data-cat]").each(function() {
         let workCat = $(this).data('cat');
-        if (workCat != cat) {
+        if (workCat == cat) {
           $(this).addClass('hide')
         } else {
           $(this).removeClass('hide')
@@ -279,7 +288,7 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
 
    });
 
-  //  tabs flip
+  //  acardeon flip
 
   document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll("[data-tab]").forEach(function(tabsBtn) {
@@ -296,9 +305,6 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
                 currentIcon.classList.remove('active')
               }
             }
-            
-          
-
         })
       })
     })
@@ -352,17 +358,118 @@ document.querySelectorAll('.dropdown-content-wrapper').forEach(el => {
   new SimpleBar(el)
 });
   
-// document.querySelectorAll('.gallery__figure').forEach(ell => {
-//   ell.addEventListener('mouseenter',function (event) {
-//     if(event.target.classList.contains('gallery__figure')) {
-//       this.classList.add('is-hover')
-//       console.log('да')
-//     } 
-//     false
-//   })
-//   ell.addEventListener('mouseleave', function (event) {
-//     if(event.target.classList.contains('is-hover')) {
-//       event.target.classList.remove('is-hover')
-//     }
-//   })
-// })
+// Код отвечающий за выбор художника по умолчанию + итаративный выбор
+let  catatalogBtnContainer = $('.catalog__painter-link');
+$.each(catatalogBtnContainer, function (item,value) {
+  $(this).bind('click', function (event) {
+    if(event.target.classList.contains('catalog__painter-link')) {
+      $('.catalog__painter-link').removeClass('main-painter');
+      // console.log($(this))
+      event.target.classList.add('main-painter');
+    }  
+  })
+})
+// Код отвечающий за выбор художника по умолчанию + ремув фокус
+let CatallTabIcon = document.querySelectorAll('.catalog__tab-icon');
+CatallTabIcon.forEach(function (ell) {
+  ell.addEventListener('click', function (event) {
+    $.each(CatallTabIcon, function () {
+      $(this).removeClass('main-country')
+    })
+    if(event.target.classList.contains('catalog__tab-icon')) {
+      ell.classList.add('main-country');
+    }
+  })
+})
+ 
+// Popup(modal)
+
+let arrImg = [
+  './img/galery/swiper-img/slide1.jpg',
+  './img/galery/swiper-img/slide4.jpg',
+  './img/galery/swiper-img/slide2.jpg',
+  './img/galery/swiper-img/slide5.jpg',
+  './img/galery/swiper-img/slide3.jpg',
+  './img/galery/swiper-img/slide6.jpg',
+  './img/galery/swiper-img/slide7.jpg',
+  './img/galery/swiper-img/slide8.jpg',
+  './img/galery/swiper-img/slide9.jpg',
+  './img/galery/swiper-img/slide10.jpg',
+  './img/galery/swiper-img/slide11.jpg',
+  './img/galery/swiper-img/slide12.jpg',
+  './img/galery/swiper-img/slide13.jpg',
+  './img/galery/swiper-img/slide14.jpg',
+  './img/galery/swiper-img/slide15.jpg',
+  './img/galery/swiper-img/slide16.jpg',
+  './img/galery/swiper-img/slide17.jpg',
+  './img/galery/swiper-img/slide18.jpg',
+  './img/galery/swiper-img/slide19.jpg',
+  './img/galery/swiper-img/slide20.jpg',
+  './img/galery/swiper-img/slide21.jpg',
+  './img/galery/swiper-img/slide22.jpg',
+  './img/galery/swiper-img/slide23.jpg',
+  './img/galery/swiper-img/slide24.jpg',
+  './img/galery/swiper-img/slide25.jpg',
+  './img/galery/swiper-img/slide26.jpg',
+  './img/galery/swiper-img/slide27.jpg',
+  './img/galery/swiper-img/slide28.jpg',
+  './img/galery/swiper-img/slide29.jpg',
+  './img/galery/swiper-img/slide30.jpg',
+];
+
+let popupTextObj = {
+  slide : ['Этот текст принадлежит первому слайду',
+          'Этот текст под слайдом номер два',
+          "Этот хочет быть под номером три",
+          'Можешь быть четвёртым',
+          'Ты пятый',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+          ]
+} 
+
+// console.log(popupTextObj)
+let gallImg = document.querySelectorAll('.gallery__figure');
+let iconClose = document.querySelector('.popup__close');
+let popupImg = document.querySelector('.popup__image');
+let popupText = document.querySelector('.popup__text');
+let popup = document.querySelector('.popup');
+let popupOne = document.querySelector('.popup-one');
+let popupNext = document.querySelector('.popup__next-slide');
+let popupPrevSlide = document.querySelector('.popup__prev-slide');
+let currentSlide = 0;
+
+gallImg.forEach(function (image,index) {
+  image.addEventListener('click',function (event) {
+    console.log(index)
+    popupImg.src = arrImg[index]
+    popup.classList.add('popup-active')
+  })
+})
+
+document.addEventListener('keydown', function (e) {
+  if(e.which === 27) {
+    popup.classList.remove('popup-active');
+  }
+})
+
+popup.addEventListener('click', function(event){
+  if(event.target.classList.contains('popup__close')) {
+      popup.classList.remove('popup-active');
+  }   
+  if(event.target.classList.contains('popup__next-slide')) {
+      currentSlide++
+      if(currentSlide === arrImg.length) {
+          currentSlide = 0;
+      }
+      popupImg.src = arrImg[currentSlide];
+      popupText.innerHTML = popupTextObj.slide[currentSlide];         
+  }
+  if(event.target.classList.contains('popup__prev-slide')) {
+      if(currentSlide == 0) {
+          currentSlide = arrImg.length;
+      }
+      --currentSlide;
+      popupImg.src = arrImg[currentSlide];
+      popupText.innerHTML = popupTextObj.slide[currentSlide];
+  }
+})
