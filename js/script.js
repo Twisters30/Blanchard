@@ -245,29 +245,29 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
     }
   }
 
-  // acardeon icon
+  // catalog acardeon icon flip
 
-let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(function(item) {
-  item.addEventListener('click', function(event) {
-    let icon = document.querySelectorAll('.catalog__icon');
-    let hasClass = event.target.parentNode.querySelectorAll('.catalog__icon')[0].classList
-    if (!hasClass.contains('active')) {
-      icon.forEach(function (ellem) {
-        ellem.classList.remove('active')
-      })
+document.querySelectorAll('.ui-icon').forEach(function (el) {
+  el.remove()
+})
+
+let icons = document.querySelectorAll('.catalog__icon');
+let catalogAccardeon = document.querySelectorAll('.catalog__item');
+
+catalogAccardeon.forEach((acardeon) => {
+  acardeon.addEventListener('click', function (event) {
+    catalogAccardeon.forEach( (ell) => {
+      ell.firstElementChild.firstElementChild.classList.remove('is-icon-flip');
+    })
+    if(event.target.classList.contains('ui-state-active')) {
+      event.target.firstElementChild.firstElementChild.classList.add('is-icon-flip')
+    } else {
+      event.target.firstElementChild.firstElementChild.classList.remove('is-icon-flip')
     }
-    hasClass.toggle('active')
   })
 })
 
-// let catalogAccardeon = document.querySelectorAll('.catalog__item');
-// catalogAccardeon.forEach(function (ell) {
-//   ell.addEventListener('click', function (event) {
-//     console.log(event.target.classList)
-//   })
-// })
-
-
+   
 
 
    $(function() {
@@ -279,9 +279,9 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item').forEach(funct
       $("[data-cat]").each(function() {
         let workCat = $(this).data('cat');
         if (workCat == cat) {
-          $(this).addClass('hide')
+          $(this).addClass('active-content')
         } else {
-          $(this).removeClass('hide')
+          $(this).removeClass('active-content')
         }
       });
     });
