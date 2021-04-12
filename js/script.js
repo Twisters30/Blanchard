@@ -158,30 +158,6 @@
         showMore.classList.add('read-more')
       }  
     }
-    
-      let checkBox = document.querySelectorAll('.checkbox__text');
-      for (let i = 0; i < checkBox.length; i++) {
-        checkBox[i].addEventListener('click', function (event) {
-          if (event.target.classList == 'checkbox__text') {
-            checkBox[i].classList.add('purple-iput')
-         } else {
-          checkBox[i].classList.remove('purple-iput')
-         }
-        })
-      }
-      
-      let check = document.querySelectorAll('.checkbox__label')
-      for (let k = 0; k < check.length; k++) {
-        check[k].addEventListener('keypress', function (event) {
-          if (event.target.classList == 'checkbox__text') {
-            check[k].classList.add('purple-iput')
-          } else {
-            check[k].classList.remove('purple-iput')
-          }
-        })
-        
-      }
-
 
       // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Плавный скрол!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       jQuery(document).ready(function() {
@@ -266,6 +242,11 @@ catalogAccardeon.forEach((acardeon) => {
     }
   })
 })
+catalogAccardeon.forEach((el, i) => {
+  if(i === catalogAccardeon.length -1) {
+    el.classList.add('end')
+  }
+})
 
    
 
@@ -312,8 +293,21 @@ catalogAccardeon.forEach((acardeon) => {
      
         // TABS CATALOG
         document.addEventListener('DOMContentLoaded', function() {
+          setDisplay(`[data-country="italy"]`, 'initial')
           document.querySelectorAll('.catalog__tab-btn').forEach(function(tabsBtn) {
             tabsBtn.addEventListener('click', function(event) {
+              setDisplay(`.catalog__painter-link`, 'none')
+              if(event.currentTarget.dataset.path === 'fr') {
+                setDisplay(`[data-country="fr"]`, 'initial')
+              } else if (event.currentTarget.dataset.path === 'ger') {
+                setDisplay(`[data-country="ger"]`, 'initial')
+              } else if (event.currentTarget.dataset.path === 'italy') {
+                setDisplay(`[data-country="italy"]`, 'initial')
+              } else if (event.currentTarget.dataset.path === 'rus') {
+                setDisplay(`[data-country="rus"]`, 'initial')
+              } else if (event.currentTarget.dataset.path === 'belg') {
+                setDisplay(`[data-country="belg"]`, 'initial')
+              }
               const path = event.currentTarget.dataset.path
               document.querySelectorAll('.catalog__tab-text').forEach(function(tabContent) {
                 tabContent.classList.remove('tab-active')
@@ -322,7 +316,11 @@ catalogAccardeon.forEach((acardeon) => {
             })
           })
         })
-
+        function setDisplay(selector, style) {
+          document.querySelectorAll(selector).forEach((el,) => {
+            el.style.display = style;
+          })
+        }
 
 // selector
 
@@ -373,6 +371,7 @@ $.each(catatalogBtnContainer, function (item,value) {
 let CatallTabIcon = document.querySelectorAll('.catalog__tab-icon');
 CatallTabIcon.forEach(function (ell) {
   ell.addEventListener('click', function (event) {
+    event.target.dataset
     $.each(CatallTabIcon, function () {
       $(this).removeClass('main-country')
     })
@@ -381,9 +380,12 @@ CatallTabIcon.forEach(function (ell) {
     }
   })
 })
- 
-// Popup(modal)
+// CatallTabIcon.forEach((ell) =>{
+//   ell.
+// })
 
+
+// Popup(modal)
 let arrImg = [
   './img/galery/swiper-img/slide1.jpg',
   './img/galery/swiper-img/slide4.jpg',
