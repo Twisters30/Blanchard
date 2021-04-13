@@ -1385,8 +1385,10 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	height: 300px;
+	max-height: 320px;
 	width: 0;
+	height: auto;
+	margin-bottom: 28px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1396,7 +1398,8 @@ body {
 	padding-top: 1.5px;
 	font-size: 16px;
 	line-height: 32px;
-	color: var(--color-black3);	
+	color: var(--color-black3);
+	transition: height 300ms linear;
 }
 
 .catalog__wrapper-painter-list {
@@ -1430,12 +1433,14 @@ body {
 }
 
 .ui-accordion .ui-accordion-content {
-	height: 342px;
+	max-height: 342px;
+	height: auto !important;
 	padding: 25px 25px 0 0;
 	border-left: none;
 	border-right: none;
 	border-top: 1px solid var(--color-purple);
     border-bottom-color: var(--color-purple);
+	overflow-y: hidden;
 }
 
 .catalog__item::after {

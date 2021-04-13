@@ -293,20 +293,22 @@ catalogAccardeon.forEach((el, i) => {
      
         // TABS CATALOG
         document.addEventListener('DOMContentLoaded', function() {
-          setDisplay(`[data-country="italy"]`, 'initial')
+          document.querySelectorAll(`[data-country="italy"]`).forEach((el) => {
+            el.style.display = 'initial';
+          })
           document.querySelectorAll('.catalog__tab-btn').forEach(function(tabsBtn) {
             tabsBtn.addEventListener('click', function(event) {
               setDisplay(`.catalog__painter-link`, 'none')
               if(event.currentTarget.dataset.path === 'fr') {
-                setDisplay(`[data-country="fr"]`, 'initial')
+                setDisplay(`[data-country="fr"]`, 'initial');
               } else if (event.currentTarget.dataset.path === 'ger') {
-                setDisplay(`[data-country="ger"]`, 'initial')
+                setDisplay(`[data-country="ger"]`, 'initial');
               } else if (event.currentTarget.dataset.path === 'italy') {
-                setDisplay(`[data-country="italy"]`, 'initial')
+                setDisplay(`[data-country="italy"]`, 'initial');
               } else if (event.currentTarget.dataset.path === 'rus') {
-                setDisplay(`[data-country="rus"]`, 'initial')
+                setDisplay(`[data-country="rus"]`, 'initial');
               } else if (event.currentTarget.dataset.path === 'belg') {
-                setDisplay(`[data-country="belg"]`, 'initial')
+                setDisplay(`[data-country="belg"]`, 'initial');
               }
               const path = event.currentTarget.dataset.path
               document.querySelectorAll('.catalog__tab-text').forEach(function(tabContent) {
@@ -317,9 +319,32 @@ catalogAccardeon.forEach((el, i) => {
           })
         })
         function setDisplay(selector, style) {
-          document.querySelectorAll(selector).forEach((el,) => {
+          document.querySelectorAll(selector).forEach((el,i) => {
             el.style.display = style;
+            if (i === 0) {
+              addClass('main-painter',el)
+            } else {
+              el.classList.remove('main-painter')
+            }           
           })
+        }
+
+        function addClass(classAdd,element) {
+          element.classList.add(classAdd);
+              index = element.dataset.key
+              document.querySelectorAll('.catalog__content').forEach((ell) =>{                         
+                if (ell.dataset.cat === index) {
+                  ell.classList.add('active-content')
+                  ell.children.forEach((child) => {
+                    child.classList.add('active-content')
+                  })
+                } else {
+                  ell.classList.remove('active-content')
+                  ell.children.forEach((child) => {
+                    child.classList.remove('active-content')
+                  })
+                }
+              })
         }
 
 // selector
