@@ -1433,8 +1433,6 @@ body {
 }
 
 .ui-accordion .ui-accordion-content {
-	max-height: 342px;
-	height: auto !important;
 	padding: 25px 25px 0 0;
 	border-left: none;
 	border-right: none;

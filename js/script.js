@@ -142,6 +142,7 @@
 
     $( "#catalog__accardeon" ).accordion({
       collapsible: true,
+      heightStyle: "content",
     });
 
     // Показать ещё
@@ -298,9 +299,10 @@ catalogAccardeon.forEach((el, i) => {
           })
           document.querySelectorAll('.catalog__tab-btn').forEach(function(tabsBtn) {
             tabsBtn.addEventListener('click', function(event) {
+              $("#catalog__accardeon").accordion("option", "active", 0);
               setDisplay(`.catalog__painter-link`, 'none')
               if(event.currentTarget.dataset.path === 'fr') {
-                setDisplay(`[data-country="fr"]`, 'initial');
+                setDisplay(`[data-country="fr"]`, 'initial');               
               } else if (event.currentTarget.dataset.path === 'ger') {
                 setDisplay(`[data-country="ger"]`, 'initial');
               } else if (event.currentTarget.dataset.path === 'italy') {
@@ -318,6 +320,7 @@ catalogAccardeon.forEach((el, i) => {
             })
           })
         })
+
         function setDisplay(selector, style) {
           document.querySelectorAll(selector).forEach((el,i) => {
             el.style.display = style;
