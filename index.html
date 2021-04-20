@@ -12,10 +12,8 @@
   <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <!-- <link rel="stylesheet" href="css/choices.min.css"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-
   <!-- simplebar -->
   <script defer src="js/simplebar.min.js"></script>
   <!-- jquery -->
@@ -25,8 +23,6 @@
   <script defer src="node_modules/swiper/swiper-bundle.min.js"></script>
   <script defer src="https://api-maps.yandex.ru/2.1/?apikey=vashAPI-key&lang=ru_RU">
   </script>
-  <!-- <script defer src="js/choices.min.js"></script> -->
-  <!-- <script defer src="js/cotalog-img.js"></script> -->
   <script defer src="js/script.js"></script>
   <title>Blanchard</title>
 </head>
@@ -132,12 +128,12 @@
 				</div>
 				</div>	
 			<div class="swiper-container hero__wrapper">
-				<div class="swiper-wrapper hero__slider">
+				<ul class="swiper-wrapper hero__slider">
 					<!-- Slides -->
-					<div class="swiper-slide hero__slide hero__slide--one"></div>
-					<div class="swiper-slide hero__slide hero__slide--two"></div>
-					<div class="swiper-slide hero__slide hero__slide--three"></div>
-				</div>							
+					<li class="swiper-slide hero__slide hero__slide--one"></li>
+					<li class="swiper-slide hero__slide hero__slide--two"></li>
+					<li class="swiper-slide hero__slide hero__slide--three"></li>
+				</ul>							
 			</div>	
 		</section>
 
@@ -807,8 +803,8 @@
 				<h2 class="events__header section-heading">
 					События
 				</h2>
-				<div class="events__container-cards">
-					<div class="events__wrapper-card">
+				<ul class="events__container-cards">
+					<li class="events__wrapper-card">
 						<figure>
 							<img class="events__cards-img" src="./img/events/p1.jpg" alt="image picture">
 							<figcaption class="events__name-museum">
@@ -828,9 +824,9 @@
 							<div class="event__wrapper-link">
 								<a class="events__link ui-custom" href="#">Подробнее</a>
 							</div>
-					</div>
+					</li>
 					
-					<div class="events__wrapper-card">
+					<li class="events__wrapper-card">
 						<figure>
 							<img class="events__cards-img" src="./img/events/p2.jpg" alt="image picture">
 							<figcaption class="events__name-museum">
@@ -849,9 +845,9 @@
 						<div class="event__wrapper-link">
 							<a class="events__link ui-custom" href="#">Подробнее</a>
 						</div>
-					</div>
+					</li>
 
-					<div class="events__wrapper-card">
+					<li class="events__wrapper-card">
 						<figure>
 							<img class="events__cards-img" src="./img/events/p3.jpg" alt="image picture">
 							<figcaption class="events__name-museum">
@@ -869,10 +865,9 @@
 						<div class="event__wrapper-link">
 							<a class="events__link ui-custom" href="#">Подробнее</a>
 						</div>
-					</div>
+					</li>
 
-					<div class="read-more" id="events-cards">
-						<div class="events__wrapper-card">
+						<li class="events__wrapper-card read-more" id="events-cards">
 							<figure>
 								<img class="events__cards-img" src="./img/events/p4.jpg" alt="image picture">
 								<figcaption class="events__name-museum">
@@ -890,9 +885,9 @@
 							<div class="event__wrapper-link">
 								<a class="events__link ui-custom" href="#">Подробнее</a>
 							</div>
-						</div>
+						</li>
 	
-						<div class="events__wrapper-card">
+						<li class="events__wrapper-card read-more">
 							<figure>
 								<img class="events__cards-img" src="./img/events/p5.jpg" alt="image picture">
 								<figcaption class="events__name-museum">
@@ -910,9 +905,8 @@
 							<div class="event__wrapper-link">
 								<a class="events__link ui-custom" href="#">Подробнее</a>
 							</div>
-						</div>
-					</div>
-				</div>				
+						</li>
+				</ul>				
 				<div class="events__btn-all__wrapper-link">
 					<a class="events__btn-all-events scrollto" id="btn-all-events" href="#events-cards">Все события</a>
 				</div>
@@ -1122,13 +1116,12 @@
 										</div>
 									</div>
 							</div>
-							
 						</div>
 						<div class="slider-nav-btn-wrapper slider-nav-btn-wrapper--edition">
-								<div class="swiper-button-prev swiper-button-prev--edition"></div>
-								<div class="swiper-pagination--gallery swiper-pagination--edition"></div>
-								<div class="swiper-button-next swiper-button-next--edition"></div>
-							</div>
+							<div class="swiper-button-prev swiper-button-prev--edition"></div>
+							<div class="swiper-pagination--edition"></div>
+							<div class="swiper-button-next swiper-button-next--edition"></div>
+						</div>
 					</div>
 				</div>		
 		</section>
@@ -1140,19 +1133,13 @@
 						фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не 
 						уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
 						Прежде всего, постоянное <br> информационно-пропагандистское 
-						<span class="project__icon-tooltip"></span>
-						<span class="project__popup">						
-						Пример современных тенденций - современная методология разработки!
-						</span>
-						 обеспечение нашей деятельности однозначно 
+						<span class="project__tooltip tooltip-one" tabindex="1"></span>					
+						обеспечение нашей деятельности однозначно 
 						фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия
 						представителей оппозиции могут быть рассмотрены
-						<span class="project__icon-tooltip"></span>
-						<span class="popup-2">
-							Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции
-						</span>
-						 исключительно в разрезе маркетинговых и финансовых <span class="project__icon-tooltip"></span>
-							<span class="popup-3">В стремлении повысить качество </span>
+						<span class="project__tooltip tooltip-two" tabindex="1"></span>	
+						 исключительно в разрезе маркетинговых и финансовых 
+						 <span class="project__tooltip tooltip-thre" tabindex="1"></span>	
 						предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
 						призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными 
 						до степени совершенной неузнаваемости. Подробнее: <a class="project__link ui-custom" href="#">blanchard-art.ru/projects/about</a>
@@ -1161,17 +1148,17 @@
 				<div class="project__wrapper-slider">
 					<div class="swiper-container project__container" >
 						<!-- Additional required wrapper -->
-						<div class="swiper-wrapper project__images-wrapper">
+						<ul class="swiper-wrapper project__images-wrapper">
 							<!-- Slides -->
-							<div class="swiper-slide project__images" tabindex="1"><img src="./img/project/logo1.svg" alt="logo"></div>
-							<div class="swiper-slide project__images" tabindex="1"><img src="./img/project/logo2.svg" alt="logo"></div>
-							<div class="swiper-slide project__images" tabindex="1"><img src="./img/project/logo3.svg" alt="logo"></div>
-							<div class="swiper-slide project__images" tabindex="1"><img src="./img/project/logo4.svg" alt="logo"></div>
-							<div class="swiper-slide project__images" tabindex="1"><img src="./img/project/logo5.svg" alt="logo"></div>
-							<div class="swiper-slide project__images" tabindex="1"><img src="./img/project/logo6.svg" alt="logo"></div>
-							<div class="swiper-slide project__images" tabindex="1"><img src="./img/project/logo7.svg" alt="logo"></div>
-							<div class="swiper-slide project__images" tabindex="1"><img src="./img/project/logo8.svg" alt="logo"></div>
-						</div>		
+							<li class="swiper-slide project__images" tabindex="1"><img src="./img/project/freelands-foundation.jpg" alt="logo"></li>
+							<li class="swiper-slide project__images" tabindex="1"><img src="./img/project/inst-art.jpg" alt="logo"></li>
+							<li class="swiper-slide project__images" tabindex="1"><img src="./img/project/workhouse.jpg" alt="logo"></li>
+							<li class="swiper-slide project__images" tabindex="1"><img src="./img/project/1849.jpg" alt="logo"></li>
+							<li class="swiper-slide project__images" tabindex="1"><img src="./img/project/hiscox.jpg" alt="logo"></li>
+							<li class="swiper-slide project__images" tabindex="1"><img src="./img/project/camden.jpg" alt="logo"></li>
+							<li class="swiper-slide project__images" tabindex="1"><img src="./img/project/stassen.jpg" alt="logo"></li>
+							<li class="swiper-slide project__images" tabindex="1"><img src="./img/project/wats.jpg" alt="logo"></li>
+						</ul>		
 						<div class="swiper-pagination project__swiper-pagination" ></div>
 					</div>
 					<div class="swiper-button-prev swiper-button-prev--project"></div>

@@ -41,7 +41,6 @@
       });
 
       let gallerySwiper = new Swiper('.gallery__slider-container', {
-
         spaceBetween: 50,
         simulateTouch: false,
         slidesPerView: 3,
@@ -65,7 +64,6 @@
       });
 
       let editionsSwiper = new Swiper('.editions-goods__container', {
-
         spaceBetween: 50,
         simulateTouch: false,
         slidesPerView: 3,
@@ -86,6 +84,7 @@
           el: '.swiper-pagination--edition',
           type: 'fraction',
         },
+        
       });
 
       let projectSwiper = new Swiper('.project__container', {
@@ -107,7 +106,7 @@
       
         // pagination
         pagination: {
-          el: '.swiper-pagination--edition',
+          el: '',
           type: 'fraction',
         },
       });
@@ -147,17 +146,20 @@
 
     // Показать ещё
     let showMoreBtn = document.getElementById('btn-all-events')
-    let showMore = document.querySelector('.read-more')
+    let showMore = document.querySelectorAll('.read-more');
    showMoreBtn.onclick = function showContent() {
-      if (showMore.classList.contains('read-more')) {        
-        showMore.classList.remove('read-more')
-        showMore.classList.add('show-more')
+    showMore.forEach((ell) => {
+      if (ell.classList.contains('read-more')) {        
+        ell.classList.remove('read-more')
+        ell.classList.add('show-more')
         showMoreBtn.innerHTML = 'Скрыть'
       } else {
         showMoreBtn.innerHTML = 'Все события'
-        showMore.classList.remove('show-more')
-        showMore.classList.add('read-more')
+        ell.classList.remove('show-more')
+        ell.classList.add('read-more')
       }  
+    })
+      
     }
 
       // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Плавный скрол!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
