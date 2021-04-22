@@ -650,9 +650,9 @@ body {
 }
 
 
-.hero__slider {
+/* .hero__slider {
 	max-height: 700px;
-}
+} */
 
 .hero__slide {
 	height: 800px;
@@ -834,6 +834,7 @@ body {
 /* gallery */
 
 .gallery__header {
+	margin-bottom: 15px;
 	color: var(--color-white);
 }
 
@@ -856,10 +857,6 @@ body {
 	display: flex;
 }
 
-.gallery__wrapper-selector {
-	padding-top: 15px;
-}
-
 .gallery__slider-container {
 	padding-top: 85px;
 	margin-left: 0px;
@@ -869,7 +866,7 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	width: 400px;
+	flex: 0 0 25%;
 	margin-right: 50px;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -889,7 +886,7 @@ body {
 }
 
 .gallery__slider-wrapper {
-	width: 1150px !important;
+	/* width: 1150px !important; */
 	max-height: 800px;
 }
 
@@ -1959,13 +1956,6 @@ body {
 
 .editions-goods__content-conteiner {
 	margin-top: 61px;
-	width: 350px;
-	height: 390px;
-}
-
-.edition__swiper-img {
-	max-width: 100%;
-	height: 100%;
 }
 
 .slider-nav-btn-wrapper--edition {
@@ -2078,18 +2068,6 @@ body {
 	line-height: 32px;
 }
 
-.project__icon-tooltip {
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	background-image: url(../img/project/icon-text.svg);
-	background-size: contain;
-	cursor: pointer;
-	-webkit-transform: translate(-1px, 3px);
-	    -ms-transform: translate(-1px, 3px);
-	        transform: translate(-1px, 3px);
-}
-
 .project__link {
 	color: var(--color-purple);
 	letter-spacing: 0.3px;
@@ -2098,17 +2076,21 @@ body {
 .project__tooltip {
     position: relative;
     display: inline-block;
+	padding: 0;
     width: 16px;
     height: 16px;
     background-image: url(../img/project/icon-text.svg);
-    cursor: pointer;
+    border: none;
+	background-color: transparent;
+	cursor: pointer;
+	transform: translateY(-5px);
 }
 
-.project__tooltip::before {
+ .project__tooltip::before {
 	content:'';
     position: absolute;
 	left: 100%;
-    bottom: 11px;
+    bottom: 13px;
     margin-left: -16px;
     border: 7px solid transparent;
     border-top: 10px solid #CACACA;
@@ -2117,54 +2099,61 @@ body {
 	transition: opacity 400ms linear, visibility 500ms linear;
 }
 
-.project__tooltip::after {
-    position: absolute;
-	bottom: 28px;
-    left: -125px;
-    width: 242px;
-    height: 20px;
+.project__tooltip:focus + .tooltip,
+.project__tooltip:active + .tooltip,
+.project__tooltip:hover + .tooltip,
+.project__tooltip:active::before,
+.project__tooltip:focus::before,
+.project__tooltip:hover::before {
+	opacity: 1;
+	visibility: visible;
+}
+
+.project__tooltip-box {
+	position: relative;
+}
+
+.tooltip {
+	position: absolute;
+	bottom: 42px;
+    left: -124px;
+    width: 263px;
+    height: 50px;
     padding: 8px 11px 22px 11px;
     background-color: #CACACA;
 	color: #fff;
-    font-family: var(--font-open-sans-semi-bold);
-    opacity: 0;
-    visibility: hidden;
 	font-size: 12px;
 	line-height: 16px;
 	text-align: center;
-    transition: opacity 400ms linear, visibility 500ms linear;
+    font-family: var(--font-open-sans-semi-bold);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(10px);
+	transition: opacity .3s ease-in-out,transform .3s ease-in-out,visibility .3s ease-in-out;
+  }
+
+.tooltip-two {
+	bottom: 41px;
+    left: -124px;
+    width: 263px;
+    height: 64px;
 }
 
-.tooltip-one::after {
-	height: 20px;
-    content: 'Пример современных тенденций - современная методология разработки';
-}
-
-.tooltip-two::after {
-	position: absolute;
-	content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции';
-	bottom: 26px;
-    left: -125px;
-    width: 242px;
-    height: 34px;
-}
-
-.tooltip-thre::after {
-    content: 'В стремлении повысить качество';
-	bottom: 26px;
+.tooltip-three {
+	bottom: 41px;
     left: -109px;
-    width: 209px;
-    height: 4px;
+    width: 232px;
+    height: 33px;
 }
 
-.project__tooltip:active::before,
-.project__tooltip:focus::before,
-.project__tooltip:hover::before, 
-.project__tooltip:active::after,
-.project__tooltip:focus::after,
-.project__tooltip:hover::after {
-    opacity: 1;
-    visibility: visible;
+.visually-hidden {
+	clip-path: inset(100%);
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
 
 /* project__swiper */
@@ -2186,8 +2175,6 @@ body {
 }
 
 .project__images {
-	width: 450px !important;
-	height: 150px;
 	margin-right: 50px;
 	filter: grayscale(1);
 	background-size: cover;
@@ -2273,7 +2260,7 @@ body {
 }
 
 .contacts__wrapper-form {
-	padding: 123px 121px 0px 160px;
+	padding: calc(7% - 13px) calc(7% - 12px) calc(7% - 15px) calc(9% - 13px);
 	border-top: 1px solid #CACACA;
 	border-right: 1px solid #CACACA;
 }
@@ -2367,6 +2354,13 @@ body {
 	color: var(--color-white);
 }
 
+.contacts__btn:active::before {
+-webkit-box-shadow: 0px 0px 0px 2px rgba(194, 131, 243, 1);
+	-moz-box-shadow: 0px 0px 0px 2px rgba(194, 131, 243, 1);
+	box-shadow: 0px 0px 0px 2px rgba(194, 131, 243, 1);
+	border-radius: 100px;
+}
+
 .contacts__connect {
 	margin-bottom: 17px;
 	font-size: 24px;
@@ -2377,7 +2371,6 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin-top: 13px;
 }
 
 .contacts__whatsup {
@@ -2386,8 +2379,8 @@ body {
 
 .contacts__whatsup-link {
 	display: block;
-	width: 38.74px;
-	height: 38.74px;
+	width: 38px;
+	height: 38px;
 	background-image: url(../img/contacts/Whatsapp-Icon.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -2395,11 +2388,42 @@ body {
 
 .contacts__telegram-link {
 	display: block;
-	width: 38.74px;
-	height: 38.74px;
+	width: 38px;
+	height: 38px;
 	background-image: url(../img/contacts/Telegram_icon.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+.socials-link{
+	position: relative;
+	outline: none;
+}
+
+.socials-link::before {
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	-webkit-box-shadow: 0px 0px 0px 2px rgba(121, 67, 164, 1);
+	-moz-box-shadow: 0px 0px 0px 2px rgba(121, 67, 164, 1);
+	box-shadow: 0px 0px 0px 2px rgba(121, 67, 164, 1);
+    border-radius: 100px;
+    opacity: 0;
+    transition: opacity 350ms linear;
+}
+
+.socials-link:focus::before,
+.socials-link:hover::before {
+	opacity: 1;
+}
+
+.socials-link:active::before {
+	-webkit-box-shadow: 0px 0px 0px 2px rgba(209, 169, 240, 1);
+	-moz-box-shadow: 0px 0px 0px 2px rgba(209, 169, 240, 1);
+	box-shadow: 0px 0px 0px 2px rgba(209, 169, 240, 1);
 }
 
 .container-fw {
@@ -2437,15 +2461,19 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
-    width: 175px;
+    /* width: 175px; */
 }
 
 .footer__social-link {
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 46px;
+	height: 46px;
 	background-repeat: no-repeat;
 	cursor: pointer;
+}
+
+.footer__social-link:not(:last-child) {
+	margin-right: 18px;
 }
 
 .footer__link--vk {
