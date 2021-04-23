@@ -173,6 +173,7 @@ body {
 	font-size: 18px;
 	line-height: 25px;
 	white-space: nowrap;
+	transition: color 200ms;
 }
 
 .nav__link:focus {
@@ -261,7 +262,7 @@ body {
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
-	margin-top: 22px;
+	transform: translateY(22px);
 	padding: 40px;
 	width: 300px;
 	max-height: 300px;
@@ -393,7 +394,7 @@ body {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
-	transition: transform 200ms ease-in-out;
+	transition: color 200ms linear, transform 200ms ease-in-out;
 }
 
 .dropdown-btn:hover::after {
@@ -422,7 +423,7 @@ body {
     background-image: url(../img/header-img/svg/header-bird.svg);
     background-repeat: no-repeat;
 	transform: translate(0px, 0px) rotate(0deg);
-	transition: transform 200ms linear;
+	transition: transform 200ms linear, background-image 200ms;
 }
 
 /* helper class */
@@ -449,7 +450,6 @@ body {
 	position: relative;
 	font-size: 18px;
 	line-height: 25px;
-	
 }
 
 .dropdown:not(:last-child) {
@@ -592,6 +592,7 @@ body {
 	font-size: 18px;
 	line-height: 25px;
 	cursor: pointer;
+	transition: border-color 200ms;
 }
 
 .search-form__input:hover {
@@ -623,6 +624,7 @@ body {
     width: 23px;
     height: 20px;
 	cursor: pointer;
+	transition: background-image 200ms;
 }
 
 .container-bottom__input-submit {
@@ -632,9 +634,9 @@ body {
 /* hero */
 
 .hero {
-	/* min-height: 700px; */
     position: relative;
-    margin-top: -70px;
+    margin-top: -70px; /* не придумал другова споособа как сделать наезд 
+	hero на header */
 }
 
 .hero__wrapper {
@@ -671,8 +673,8 @@ body {
 }
 
 .hero__header {
-	margin-left: -5px;
 	margin-bottom: 19px;
+	transform: translateX(-5px);
 	font-family: var(--font-open-sans-bold);	
 	font-size: 72px;
 	line-height: 82.8px;
@@ -877,16 +879,7 @@ body {
 	justify-content: space-between;
 }
 
-.swiper-container--gallery {
-	position: relative;
-	width: 1200px;
-	height: 865px;
-	margin-top: 162px;
-	margin-left: 50px;
-}
-
 .gallery__slider-wrapper {
-	/* width: 1150px !important; */
 	max-height: 800px;
 }
 
@@ -1085,7 +1078,6 @@ body {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 	border: 1px solid #999;
     border-radius: 6px;
-    margin-top: 5px;
     max-height: 205px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -1287,6 +1279,7 @@ body {
 .catalog__painter {
 	position: relative;
 	width: 750px;
+	margin-right: 50px;
 }
 
 .catalog__painter-wrapper {
@@ -1357,7 +1350,6 @@ body {
 
 .catalog__accardeon {
 	min-width: 800px;
-	margin-left: 50px;
 }
 
 /* catalog__accardeoN */
@@ -1479,7 +1471,7 @@ body {
 
 .ui-accordion .ui-accordion-header {
 	margin-top: 0px;
-    padding: 37px 0px 43.7px 0px;
+    padding: 37px 0px 44px 0px;
 	border-left: none;
 	border-right: none;
 }
@@ -1569,6 +1561,7 @@ body {
 
 .events {
 	padding-top: 84px;
+	margin-bottom: 78px;
 } 
 
 
@@ -1743,12 +1736,6 @@ body {
 	box-shadow: 0px 0px 0px 2px rgba(194, 131, 243, 1);
 }
 
-.wrapper-btn-all-events {
-	display: inline-block;
-    padding: 3px;
-    margin-left: calc(50% - 94.3px);
-}
-
 .events__btn-link {
 	color: var(--color-purple);
 }
@@ -1757,7 +1744,6 @@ body {
 
 .editions {
 	padding-top: 80px;
-	margin-top: 78px;
 	background-image: url(../img/Editions/bg-section-editions.jpg);
 }
 
@@ -1950,12 +1936,8 @@ body {
 }
 
 .editions-goods__container {
-	margin-top: 34px;
+	padding-top: 94px;
 	padding-left: 5px;
-}
-
-.editions-goods__content-conteiner {
-	margin-top: 61px;
 }
 
 .slider-nav-btn-wrapper--edition {
@@ -2246,7 +2228,7 @@ body {
 
 .contacts-header {
 	margin-bottom: 16px;
-	margin-left: 160px;
+	padding-left: calc(9% - 15px);
 	color: var(--color-black3);
 	font-size: 48px;
 	line-height: 65px;
@@ -2256,7 +2238,6 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin-top: 16px;
 }
 
 .contacts__wrapper-form {
@@ -2304,10 +2285,6 @@ body {
 	color: #999999;
 	font-size: 16px;
 	line-height: 32px;
-}
-
-.contacts__input:nth-child(1) {
-	margin-top: 15px;
 }
 
 .contacts__input:nth-child(2) {
