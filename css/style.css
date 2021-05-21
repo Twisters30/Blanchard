@@ -1,4 +1,6 @@
-
+/* * {
+	outline: 1px solid red;
+} */
 /* шрифты */
 
 @font-face {
@@ -78,8 +80,9 @@ ul {
 
 
 .container {
-	max-width: 1601px;
+	max-width: 1631px;
 	margin: 0 auto;
+	padding: 0 15px;
 }
 
 .purple-iput {
@@ -641,8 +644,8 @@ body {
 
 .hero__wrapper {
 	position: absolute;
-    max-height: 700px;
-    margin: 0 calc(50.5% - 961px);
+    height: auto;
+    /* margin: 0 calc(50.5% - 961px); */
     top: 0;
     left: 0;
     right: 0;
@@ -666,7 +669,7 @@ body {
 	position: relative;
 	padding-top: 141px;
 	padding-bottom: 147px;
-    width: 597px;
+    max-width: 597px;
     color: var(--color-white);
     pointer-events: none;
 	z-index: 5;
@@ -798,6 +801,7 @@ body {
 	         animation-iteration-count: infinite;
 	 -o-object-fit: none;
 	    object-fit: none;
+		background-position: center;
  }
 
  .hero__slide--one{
@@ -1007,12 +1011,9 @@ body {
     letter-spacing: 0.5px;
 }
 
-.gallery__wrapper-discription {
-	height: 118px; 
-}
 
 .gallery__download-discription {
-	width: 385px;
+	max-width: 385px;
 	font-size: 16px;
 	line-height: 32px;
 	font-family: var(--font-open-sans-semi-bold);
@@ -1593,7 +1594,7 @@ body {
 /* cards */
 
 .events__header {
-	margin-bottom: 15px;
+	margin-bottom: 12px;
 }
 
 .events__name-museum {
@@ -2241,7 +2242,7 @@ body {
 }
 
 .contacts__wrapper-form {
-	padding: calc(7% - 13px) calc(7% - 12px) calc(7% - 15px) calc(9% - 13px);
+	padding: 123px calc(1920px - 1800px) 123px calc(1920px - 1760px);
 	border-top: 1px solid #CACACA;
 	border-right: 1px solid #CACACA;
 }
