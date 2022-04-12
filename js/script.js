@@ -41,40 +41,43 @@
       });
 
       let gallerySwiper = new Swiper('.gallery__slider-container', {
+        spaceBetween: 50,
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        slidesPerColumn: 2,
         breakpoints: {
-          320: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            slidesPerColumn: 1,
-          },
-          768: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            slidesPerColumn: 2,
-          },
-          1024: {
-            spaceBetween:34,
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            slidesPerColumn: 2,
-          },
+          // 320: {
+          //   spaceBetween: 34,
+          //   slidesPerView: 2,
+          //   slidesPerGroup: 2,
+          //   slidesPerColumn: 2,
+          // },
+          // 768: {
+          //   spaceBetween: 34,
+          //   slidesPerView: 2,
+          //   slidesPerGroup: 2,
+          //   slidesPerColumn: 2
+          // },
+          // 1024: {
+          //   spaceBetween:34,
+          //   slidesPerView: 2,
+          //   slidesPerGroup: 2,
+          //   slidesPerColumn: 2,
+          // },
           1504: {
             spaceBetween:34,
-            slidesPerView: 3,
+            slidesPerView: 6,
             slidesPerGroup: 3,
             slidesPerColumn: 2,
           },
           1920: {
             spaceBetween: 50,
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            slidesPerColumn: 2,
           },
         },
         simulateTouch: false,
         loop: false,
         // Optional parameters
-        direction: 'horizontal',
+        // direction: 'horizontal',
 
         // Navigation arrows
         navigation: {
@@ -90,11 +93,32 @@
       });
 
       let editionsSwiper = new Swiper('.editions-goods__container', {
-        spaceBetween: 50,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+          1024: {
+            spaceBetween:49,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+          1500: {
+            spaceBetween:49,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+          1920: {
+            spaceBetween: 50,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
+        },
         simulateTouch: false,
-        slidesPerView: 3,
-        slidesPerGroup: 1,
-        slidesPerColumn: 1,
         loop: false,
         // Optional parameters
         direction: 'horizontal',
