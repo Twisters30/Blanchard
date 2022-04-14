@@ -1,6 +1,6 @@
-/* * {
+* {
 	outline: 1px solid red;
-} */
+}
 /* шрифты */
 
 @font-face {
@@ -1028,6 +1028,9 @@ body {
 	font-size: 16px;
 	line-height: 32px;
 }
+.gallery__download-discription.mobile {
+	display: none;
+}
 
 .gallery__wrapper {
 	display: -webkit-box;
@@ -1314,6 +1317,8 @@ body {
 .catalog__tab-wrapper-text {
 	position: relative;
 	max-width: 1080px;
+	max-height: 300px;
+	overflow: auto;
 }
 
 .catalog__tab-icon:active {
@@ -1402,6 +1407,8 @@ body {
 .catalog__tab-item {
 	display: inherit;
 	max-height: 46px;
+}
+.catalog__tab-item:not(:last-child) {
 	margin-right: 50px;
 }
 
@@ -1740,13 +1747,24 @@ body {
 	margin-bottom: 78px;
 }
 
+.events__cards-wrapper {
+	position: relative;
+}
 
 .events__container-cards {
+	max-height: 748px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
+	overflow: hidden;
+}
+.events__container-cards.show-more {
+	max-height: 100%;
+}
+.events__container-cards.show-more events__wrapper-card {
+	margin-bottom: 50px;
 }
 
 .events__wrapper-card {
@@ -1758,7 +1776,7 @@ body {
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 	width: 31.2%;
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 	border: 1px solid #CACACA;
 }
 
@@ -1841,6 +1859,7 @@ body {
 /* card show-more */
 
 .read-more {
+	display: none;
 	margin: 0;
 	visibility: hidden;
 	height: 0;
@@ -1883,6 +1902,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     color: var(--color-purple);
+	background-color: transparent;
     cursor: pointer;
     outline: none;
     font-family: var(--font-open-sans-bold);
@@ -1985,6 +2005,9 @@ body {
 
 .p {
 	color: var(--color-purple);
+}
+.checkbox__list {
+	margin-bottom: 35px;
 }
 
 .checkbox__text {
@@ -2147,12 +2170,18 @@ body {
 }
 
 .editions-goods__name-book {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 	font-size: 16px;
 	line-height: 22px;
 	font-family: var(--font-open-sans-bold);
 }
 
 .editions-goods__book-author {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 	font-size: 16px;
 	font-family: var(--font-open-sans-regular);
 }
@@ -2218,7 +2247,7 @@ body {
 
 .project {
 	padding-top: 80px;
-	margin-bottom: 80px;
+	padding-bottom: 80px;
 }
 
 .project__header {
@@ -2231,6 +2260,7 @@ body {
 	max-width: 1080px;
 	font-size: 16px;
 	line-height: 32px;
+	overflow: auto;
 }
 
 .project__link {
@@ -2276,6 +2306,26 @@ body {
 
 .project__tooltip-box {
 	position: relative;
+}
+
+.project__br-xs {
+	display: none;
+}
+
+.project__images {
+	transition: all 300ms ease-in;
+	border: 1px solid #CACACA;
+}
+.project__images img {
+	object-fit: none;
+	height: 100%;
+}
+.project__images:hover {
+	filter: grayscale(0);
+}
+.project__images:active,
+.project__images:focus {
+	border-color: #9D5CD0;
 }
 
 .tooltip {
@@ -2346,9 +2396,6 @@ body {
 	background-repeat: no-repeat;
 	outline: none;
 	transition: filter 300ms linear;
-}
-.project__images img {
-	height: 100%;
 }
 
 .project__images:active,
@@ -2782,6 +2829,30 @@ body {
 		flex-basis: auto;
 		margin-right: 18px;
 	}
+	/*Events*/
+	.event__wrapper-card-content {
+		padding: 0 33px 0 33px;
+	}
+	.events__name-museum {
+		margin: 0 19px 35px 0;
+	}
+	.events__cards-img {
+		height: 100%;
+		max-height: 203px;
+	}
+	.events__card-discription {
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 7;
+		overflow: hidden;
+	}
+	.event__wrapper-link {
+		margin: 0 30px 28px 34px;
+	}
+	.events__link {
+		padding-bottom: 0;
+	}
 }
 /* адаптив*/
 @media (max-width: 1350px) {
@@ -2801,7 +2872,14 @@ body {
 	}
 }
 
+@media (max-width:938px) {
+
+}
+
 @media (max-width:1024px) {
+	.dropdown-btn {
+		font-size: 0;
+	}
 	.container {
 		max-width: 955px;
 	}
@@ -2829,6 +2907,10 @@ body {
 	}
 	.burger__wrap {
 		display: flex;
+	}
+	/*events*/
+	.events__container-cards {
+		max-height: 736px;
 	}
 
 	/*Hero*/
@@ -2863,30 +2945,7 @@ body {
 	.catalog__painter {
 	}
 
-	/*Events*/
-	.event__wrapper-card-content {
-		padding: 0 33px 0 33px;
-	}
-	.events__name-museum {
-		margin: 0 19px 35px 0;
-	}
-	.events__cards-img {
-		height: 100%;
-		max-height: 203px;
-	}
-	.events__card-discription {
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 7;
-		overflow: hidden;
-	}
-	.event__wrapper-link {
-		margin: 0 30px 28px 34px;
-	}
-	.events__link {
-		padding-bottom: 0;
-	}
+
 	/*editions	*/
 	.editions-goods__content-conteiner {
 		width: 290px;
@@ -2910,7 +2969,7 @@ body {
 		margin-bottom: 15px;
 	}
 	/*project*/
-	.project__wrapper-content br {
+	.project__br-xm {
 		display: none;
 	}
 	/*contacts*/
@@ -2955,11 +3014,11 @@ body {
 		line-height: 64px;
 	}
 	.nav.menu-active {
-		height: calc(100% + 16%);
+		height: calc(100% + 59%);
 	}
 	/*gallery*/
 	.gallery__wrapper {
-		flex-direction: column;
+		flex-wrap: wrap;
 	}
 	.gallery__download-discription {
 		display: none;
@@ -2967,25 +3026,194 @@ body {
 	.select {
 		width: 280px;
 	}
+	.gallery__slider-container {
+		padding-top: 92px;
+	}
 	.gallery__figure {
 		width: 317px;
 	}
+
 	.gallery__slide {
+		width: 317px;
 		max-width: 317px;
+		height: 280px;
 	}
 	.gallery__slider-wrapper {
-		max-height: 100%;
+		max-height: 595px;
+		margin-bottom: 22px;
+	}
+	.gallery__download-discription.mobile {
+		display: block;
+		max-width: 100%;
+	}
+	.slider-nav-btn-wrapper {
+		top: 35px;
+		left: -9px;
 	}
 	.select__list {
 		background-color: #111;
+	}
+	/*catalog*/
+	.catalog__container-accardeon {
+		flex-direction: column-reverse;
+	}
+	.catalog__accardeon {
+		margin-bottom: 48px;
+	}
+	.catalog__discription-painter {
+		max-height: 280px;
+		overflow: auto;
+	}
+	.catalog__painter-img {
+		max-height: 419px;
+	}
+	.catalog__painter {
+		min-height: 722px;
+		margin-right: 0;
+	}
+	.catalog__tab-text {
+		margin-bottom: 20px;
+	}
+	/*events*/
+	.events__wrapper-card {
+		width: 47.5%;
+		min-height: 691px;
+	}
+	.events__container-cards {
+		max-height: 742px;
+	}
+	.events__cards-img {
+		max-height: 206px;
+		margin-bottom: 12px;
+	}
+	.events__name-museum {
+		margin: 0 19px 19px 0;
+	}
+	.events__wrapper-card:not(:nth-child(3n)) {
+		margin-right: 0;
+	}
+	.events__wrapper-card:not(:nth-child(2n)) {
+		margin-right: 5%;
+	}
+	.events__card-discription {
+		-webkit-line-clamp: 5;
+	}
+	.event__wrapper-link {
+		margin: 0 30px 49px 34px;
+	}
+	/*editions*/
+	.editions {
+		padding-top: 86px;
+		padding-bottom: 78px;
+	}
+	.editions__wrapper-content {
+		flex-wrap: wrap;
+	}
+	.checkbox__list  {
+		column-count: 3;
+		margin-bottom: 30px;
+	}
+	.checkbox__list > .checkbox__label {
+		display: flex;
+		align-content: center;
+	}
+	.editions-goods__content-conteiner {
+		width: 290px;
+		min-height: 433px;
+	}
+
+	.editions-goods__container {
+		padding-top: 31px;
+		padding-left: 0;
+	}
+	.editions-goods__img {
+		width: 290px;
+	}
+	.editions-goods__wrapper {
+		width: 614px;
+	}
+	.editions-goods__discriprion {
+		margin-bottom: 27px;
+	}
+	.slider-nav-btn-wrapper--edition {
+		top: 428px;
+	}
+	/*.project*/
+	.project__wrapper-content {
+		margin-bottom: 27px;
+		max-width: 99.4%;
+	}
+	.project__br-xs {
+		display: block;
+	}
+	.project__images {
+		border: 1px solid #CACACA;
+	}
+	.project__images img {
+		object-fit: contain;
+		padding: 27px;
+	}
+	/*contacts*/
+	.contacts-header {
+		padding-left: calc(9% - 19px);
+	}
+	.project {
+		padding-bottom: 86px;
 	}
 	/*Свайпер партнёров*/
 	.project__container {
 		max-width: 562px;
 		max-height: 106px;
 	}
+	.contacts__wrapper-form {
+		padding: 124px 46px 102px calc((100% / 2) - 335px);
+	}
+}
+@media (max-width: 693px) {
+	.catalog__wrapper-tab {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.catalog__painter {
+		min-width: 100%;
+	}
+}
+@media (max-width: 575px) {
+	.hero__header {
+		margin: 0 auto 16px;
+		text-align: center;
+		font-size: 38px;
+		line-height: 44px;
+	}
+	.hero__btn-link {
+		display: block;
+		font-size: 12px;
+		line-height: 16px;
+		text-align: center;
+	}
 }
 @media (max-width: 320px) {
+	.container {
+		max-width: 100%;
+	}
+	.wrapper-top {
+		padding: 12px 0;
+	}
+	.logo {
+		min-width: auto;
+	}
+	.header__logo-img {
+		width: 97px;
+	}
+	.hero__header {
+		max-width: 258px;
+		font-size: 32px;
+	}
+	.hero__text {
+		font-size: 12px;
+		line-height: 16px;
+		text-align: center;
+	}
 	/*Свайпер партнёров*/
 	.project__container {
 		max-width: 195px;

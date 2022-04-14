@@ -41,10 +41,10 @@
       });
 
       let gallerySwiper = new Swiper('.gallery__slider-container', {
-        spaceBetween: 50,
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        slidesPerColumn: 2,
+        spaceBetween: 34,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        slidesPerColumn: 1,
         breakpoints: {
           // 320: {
           //   spaceBetween: 34,
@@ -52,12 +52,12 @@
           //   slidesPerGroup: 2,
           //   slidesPerColumn: 2,
           // },
-          // 768: {
-          //   spaceBetween: 34,
-          //   slidesPerView: 2,
-          //   slidesPerGroup: 2,
-          //   slidesPerColumn: 2
-          // },
+          768: {
+            spaceBetween: 34,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            slidesPerColumn: 2
+          },
           // 1024: {
           //   spaceBetween:34,
           //   slidesPerView: 2,
@@ -66,12 +66,15 @@
           // },
           1504: {
             spaceBetween:34,
-            slidesPerView: 6,
+            slidesPerView: 3,
             slidesPerGroup: 3,
             slidesPerColumn: 2,
           },
           1920: {
             spaceBetween: 50,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            slidesPerColumn: 2,
           },
         },
         simulateTouch: false,
@@ -95,10 +98,12 @@
       let editionsSwiper = new Swiper('.editions-goods__container', {
         breakpoints: {
           320: {
+            spaceBetween:34,
             slidesPerView: 1,
             slidesPerGroup: 1,
           },
           768: {
+            spaceBetween:34,
             slidesPerView: 2,
             slidesPerGroup: 2,
           },
@@ -214,23 +219,32 @@
     });
 
     // Показать ещё
-    let showMoreBtn = document.getElementById('btn-all-events')
-    let showMore = document.querySelectorAll('.read-more');
-   showMoreBtn.onclick = function showContent() {
-    showMore.forEach((ell) => {
-      if (ell.classList.contains('read-more')) {
-        ell.classList.remove('read-more')
-        ell.classList.add('show-more')
-        showMoreBtn.innerHTML = 'Скрыть'
-      } else {
-        showMoreBtn.innerHTML = 'Все события'
-        ell.classList.remove('show-more')
-        ell.classList.add('read-more')
-      }
-    })
+    function mobileAddClass(classElements, classCheck, howManyShowItems) {
+      const elements = document.querySelectorAll(classElements);
+      let checkArr = [];
+      if (!elements) return;
 
+      elements.forEach((el,index) => {
+        if (!el.classList.contains(classCheck)) checkArr.push(el);
+        if (checkArr.length === elements.length) {
+          console.log('yea')
+        }
+        if (index < howManyShowItems) {
+          el.classList.remove(classCheck)
+        } else {
+          el.classList.add(classCheck)
+        }
+      })
     }
+      function clickShowMore() {
+        const showMoreBtn = document.getElementById('btn-all-events')
+        const elementsWrap = document.querySelector('.events__container-cards');
+        showMoreBtn.addEventListener('click', () => {
+          elementsWrap.classList.toggle('show-more');
+        })
 
+      }
+    clickShowMore();
       // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Плавный скрол!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       jQuery(document).ready(function() {
         jQuery("a.scrollto").click(function () {

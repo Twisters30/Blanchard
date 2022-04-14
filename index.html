@@ -184,14 +184,14 @@
 								</div>
 							</div>
 						</div>
-							<p class="gallery__download-discription">
-								Вам предоставляется 10 бесплатных скачиваний.
-								Для увеличения количества скачиваний
-								<a class="gallery__link-authorization ui-custom scrollto" href="#join">
-									авторизуйтесь,
-								</a>
-								либо воспользуйтесь лицензией.
-							</p>
+						<p class="gallery__download-discription">
+							Вам предоставляется 10 бесплатных скачиваний.
+							Для увеличения количества скачиваний
+							<a class="gallery__link-authorization ui-custom scrollto" href="#join">
+								авторизуйтесь,
+							</a>
+							либо воспользуйтесь лицензией.
+						</p>
 					</div>
 					<div class="swiper-container gallery__slider-container">
 						<div class="swiper-wrapper gallery__slider-wrapper">
@@ -294,6 +294,14 @@
    							<div class="swiper-button-next swiper-button-next--gallery"></div>
 						</div>
 					</div>
+					<p class="gallery__download-discription mobile">
+						Вам предоставляется 10 бесплатных скачиваний.
+						Для увеличения количества скачиваний
+						<a class="gallery__link-authorization ui-custom scrollto" href="#join">
+							авторизуйтесь,
+						</a>
+						либо воспользуйтесь лицензией.
+					</p>
 				</div>
 			</div>
 		</section>
@@ -881,7 +889,7 @@
 						</div>
 					</li>
 
-						<li class="events__wrapper-card read-more" id="events-cards">
+						<li class="events__wrapper-card">
 							<figure>
 								<img class="events__cards-img" src="./img/events/p4.jpg" alt="image picture">
 								<figcaption class="events__name-museum">
@@ -901,7 +909,7 @@
 							</div>
 						</li>
 
-						<li class="events__wrapper-card read-more">
+						<li class="events__wrapper-card">
 							<figure>
 								<img class="events__cards-img" src="./img/events/p5.jpg" alt="image picture">
 								<figcaption class="events__name-museum">
@@ -922,7 +930,7 @@
 						</li>
 				</ul>
 				<div class="events__btn-all__wrapper-link">
-					<a class="events__btn-all-events scrollto" id="btn-all-events" href="#events-cards">Все события</a>
+					<button class="events__btn-all-events" id="btn-all-events">Все события</button>
 				</div>
 			</div>
 		</section>
@@ -934,54 +942,56 @@
 							<h2 class="editions__header section-heading">Издания</h2>
 							<h3 class="checkbox__header">Категории</h3>
 							<form class="checkbox__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-								<label class="checkbox__label">
-									<input class="checkbox__input-item"  type="checkbox" name="check">
-									<span class="checkbox__text">Бестселлеры</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text">Искусство</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text">Архитектура</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text">Дизайн</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text">Мода</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text">Детям</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text">Художественная литература</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text">Публицистика</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text">Путеводители</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text" >Философия</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text" >Учебная литература</span>
-								</label>
-								<label class="checkbox__label">
-									<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
-									<span class="checkbox__text">Журналы и газеты</span>
-								</label>
+								<div class="checkbox__list">
+									<label class="checkbox__label">
+										<input class="checkbox__input-item"  type="checkbox" name="check">
+										<span class="checkbox__text">Бестселлеры</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text">Искусство</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text">Архитектура</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text">Дизайн</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text">Мода</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text">Детям</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text">Художественная литература</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text">Публицистика</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text">Путеводители</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text" >Философия</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text" >Учебная литература</span>
+									</label>
+									<label class="checkbox__label">
+										<input class="checkbox__input-item" type="checkbox" name="check" aria-checked="undefined">
+										<span class="checkbox__text">Журналы и газеты</span>
+									</label>
+								</div>
 								<div class="checkbox__label filter-price">
 									<div class="checkbox__header-price" >Цена</div>
 									<div class="checkbox__filter-price">
@@ -1146,7 +1156,7 @@
 						Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
 						фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
 						уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
-						Прежде всего, постоянное <br> информационно-пропагандистское
+						Прежде всего, постоянное <br class="project__br-xm"> информационно-пропагандистское
 						<span class="project__tooltip-box">
 							<button class="project__tooltip tooltip-btn-one" aria-describedby="tooltip-one"></button>
 							<span class="tooltip tooltip-one" id="tooltip-one">
@@ -1174,7 +1184,7 @@
 						</span>
 						предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
 						призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными
-						до степени совершенной неузнаваемости. Подробнее: <a class="project__link ui-custom" href="#">blanchard-art.ru/projects/about</a>
+						до степени совершенной неузнаваемости. Подробнее: <br class="project__br-xs"> <a class="project__link ui-custom" href="#">blanchard-art.ru/projects/about</a>
 					</p>
 				<h3 class="project__header-images">Партнёры проектов:</h3>
 				<div class="project__wrapper-slider">
