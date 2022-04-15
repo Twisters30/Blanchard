@@ -309,7 +309,7 @@
 		<section class="catalog" id="catalog">
 			<div class="container catalog--container">
 				<div class="catalog__wrapper-tab">
-					<h2 class="catalog__header">Каталог</h2>
+					<h2 class="catalog__header section-heading">Каталог</h2>
 					<ul class="catalog__tab-list">
 						<li class="catalog__tab-item"><button aria-label="Французские художники" class="catalog__tab-btn" data-path="fr"><span class="catalog__tab-icon catalog__span--fr"></span></button></li>
 						<li class="catalog__tab-item"><button aria-label="Немецкие художники" class="catalog__tab-btn" data-path="ger"><span class="catalog__tab-icon catalog__span--ger"></span></button></li>
@@ -825,71 +825,72 @@
 				<h2 class="events__header section-heading">
 					События
 				</h2>
-				<ul class="events__container-cards">
-					<li class="events__wrapper-card">
-						<figure>
-							<img class="events__cards-img" src="./img/events/p1.jpg" alt="image picture">
-							<figcaption class="events__name-museum">
-								Музей им. Щусева <br>
-								с 20 марта по 30 апреля
-							</figcaption>
-						</figure>
-						<div class="event__wrapper-card-content">
-							<h3 class="events__header-card">Книжная гравюра в живом восприятии</h3>
-							<div class="events__card-discription">
-								Один из ведущих флорентийских художников Кватроченто,
-								основатель художественной <br> династии, которую продолжили его брат Давид и сын Ридольфо.
-								Глава художественной мастерской, где юный Микеланджело.
-							</div>
+				<div class="swiper-container events__swiper">
+					<ul class="swiper-wrapper events__container-cards" id="swiper-events">
+						<li class="swiper-slide events__wrapper-card">
+							<figure>
+								<img class="events__cards-img" src="./img/events/p1.jpg" alt="image picture">
+								<figcaption class="events__name-museum">
+									Музей им. Щусева <br>
+									с 20 марта по 30 апреля
+								</figcaption>
+							</figure>
+							<div class="event__wrapper-card-content">
+								<h3 class="events__header-card">Книжная гравюра в живом восприятии</h3>
+								<div class="events__card-discription">
+									Один из ведущих флорентийских художников Кватроченто,
+									основатель художественной <br> династии, которую продолжили его брат Давид и сын Ридольфо.
+									Глава художественной мастерской, где юный Микеланджело.
+								</div>
 
 							</div>
 							<div class="event__wrapper-link">
 								<a class="events__link ui-custom" href="#">Подробнее</a>
 							</div>
-					</li>
+						</li>
 
-					<li class="events__wrapper-card">
-						<figure>
-							<img class="events__cards-img" src="./img/events/p2.jpg" alt="image picture">
-							<figcaption class="events__name-museum">
-								ММОМА <br>
-								24 марта 19:00
-							</figcaption>
-						</figure>
-						<div class="event__wrapper-card-content">
-							<h3 class="events__header-card">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
-							<div class="events__card-discription">
-								Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта:
-								постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки новых принципов формирования...
+						<li class="swiper-slide events__wrapper-card">
+							<figure>
+								<img class="events__cards-img" src="./img/events/p2.jpg" alt="image picture">
+								<figcaption class="events__name-museum">
+									ММОМА <br>
+									24 марта 19:00
+								</figcaption>
+							</figure>
+							<div class="event__wrapper-card-content">
+								<h3 class="events__header-card">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+								<div class="events__card-discription">
+									Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта:
+									постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки новых принципов формирования...
+								</div>
+
 							</div>
-
-						</div>
-						<div class="event__wrapper-link">
-							<a class="events__link ui-custom" href="#">Подробнее</a>
-						</div>
-					</li>
-
-					<li class="events__wrapper-card">
-						<figure>
-							<img class="events__cards-img" src="./img/events/p3.jpg" alt="image picture">
-							<figcaption class="events__name-museum">
-								Еврейский музей <br>
-								с 31 марта по 21 апреля
-							</figcaption>
-						</figure>
-						<div class="event__wrapper-card-content">
-							<h3 class="events__header-card">Выставка «Формация 2020»</h3>
-							<div class="events__card-discription">
-								Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
-								Также как перспективное планирование играет определяющее значение <br> для новых принципов формирования <br> материально-технической и кадровой базы.
+							<div class="event__wrapper-link">
+								<a class="events__link ui-custom" href="#">Подробнее</a>
 							</div>
-						</div>
-						<div class="event__wrapper-link">
-							<a class="events__link ui-custom" href="#">Подробнее</a>
-						</div>
-					</li>
+						</li>
 
-						<li class="events__wrapper-card">
+						<li class="swiper-slide events__wrapper-card">
+							<figure>
+								<img class="events__cards-img" src="./img/events/p3.jpg" alt="image picture">
+								<figcaption class="events__name-museum">
+									Еврейский музей <br>
+									с 31 марта по 21 апреля
+								</figcaption>
+							</figure>
+							<div class="event__wrapper-card-content">
+								<h3 class="events__header-card">Выставка «Формация 2020»</h3>
+								<div class="events__card-discription">
+									Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
+									Также как перспективное планирование играет определяющее значение <br> для новых принципов формирования <br> материально-технической и кадровой базы.
+								</div>
+							</div>
+							<div class="event__wrapper-link">
+								<a class="events__link ui-custom" href="#">Подробнее</a>
+							</div>
+						</li>
+
+						<li class="swiper-slide events__wrapper-card">
 							<figure>
 								<img class="events__cards-img" src="./img/events/p4.jpg" alt="image picture">
 								<figcaption class="events__name-museum">
@@ -909,7 +910,7 @@
 							</div>
 						</li>
 
-						<li class="events__wrapper-card">
+						<li class="swiper-slide events__wrapper-card">
 							<figure>
 								<img class="events__cards-img" src="./img/events/p5.jpg" alt="image picture">
 								<figcaption class="events__name-museum">
@@ -928,7 +929,10 @@
 								<a class="events__link ui-custom" href="#">Подробнее</a>
 							</div>
 						</li>
-				</ul>
+					</ul>
+					<div class="swiper-pagination events__pagination"></div>
+				</div>
+
 				<div class="events__btn-all__wrapper-link">
 					<button class="events__btn-all-events" id="btn-all-events">Все события</button>
 				</div>

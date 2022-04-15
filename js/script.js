@@ -37,8 +37,85 @@
         simulateTouch: false,
         // Optional parameters
         loop: true,
-
+        breakpoints: {
+          320: {
+            spaceBetween:50
+          },
+          1024: {
+            spaceBetween:500
+          }
+        }
       });
+
+/* Swiper
+**************************************************************/
+var eventsSwiper = Swiper;
+var init = false;
+
+
+
+/* Which media query
+**************************************************************/
+function swiperMode() {
+  let mobile = window.matchMedia('(min-width: 0px) and (max-width: 475px)');
+  let tablet = window.matchMedia('(min-width: 769px) and (max-width: 1024px)');
+  let desktop = window.matchMedia('(min-width: 1025px)');
+
+  // Enable (for mobile)
+  if(mobile.matches) {
+    if (!init) {
+      init = true;
+      eventsSwiper = new Swiper('.events__swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-events-next',
+          prevEl: '.swiper-button-events-prev',
+        },
+        pagination: {
+          el: '.events__pagination',
+          type: 'bullets',
+          clickable: true,
+        },
+        breakpoints: {
+          550: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 34,
+          }
+        }
+      });
+    }
+
+  }
+
+  // Disable (for tablet)
+  else if(tablet.matches) {
+    eventsSwiper.destroy();
+    init = false;
+  }
+
+  // Disable (for desktop)
+  else if(desktop.matches) {
+    eventsSwiper.destroy();
+    init = false;
+  }
+}
+
+/* On Load
+**************************************************************/
+window.addEventListener('load', function() {
+  swiperMode();
+});
+
+/* On Resize
+**************************************************************/
+window.addEventListener('resize', function() {
+  swiperMode();
+});
 
       let gallerySwiper = new Swiper('.gallery__slider-container', {
         spaceBetween: 34,
