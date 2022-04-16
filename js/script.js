@@ -47,76 +47,77 @@
         }
       });
 
-/* Swiper
+(() => {
+  /* Swiper
 **************************************************************/
-var eventsSwiper = Swiper;
-var init = false;
+  var eventsSwiper = Swiper;
+  var init = false;
 
 
 
-/* Which media query
-**************************************************************/
-function swiperMode() {
-  let mobile = window.matchMedia('(min-width: 0px) and (max-width: 475px)');
-  let tablet = window.matchMedia('(min-width: 769px) and (max-width: 1024px)');
-  let desktop = window.matchMedia('(min-width: 1025px)');
+  /* Which media query
+	**************************************************************/
+  function swiperMode() {
+    let mobile = window.matchMedia('(min-width: 0px) and (max-width: 550px)');
+    let tablet = window.matchMedia('(min-width: 551px) and (max-width: 1024px)');
+    let desktop = window.matchMedia('(min-width: 1025px)');
 
-  // Enable (for mobile)
-  if(mobile.matches) {
-    if (!init) {
-      init = true;
-      eventsSwiper = new Swiper('.events__swiper', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: '.swiper-button-events-next',
-          prevEl: '.swiper-button-events-prev',
-        },
-        pagination: {
-          el: '.events__pagination',
-          type: 'bullets',
-          clickable: true,
-        },
-        breakpoints: {
-          550: {
-            slidesPerView: 2,
-            spaceBetween: 10,
+    // Enable (for mobile)
+    if(mobile.matches) {
+      if (!init) {
+        init = true;
+        eventsSwiper = new Swiper('.events__swiper', {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: '.swiper-button-events-next',
+            prevEl: '.swiper-button-events-prev',
           },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 34,
+          pagination: {
+            el: '.events__pagination',
+            type: 'bullets',
+            clickable: true,
+          },
+          breakpoints: {
+            551: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 34,
+            }
           }
-        }
-      });
+        });
+      }
+
     }
 
+    // Disable (for tablet)
+    else if(tablet.matches && typeof eventsSwiper.destroy === "function") {
+      eventsSwiper.destroy();
+      init = false;
+    }
+
+    // Disable (for desktop)
+    else if(desktop.matches && typeof eventsSwiper.destroy === "function") {
+      eventsSwiper.destroy();
+      init = false;
+    }
   }
 
-  // Disable (for tablet)
-  else if(tablet.matches) {
-    eventsSwiper.destroy();
-    init = false;
-  }
+  /* On Load
+	**************************************************************/
+  window.addEventListener('load', function() {
+    swiperMode();
+  });
 
-  // Disable (for desktop)
-  else if(desktop.matches) {
-    eventsSwiper.destroy();
-    init = false;
-  }
-}
-
-/* On Load
-**************************************************************/
-window.addEventListener('load', function() {
-  swiperMode();
-});
-
-/* On Resize
-**************************************************************/
-window.addEventListener('resize', function() {
-  swiperMode();
-});
-
+  /* On Resize
+	**************************************************************/
+  window.addEventListener('resize', function() {
+    swiperMode();
+  });
+})()
       let gallerySwiper = new Swiper('.gallery__slider-container', {
         spaceBetween: 34,
         slidesPerView: 1,
@@ -172,52 +173,96 @@ window.addEventListener('resize', function() {
         },
       });
 
-      let editionsSwiper = new Swiper('.editions-goods__container', {
-        breakpoints: {
-          320: {
-            spaceBetween:34,
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-          },
-          768: {
-            spaceBetween:34,
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-          },
-          1024: {
-            spaceBetween:49,
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-          },
-          1500: {
-            spaceBetween:49,
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-          },
-          1920: {
-            spaceBetween: 50,
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-          },
-        },
-        simulateTouch: false,
-        loop: false,
-        // Optional parameters
-        direction: 'horizontal',
+(() => {
+  /* Swiper
+**************************************************************/
+  var editionsSwiper = Swiper;
+  var initEditions = false;
 
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next--edition',
-          prevEl: '.swiper-button-prev--edition',
-        },
 
-        // pagination
-        pagination: {
-          el: '.swiper-pagination--edition',
-          type: 'fraction',
-        },
 
-      });
+  /* Which media query
+	**************************************************************/
+  function swiperModeEditions() {
+    let mobile = window.matchMedia('(min-width: 320px) and (max-width: 580px)');
+    let tablet = window.matchMedia('(min-width: 581px) and (max-width: 1024px)');
+    // let desktop = window.matchMedia('(min-width: 581x)');
+
+    // Enable (for mobile)
+    if(tablet.matches || window.screen.availWidth > 581) {
+      if (!initEditions) {
+        initEditions = true;
+        editionsSwiper = new Swiper('.editions-goods__container', {
+          breakpoints: {
+            // 320: {
+            //   spaceBetween:34,
+            //   slidesPerView: 1,
+            //   slidesPerGroup: 1,
+            // },
+            580: {
+              spaceBetween:34,
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+            1024: {
+              spaceBetween:49,
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+            1500: {
+              spaceBetween:49,
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+            1920: {
+              spaceBetween: 50,
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+            },
+          },
+          simulateTouch: false,
+          loop: false,
+          // Optional parameters
+          direction: 'horizontal',
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next--edition',
+            prevEl: '.swiper-button-prev--edition',
+          },
+
+          // pagination
+          pagination: {
+            el: '.swiper-pagination--edition',
+            type: 'fraction',
+          },
+
+        });
+      }
+
+    }
+
+    // Disable (for tablet)
+    else if(mobile.matches && typeof editionsSwiper.destroy === "function") {
+      editionsSwiper.destroy();
+      initEditions = false;
+    }
+  }
+
+  /* On Load
+	**************************************************************/
+  window.addEventListener('load', function() {
+    swiperModeEditions();
+  });
+
+  /* On Resize
+	**************************************************************/
+  window.addEventListener('resize', function() {
+    swiperModeEditions();
+  });
+  swiperModeEditions();
+
+})()
 
       let projectSwiper = new Swiper('.project__container', {
         breakpoints: {
@@ -375,8 +420,8 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
           item.classList.remove('btn-flip')
         }
       })
-      for (var k = 0; k < dropdowns.length; k++) {
-        var openDropdown = dropdowns[k];
+      for (let k = 0; k < dropdowns.length; k++) {
+        let openDropdown = dropdowns[k];
         if (openDropdown.classList.contains('show')) {
           openDropdown.classList.remove('show');
         }
@@ -686,3 +731,92 @@ const burgerIcon = document.querySelector('.burger');
 const burgerMenu = document.getElementById('main-menu');
 const burger = new Burger(burgerIcon,burgerMenu);
 burger.clickBurgerMenu();
+
+
+// checkbox filter
+
+function removeCheckAttribute(searchText) {
+  const listForRemoveChecked = document.querySelector('.checkbox__list').querySelectorAll('.checkbox__text');
+  if(!searchText) return;
+  listForRemoveChecked.forEach((el) => {
+    if (searchText === el.textContent) {
+      el.previousElementSibling.checked = false;
+    }
+    console.log(el)
+  })
+}
+
+function clickBtnDelete() {
+  const containerBtn = document.querySelector('.checkbox__checked-container');
+  containerBtn.addEventListener('click', function (e) {
+    const target = e.target;
+    if (target.closest('.btn-delete')) {
+      const textLabelInput = target.parentElement.textContent;
+      console.log(textLabelInput)
+      removeCheckAttribute(textLabelInput);
+      target.parentElement.parentElement.remove();
+    }
+  })
+}
+
+function createBtnDeleteCheckbox() {
+  const btn = document.createElement('button');
+  btn.classList.add('btn-delete');
+  return btn;
+}
+
+function createListCheckedInputs(inputs) {
+  const containerList = document.createElement('div');
+  containerList.classList.add('checkbox__checked-container');
+  const ellForInsert = document.querySelector('.checkbox__header');
+  inputs.forEach((el) => {
+    containerList.append(el);
+  })
+  const oldContainer = document.querySelector('.checkbox__checked-container');
+  if (oldContainer) oldContainer.remove();
+  ellForInsert.after(containerList);
+  containerList.querySelectorAll('label').forEach((el) => {
+    el.classList.add('checked--item');
+    const spanEll = el.querySelector('span');
+    spanEll.append(createBtnDeleteCheckbox());
+  })
+  clickBtnDelete();
+}
+
+function addCheckBoxInContainer() {
+  let checkedInput = [];
+  const inputsCheckbox = document.querySelector('.checkbox__list').querySelectorAll('input');
+  inputsCheckbox.forEach((el) => {
+    if (el.checked) {
+      const cloneNode = el.parentNode.cloneNode(true);
+      checkedInput.push(cloneNode);
+    }
+  })
+  createListCheckedInputs(checkedInput);
+}
+
+function clickFilterEditions() {
+  const btnClick = document.querySelector('.checkbox__header');
+  const checkBoxList = document.querySelector('.checkbox__list');
+  btnClick.addEventListener('click', function () {
+    this.classList.toggle('active');
+    checkBoxList.classList.toggle('active');
+  })
+  checkBoxList.addEventListener('click', function (e) {
+    const target = e.target;
+    if (target.closest('.checkbox__input-item')) {
+      addCheckBoxInContainer();
+    }
+  })
+}
+clickFilterEditions();
+
+function clickOutFilter() {
+  window.addEventListener('click', function (e) {
+    if (!e.target.closest('.checkbox__header') && !e.target.closest('.checkbox__list')) {
+      document.querySelector('.checkbox__header').classList.remove('active');
+      document.querySelector('.checkbox__list').classList.remove('active');
+    }
+  })
+}
+clickOutFilter();

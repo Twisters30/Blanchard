@@ -78,6 +78,21 @@ ul {
 	visibility: visible !important;
 }
 
+.checkbox__checked-container {
+	display: none;
+}
+
+.btn-delete {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	border: none;
+	width: 12px;
+	height: 12px;
+	background: transparent url("../img/Editions/cros.svg") no-repeat center/12px;
+	z-index: 99;
+}
 
 .container {
 	max-width: 1631px;
@@ -119,6 +134,7 @@ body {
 *:focus {
 	outline: 2px solid var(--color-focus-purple);
 }
+
 
 .outline {
 	max-width: 257px;
@@ -1995,10 +2011,19 @@ body {
 /* Custom checkbox */
 
 
+.checkbox__label.checked--item span:after {
+	box-shadow: none;
+}
+
 .checkbox__label {
 	position: relative;
 	cursor: pointer;
 	width: fit-content;
+}
+.checkbox__label.checked--item {
+	display: block;
+	background-color: transparent;
+	padding: 7px 0 13px;
 }
 
 .checkbox__label:nth-last-child(2) {
@@ -2091,7 +2116,9 @@ body {
 }
 
 /* filter-price */
-
+.checkbox__label.filter-price {
+	border-bottom: none;
+}
 .checkbox__filter-price {
 	min-width: 277px;
 	border: 1px solid rgba(255, 255, 255, 0.5);
@@ -3185,6 +3212,100 @@ body {
 		padding: 124px 46px 102px calc((100% / 2) - 335px);
 	}
 }
+
+@media (max-width: 580px) {
+	.checkbox__form {
+		margin-bottom: 0;
+	}
+	.slider-nav-btn-wrapper--edition {
+		display: none;
+	}
+	.checkbox__checked-container {
+		display: block;
+	}
+	.checkbox__wrapper {
+		margin-right: 0;
+	}
+	.checkbox__label.filter-price {
+		margin-top: 20px;
+	}
+	.checkbox__header {
+		position: relative;
+		/*margin-bottom: 20px;*/
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	}
+	.checkbox__header:before {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		content: '';
+		background: url("../img/Editions/arrow-bottom.svg") no-repeat center/15px;
+		width: 14px;
+		height: 14px;
+		transform: translateY(-50%);
+		transition: 300ms ease-in;
+	}
+	.checkbox__header.active:before {
+		transform: rotate(180deg) translateY(50%);
+	}
+	.checkbox__list {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		top: 114px;
+		left: 0;
+		z-index: 99;
+	}
+	.checkbox__text {
+		width: 100%;
+	}
+	.checkbox__label {
+		width: 100%;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		background-color: #111;
+	}
+	.checkbox__label:nth-last-child(2) {
+		margin-bottom: 0;
+	}
+	.checkbox__label.filter-price {
+		background-color: transparent;
+	}
+	.checkbox__list.active  {
+		display: flex;
+	}
+/*	слайдер офф стили*/
+	.editions-goods__container {
+		margin: 0;
+		width: 100%;
+		overflow: visible;
+	}
+	.editions-goods__content-conteiner {
+		min-height: auto;
+	}
+	.editions-goods__wrapper {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.editions-goods__content-conteiner {
+		width: 130px;
+		flex: 1 1 45%;
+		max-height: 300px;
+		max-width: 183px
+	}
+	.editions-goods__content-conteiner:not(:nth-child(2n)) {
+		margin-right: 10%;
+	}
+	.editions-goods__img {
+		width: 100%;
+		height: 143px;
+		min-height: auto;
+		min-width: auto;
+	}
+}
+
 @media (max-width: 760px) {
 	.events__wrapper-card figure {
 		margin-bottom: 40px;
@@ -3214,11 +3335,16 @@ body {
 	}
 }
 @media (min-width: 550px) {
-	.events__container-cards {
-		flex-wrap: inherit;
-	}
+
 }
 @media (max-width: 550px) {
+	.editions-goods__discriprion {
+		flex-direction: column;
+	}
+	.events__container-cards {
+		flex-wrap: inherit;
+		overflow: visible;
+	}
 	.events {
 		margin-bottom: 45px;
 	}
@@ -3238,11 +3364,19 @@ body {
 		bottom: 2px;
 		left: auto;
 	}
+	.events__wrapper-card {
+		margin-bottom: 100px;
+		width: 100%;
+	}
 	.events__btn-all__wrapper-link {
 		display: none;
 	}
 	.events__container-cards {
 		padding-bottom: 35px;
+	}
+	.editions__swiper-link {
+		display: block;
+		text-align: center;
 	}
 }
 @media (max-width: 475px) {
@@ -3524,9 +3658,38 @@ body {
 	.events__wrapper-card figure {
 		margin-bottom: 3px;
 	}
+	/*editions*/
+	.editions {
+		padding: 50px 0;
+	}
+	.checkbox__list.active {
+		top: 85px;
+	}
 	/*Свайпер партнёров*/
 	.project__container {
 		max-width: 195px;
 		max-height: 65px;
+	}
+	.checkbox__header-price {
+		margin-bottom: 8px;
+	}
+	.editions-goods__container {
+		padding-top: 0;
+	}
+	.checkbox__label.filter-price {
+		margin-bottom: 45px;
+	}
+	.editions-goods__discriprion {
+		margin-bottom: 5px;
+	}
+	.editions__swiper-link,
+	.editions__swiper-book-price,
+	.editions-goods__book-author,
+	.editions-goods__name-book {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.editions-goods__content-conteiner {
+		max-width: 130px;
 	}
 }
