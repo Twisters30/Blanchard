@@ -95,7 +95,7 @@
 
     // Disable (for tablet)
     else if(tablet.matches && typeof eventsSwiper.destroy === "function") {
-      eventsSwiper.destroy();
+      eventsSwiper.destroy(false, true);
       init = false;
     }
 
