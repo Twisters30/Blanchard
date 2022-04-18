@@ -32,16 +32,13 @@
 
     let heroSwiper = new Swiper('.hero__wrapper', {
 
-        spaceBetween: 500,
+        spaceBetween: 50,
         speed: 500,
         simulateTouch: false,
         // Optional parameters
         loop: true,
         breakpoints: {
-          320: {
-            spaceBetween:50
-          },
-          1024: {
+          550: {
             spaceBetween:500
           }
         }
@@ -124,12 +121,18 @@
         slidesPerGroup: 1,
         slidesPerColumn: 1,
         breakpoints: {
-          // 320: {
-          //   spaceBetween: 34,
-          //   slidesPerView: 2,
-          //   slidesPerGroup: 2,
-          //   slidesPerColumn: 2,
-          // },
+          320: {
+            spaceBetween: 34,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            slidesPerColumn: 1,
+          },
+          650: {
+            spaceBetween: 34,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            slidesPerColumn: 2,
+          },
           768: {
             spaceBetween: 34,
             slidesPerView: 2,
@@ -820,3 +823,90 @@ function clickOutFilter() {
   })
 }
 clickOutFilter();
+
+class FormValidation {
+
+  successHighlight(input) {
+    input.classList.add('validation-success');
+    setTimeout(() => {
+      input.classList.remove('validation-success');
+    },300)
+  }
+
+  validateName(inputName) {
+    if (!inputName.value) {
+      inputName.classList.add('validation-error');
+      this.errorRemove(inputName);
+      return undefined
+    } else {
+      inputName.classList.remove('validation-error');
+      this.successHighlight(inputName);
+      return true;
+    }
+  }
+  validationPhone(inputPhone) {
+    if (inputPhone.value.length === 18) {
+      inputPhone.classList.remove('validation-error');
+      this.successHighlight(inputPhone);
+      return true
+    } else {
+      inputPhone.classList.add('validation-error');
+      return false;
+    }
+  }
+  errorRemove(input) {
+    input.addEventListener('input', () => {
+      if (input.value) {
+        input.classList.remove('validation-error');
+      }
+      if (!input.value) input.classList.add('validation-error');
+    })
+  }
+  submitForm() {
+    const contactsForm = document.querySelector('.contacts__form');
+    const inputName = document.querySelector('#input-name');
+    const inputPhone = document.querySelector('#input-phone');
+    const btnSubmit = document.querySelector('.contacts__btn');
+    contactsForm.addEventListener('submit', (e) => e.preventDefault());
+    btnSubmit.addEventListener('click', () => {
+        if (this.validateName(inputName) && this.validationPhone(inputPhone)) {
+          console.log('validation success')
+        }
+    }
+    )
+  }
+  phoneMaskActive() {
+    const inputPhone = document.querySelector('#input-phone');
+    inputPhone.addEventListener('input', this.maskInput);
+  }
+  maskInput() {
+    let literalPattern = /[0\*]/;
+    let numberPattern = /[0-9]/;
+    let newValue = '';
+    let valueIndex = 0;
+    let maskIndex = 0;
+    this.placeholder = '+7 (___) ___‒__‒__';
+    while (maskIndex < this.dataset.mask.length) {
+      if (maskIndex >= this.value.length) {
+        break;
+      }
+      if (this.dataset.mask[maskIndex] === '0' && this.value[valueIndex].match(numberPattern) === null) {
+        break;
+      }
+      while (this.dataset.mask[maskIndex].match(literalPattern) === null) {
+        if (this.value[valueIndex] === this.dataset.mask[maskIndex]) {
+          break;
+        }
+        newValue += this.dataset.mask[maskIndex++];
+      }
+      newValue += this.value[valueIndex++];
+      maskIndex++;
+    }
+
+    this.value = newValue;
+  }
+}
+
+const formValidation = new FormValidation;
+formValidation.submitForm();
+formValidation.phoneMaskActive();

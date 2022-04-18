@@ -1219,11 +1219,11 @@
 					<div class="contacts__wrapper-form">
 						<div class="contacts__wrapper-form-content">
 							<h3 class="contacts__address">Шоурум №4</h3>
-							<h3 class="contacts__address-description">Леонтьевский переулок, дом 5, строение 1</h3>
+							<h3 class="contacts__address-description">Леонтьевский переулок, дом 5/1</h3>
 							<form class="contacts__form" aria-label="форма обратной связи" action="https://jsonplaceholder.typicode.com/posts" method="POST">
 							<p class="contacts__callback">Заказать обратный звонок</p>
-								<input class="contacts__input" type="text" id="name" name="Имя" placeholder="Имя*">
-							<input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Телефон*">
+							<input class="contacts__input" type="text" required id="input-name" name="input-name" placeholder="Имя*">
+							<input class="contacts__input" type="tel" required id="input-phone" data-mask="+7 (000) 000-00-00" name="input-phone" placeholder="Телефон*">
 							<button class="contacts__btn">Заказать</button>
 							</form>
 							<p class="contacts__connect">Связаться в один клик</p>
@@ -1234,6 +1234,8 @@
 						</div>
 					</div>
 					<div id="map" style="width: 1920px; height: 700px"></div>
+					<h3 class="contacts__address mobile">Шоурум №4</h3>
+					<h3 class="contacts__address-description mobile">Леонтьевский переулок, дом 5/1</h3>
 				</div>
 			</div>
 		</section>
