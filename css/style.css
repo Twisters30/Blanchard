@@ -3069,6 +3069,9 @@ body {
 	.footer__social-link:not(:last-child) {
 		margin-right: 30px;
 	}
+	.ymaps-2-1-79-map {
+		width: 100% !important;
+	}
 }
 @media (max-width: 768px) {
 	.container {
