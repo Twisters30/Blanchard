@@ -910,3 +910,27 @@ class FormValidation {
 const formValidation = new FormValidation;
 formValidation.submitForm();
 formValidation.phoneMaskActive();
+
+//mobile search
+
+class SearchMobile {
+
+  activeInput() {
+    const mobileSearchInput = document.querySelector('#mobile-search-input');
+    const mobileSearchBtn = document.querySelector('.mobile__search-icon');
+    mobileSearchBtn.addEventListener('click', () => {
+      mobileSearchInput.classList.add('active');
+      this.hideInput(mobileSearchInput);
+    })
+  }
+  hideInput(input) {
+    input.addEventListener('blur', () => {
+      console.log(input)
+      input.classList.remove('active');
+    })
+  }
+}
+
+
+const searchMobile = new SearchMobile()
+searchMobile.activeInput();
