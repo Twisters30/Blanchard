@@ -119,32 +119,13 @@
         spaceBetween: 34,
         slidesPerView: 1,
         slidesPerGroup: 1,
-        slidesPerColumn: 1,
         breakpoints: {
-          320: {
-            spaceBetween: 34,
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            slidesPerColumn: 1,
-          },
           650: {
             spaceBetween: 34,
             slidesPerView: 2,
             slidesPerGroup: 2,
             slidesPerColumn: 2,
           },
-          768: {
-            spaceBetween: 34,
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            slidesPerColumn: 2
-          },
-          // 1024: {
-          //   spaceBetween:34,
-          //   slidesPerView: 2,
-          //   slidesPerGroup: 2,
-          //   slidesPerColumn: 2,
-          // },
           1504: {
             spaceBetween:34,
             slidesPerView: 3,
@@ -153,15 +134,10 @@
           },
           1920: {
             spaceBetween: 50,
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            slidesPerColumn: 2,
           },
         },
         simulateTouch: false,
         loop: false,
-        // Optional parameters
-        // direction: 'horizontal',
 
         // Navigation arrows
         navigation: {
@@ -431,6 +407,16 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
       }
     }
   }
+function sortListOfPainter() {
+  const listPainter = document.querySelector('.ui-accordion-content-active').querySelectorAll('.catalog__painter-link');
+  listPainter.forEach((el) => {
+    if (el.style.display !== 'initial') {
+      el.parentElement.style.display = 'none';
+    } else {
+      el.parentElement.style.display = 'block';
+    }
+  })
+}
 
   // catalog acardeon icon flip
 
@@ -443,6 +429,7 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item');
 
 catalogAccardeon.forEach((acardeon) => {
   acardeon.addEventListener('click', function (event) {
+    sortListOfPainter()
     catalogAccardeon.forEach( (ell) => {
       ell.firstElementChild.firstElementChild.classList.remove('is-icon-flip');
     })
@@ -500,6 +487,7 @@ catalogAccardeon.forEach((el, i) => {
         })
       })
     })
+// функция сортировки списков художников и ставим первыми активные
 
 
         // TABS CATALOG
@@ -507,6 +495,7 @@ catalogAccardeon.forEach((el, i) => {
           document.querySelectorAll(`[data-country="italy"]`).forEach((el) => {
             el.style.display = 'initial';
           })
+          sortListOfPainter()
           document.querySelectorAll('.catalog__tab-btn').forEach(function(tabsBtn) {
             tabsBtn.addEventListener('click', function(event) {
               $("#catalog__accardeon").accordion("option", "active", 0);
@@ -535,8 +524,10 @@ catalogAccardeon.forEach((el, i) => {
           document.querySelectorAll(selector).forEach((el,i) => {
             el.style.display = style;
             if (i === 0) {
+              sortListOfPainter()
               addClass('main-painter',el)
             } else {
+              sortListOfPainter()
               el.classList.remove('main-painter')
             }
           })
@@ -600,7 +591,6 @@ $.each(catatalogBtnContainer, function (item,value) {
   $(this).bind('click', function (event) {
     if(event.target.classList.contains('catalog__painter-link')) {
       $('.catalog__painter-link').removeClass('main-painter');
-      // console.log($(this))
       event.target.classList.add('main-painter');
     }
   })
@@ -618,10 +608,6 @@ CatallTabIcon.forEach(function (ell) {
     }
   })
 })
-// CatallTabIcon.forEach((ell) =>{
-//   ell.
-// })
-
 
 // Popup(modal)
 let arrImg = [
@@ -724,6 +710,7 @@ class Burger {
     const myMenu = this.menu;
     this.burger.addEventListener('click', function () {
     this.classList.toggle('burger-open');
+    this.parentNode.classList.toggle('burger-open');
     myMenu.classList.toggle('menu-active');
     })
   }
@@ -745,7 +732,6 @@ function removeCheckAttribute(searchText) {
     if (searchText === el.textContent) {
       el.previousElementSibling.checked = false;
     }
-    console.log(el)
   })
 }
 
