@@ -120,20 +120,25 @@
         slidesPerView: 1,
         slidesPerGroup: 1,
         breakpoints: {
-          650: {
+          376: {
             spaceBetween: 34,
             slidesPerView: 2,
             slidesPerGroup: 2,
-            slidesPerColumn: 2,
           },
-          1504: {
+          1024: {
+            spaceBetween:34,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+          1204: {
             spaceBetween:34,
             slidesPerView: 3,
             slidesPerGroup: 3,
-            slidesPerColumn: 2,
           },
           1920: {
             spaceBetween: 50,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
           },
         },
         simulateTouch: false,
@@ -163,40 +168,43 @@
   /* Which media query
 	**************************************************************/
   function swiperModeEditions() {
-    let mobile = window.matchMedia('(min-width: 320px) and (max-width: 580px)');
-    let tablet = window.matchMedia('(min-width: 581px) and (max-width: 1024px)');
+    let mobile = window.matchMedia('(min-width: 320px) and (max-width: 660px)');
+    let tablet = window.matchMedia('(min-width: 661px) and (max-width: 1024px)');
     // let desktop = window.matchMedia('(min-width: 581x)');
 
     // Enable (for mobile)
-    if(tablet.matches || window.screen.availWidth > 581) {
+    if(tablet.matches || window.screen.availWidth > 661) {
       if (!initEditions) {
         initEditions = true;
         editionsSwiper = new Swiper('.editions-goods__container', {
           breakpoints: {
-            // 320: {
-            //   spaceBetween:34,
-            //   slidesPerView: 1,
-            //   slidesPerGroup: 1,
-            // },
             580: {
               spaceBetween:34,
               slidesPerView: 2,
               slidesPerGroup: 2,
             },
-            1024: {
+            768: {
+              spaceBetween:36,
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+            1000: {
               spaceBetween:49,
               slidesPerView: 2,
               slidesPerGroup: 2,
             },
-            1500: {
-              spaceBetween:49,
-              slidesPerView: 2,
-              slidesPerGroup: 2,
+            1025: {
+              spaceBetween:25,
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+            },
+            1025: {
+              spaceBetween:50,
+              slidesPerView: 3,
+              slidesPerGroup: 3,
             },
             1920: {
               spaceBetween: 50,
-              slidesPerView: 3,
-              slidesPerGroup: 3,
             },
           },
           simulateTouch: false,
@@ -250,12 +258,37 @@
             slidesPerGroup: 1,
             spaceBetween: 21
           },
+          376: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 0
+          },
           768: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 34
           },
+          769: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 0
+          },
+          931: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 34
+          },
           1024: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 50
+          },
+          1025: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 0
+          },
+          1551: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 50
@@ -643,6 +676,10 @@ let arrImg = [
   './img/galery/swiper-img/slide30.jpg',
 ];
 
+const catalogImgItaly = [
+
+]
+
 let popupTextObj = {
   slide : ['Этот текст принадлежит первому слайду',
           'Этот текст под слайдом номер два',
@@ -666,7 +703,9 @@ let currentSlide = 0;
 
 gallImg.forEach(function (image,index) {
   image.addEventListener('click',function (event) {
-    console.log(index)
+    const descriptionModalImage = document.querySelector('.popup__text');
+    setTimeout(() => descriptionModalImage.focus(),100);
+    console.log(descriptionModalImage)
     popupImg.src = arrImg[index]
     popup.classList.add('popup-active')
   })
@@ -726,7 +765,7 @@ burger.clickBurgerMenu();
 // checkbox filter
 
 function removeCheckAttribute(searchText) {
-  const listForRemoveChecked = document.querySelector('.checkbox__list').querySelectorAll('.checkbox__text');
+  const listForRemoveChecked = document.querySelector('#filter-list-js').querySelectorAll('.checkbox__text');
   if(!searchText) return;
   listForRemoveChecked.forEach((el) => {
     if (searchText === el.textContent) {
@@ -757,7 +796,7 @@ function createBtnDeleteCheckbox() {
 function createListCheckedInputs(inputs) {
   const containerList = document.createElement('div');
   containerList.classList.add('checkbox__checked-container');
-  const ellForInsert = document.querySelector('.checkbox__header');
+  const ellForInsert = document.querySelector('#filter-btn-js');
   inputs.forEach((el) => {
     containerList.append(el);
   })
@@ -774,7 +813,7 @@ function createListCheckedInputs(inputs) {
 
 function addCheckBoxInContainer() {
   let checkedInput = [];
-  const inputsCheckbox = document.querySelector('.checkbox__list').querySelectorAll('input');
+  const inputsCheckbox = document.querySelector('#filter-list-js').querySelectorAll('input');
   inputsCheckbox.forEach((el) => {
     if (el.checked) {
       const cloneNode = el.parentNode.cloneNode(true);
@@ -785,8 +824,8 @@ function addCheckBoxInContainer() {
 }
 
 function clickFilterEditions() {
-  const btnClick = document.querySelector('.checkbox__header');
-  const checkBoxList = document.querySelector('.checkbox__list');
+  const btnClick = document.querySelector('#filter-btn-js');
+  const checkBoxList = document.querySelector('#filter-list-js');
   btnClick.addEventListener('click', function () {
     this.classList.toggle('active');
     checkBoxList.classList.toggle('active');
@@ -802,9 +841,9 @@ clickFilterEditions();
 
 function clickOutFilter() {
   window.addEventListener('click', function (e) {
-    if (!e.target.closest('.checkbox__header') && !e.target.closest('.checkbox__list')) {
-      document.querySelector('.checkbox__header').classList.remove('active');
-      document.querySelector('.checkbox__list').classList.remove('active');
+    if (!e.target.closest('.checkbox__header') && !e.target.closest('#filter-list-js')) {
+      document.querySelector('#filter-btn-js').classList.remove('active');
+      document.querySelector('#filter-list-js').classList.remove('active');
     }
   })
 }
