@@ -3156,6 +3156,9 @@ body {
 	.catalog__tab-text {
 		margin-bottom: 20px;
 	}
+	.select {
+		width: 50vw;
+	}
 }
 
 @media (max-width: 768px) {
@@ -3189,9 +3192,6 @@ body {
 	}
 	.gallery__download-discription {
 		display: none;
-	}
-	.select {
-		width: 280px;
 	}
 	.gallery__slider-container {
 		padding-top: 74px;
