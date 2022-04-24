@@ -1515,15 +1515,15 @@ body {
 	margin-bottom: 31px;
 }
 
-.catalog__content {
-	position: absolute;
-	top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-	visibility: hidden;
-	opacity: 0;
-}
+/*.catalog__content {*/
+/*	position: absolute;*/
+/*	top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*	visibility: hidden;*/
+/*	opacity: 0;*/
+/*}*/
 
 .main-painter {
 	color: var(--color-purple);
@@ -1536,9 +1536,6 @@ body {
 	max-height: 470px;
 	min-height: 274px;
 	margin-bottom: 29px;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 400ms, visability 400ms;
 }
 
 .catalog__wrapper-discription-painter {
@@ -1551,8 +1548,6 @@ body {
 
 .catalog__discription-painter {
 	display: block;
-	opacity: 0;
-	visibility: hidden;
 	max-width: 749px;
 	max-height: 580px;
 	font-size: 16px;
@@ -1606,7 +1601,6 @@ body {
 }
 
 .catalog__painter-link {
-	display: none;
 	padding: 0px;
 	border: none;
 	background-color: transparent;
@@ -1755,9 +1749,6 @@ body {
 	font-size: 24px;
 	line-height: 33px;
 	font-family: var(--font-open-sans-semi-bold);
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity 600ms, visibility 400ms;
 }
 
 .catalog__painter-wrapper-years-lived {
@@ -1769,8 +1760,6 @@ body {
 .catalog__painter-years-lived {
 	display: block;
     margin-bottom: 7px;
-    opacity: 0;
-    visibility: hidden;
     font-size: 12px;
     line-height: 16px;
     color: #999;
@@ -3157,9 +3146,11 @@ body {
 	}
 	.catalog__painter-img {
 		max-height: 419px;
+		max-width: 100%;
 	}
 	.catalog__painter {
 		min-height: 722px;
+		flex-basis: 100%;
 		margin-right: 0;
 	}
 	.catalog__tab-text {
@@ -3601,6 +3592,11 @@ body {
 		flex-wrap: nowrap;
 	}
 /*	catalog*/
+	.catalog__header {
+		margin-bottom: 20px;
+		font-size: 28px;
+		line-height: 38px;
+	}
 	.catalog__tab-item:not(:last-child) {
 		margin-right: 32px;
 	}

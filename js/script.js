@@ -440,17 +440,6 @@ document.querySelectorAll('.dropdown-btn').forEach(function(ell) {
       }
     }
   }
-function sortListOfPainter() {
-  const listPainter = document.querySelector('.ui-accordion-content-active').querySelectorAll('.catalog__painter-link');
-  listPainter.forEach((el) => {
-    if (el.style.display !== 'initial') {
-      el.parentElement.style.display = 'none';
-    } else {
-      el.parentElement.style.display = 'block';
-    }
-  })
-}
-
   // catalog acardeon icon flip
 
 document.querySelectorAll('.ui-icon').forEach(function (el) {
@@ -462,7 +451,6 @@ let catalogAccardeon = document.querySelectorAll('.catalog__item');
 
 catalogAccardeon.forEach((acardeon) => {
   acardeon.addEventListener('click', function (event) {
-    sortListOfPainter()
     catalogAccardeon.forEach( (ell) => {
       ell.firstElementChild.firstElementChild.classList.remove('is-icon-flip');
     })
@@ -479,110 +467,9 @@ catalogAccardeon.forEach((el, i) => {
   }
 })
 
-
-
-
-   $(function() {
-
-    let filter = $("[data-key]");
-    filter.on('click', function(event) {
-      let cat = $(this).data('key');
-
-      $("[data-cat]").each(function() {
-        let workCat = $(this).data('cat');
-        if (workCat == cat) {
-          $(this).addClass('active-content')
-        } else {
-          $(this).removeClass('active-content')
-        }
-      });
-    });
-
-   });
-
   //  acardeon flip
 
-  document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll("[data-tab]").forEach(function(tabsBtn) {
-       tabsBtn.addEventListener('click', function() {
-         let tab = this.dataset.tab
-
-        let icon =  document.querySelectorAll("[data-arrow]");
-            let currentIcon = icon.dataset.arrow
-            for(var i = 0; i < currentIcon.length; i++)
-            {
-              if(tab === currentIcon[i]) {
-                currentIcon[i].classList.add('active')
-              } else {
-                currentIcon.classList.remove('active')
-              }
-            }
-        })
-      })
-    })
 // функция сортировки списков художников и ставим первыми активные
-
-
-        // TABS CATALOG
-        document.addEventListener('DOMContentLoaded', function() {
-          document.querySelectorAll(`[data-country="italy"]`).forEach((el) => {
-            el.style.display = 'initial';
-          })
-          sortListOfPainter()
-          document.querySelectorAll('.catalog__tab-btn').forEach(function(tabsBtn) {
-            tabsBtn.addEventListener('click', function(event) {
-              $("#catalog__accardeon").accordion("option", "active", 0);
-              setDisplay(`.catalog__painter-link`, 'none')
-              if(event.currentTarget.dataset.path === 'fr') {
-                setDisplay(`[data-country="fr"]`, 'initial');
-              } else if (event.currentTarget.dataset.path === 'ger') {
-                setDisplay(`[data-country="ger"]`, 'initial');
-              } else if (event.currentTarget.dataset.path === 'italy') {
-                setDisplay(`[data-country="italy"]`, 'initial');
-              } else if (event.currentTarget.dataset.path === 'rus') {
-                setDisplay(`[data-country="rus"]`, 'initial');
-              } else if (event.currentTarget.dataset.path === 'belg') {
-                setDisplay(`[data-country="belg"]`, 'initial');
-              }
-              const path = event.currentTarget.dataset.path
-              document.querySelectorAll('.catalog__tab-text').forEach(function(tabContent) {
-                tabContent.classList.remove('tab-active')
-              })
-              document.querySelector(`[data-target="${path}"]`).classList.add('tab-active')
-            })
-          })
-        })
-
-        function setDisplay(selector, style) {
-          document.querySelectorAll(selector).forEach((el,i) => {
-            el.style.display = style;
-            if (i === 0) {
-              sortListOfPainter()
-              addClass('main-painter',el)
-            } else {
-              sortListOfPainter()
-              el.classList.remove('main-painter')
-            }
-          })
-        }
-
-        function addClass(classAdd,element) {
-          element.classList.add(classAdd);
-              index = element.dataset.key
-              document.querySelectorAll('.catalog__content').forEach((ell) =>{
-                if (ell.dataset.cat === index) {
-                  ell.classList.add('active-content')
-                  ell.children.forEach((child) => {
-                    child.classList.add('active-content')
-                  })
-                } else {
-                  ell.classList.remove('active-content')
-                  ell.children.forEach((child) => {
-                    child.classList.remove('active-content')
-                  })
-                }
-              })
-        }
 
 // selector
 
@@ -618,30 +505,6 @@ document.querySelectorAll('.dropdown-content-wrapper').forEach(el => {
   new SimpleBar(el)
 });
 
-// Код отвечающий за выбор художника по умолчанию + итаративный выбор
-let  catatalogBtnContainer = $('.catalog__painter-link');
-$.each(catatalogBtnContainer, function (item,value) {
-  $(this).bind('click', function (event) {
-    if(event.target.classList.contains('catalog__painter-link')) {
-      $('.catalog__painter-link').removeClass('main-painter');
-      event.target.classList.add('main-painter');
-    }
-  })
-})
-// Код отвечающий за выбор художника по умолчанию + ремув фокус
-let CatallTabIcon = document.querySelectorAll('.catalog__tab-icon');
-CatallTabIcon.forEach(function (ell) {
-  ell.addEventListener('click', function (event) {
-    event.target.dataset
-    $.each(CatallTabIcon, function () {
-      $(this).removeClass('main-country')
-    })
-    if(event.target.classList.contains('catalog__tab-icon')) {
-      ell.classList.add('main-country');
-    }
-  })
-})
-
 // Popup(modal)
 let arrImg = [
   './img/galery/swiper-img/slide1.jpg',
@@ -676,9 +539,314 @@ let arrImg = [
   './img/galery/swiper-img/slide30.jpg',
 ];
 
-const catalogImgItaly = [
-
+const catalogImages = [
+  {
+    'id':'Beltraffio',
+    'country':'italy',
+    'name': 'Больтраффио, Джованни',
+    'image': './img/catalog/Beltraffio.jpg',
+    'yearsOfLive': '1453 — 1523.',
+    'description': 'Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях Фоппы,Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо.Его первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 годуОджоно для миланской церкви Сан-Джованни-сул-Муро.',
+  },
+  {
+    'id':'Francesco-italy',
+    'country':'italy',
+    'name': 'Биссоло, Франческо',
+    'image':'./img/catalog/Francesco-italy.jpg',
+    'yearsOfLive':'1470 г — 20 апреля 1554 г.',
+    'description':'Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции.Помогал учителю в работе над украшением Большого зала СоветаДворца дожей (Венеция). Принимал участие в создании украшений Церкви Иль Реденторе в Венеции.'
+  },
+  {
+    'id':'image-picture',
+    'country':'italy',
+    'name':'Доменико Гирландайо',
+    'yearsOfLive':'2 июня 1448 — 11 января 1494.',
+    'image':'./img/catalog/image-picture.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Bergognone-italy',
+    'country':'italy',
+    'name':'Бергоньоне, Амброджо',
+    'yearsOfLive':'1453 — 1523.',
+    'image':'./img/catalog/Bergognone-italy.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Benedetto-italy',
+    'country':'italy',
+    'name':'Бенедетто ди Биндо',
+    'yearsOfLive':'1380-е — 1417.',
+    'image':'./img/catalog/Benedetto-italy.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Bonsignori',
+    'country':'italy',
+    'name':'Бонсиньори, Франческо',
+    'yearsOfLive':'1460 г. - 2 июля 1519 г.',
+    'image':'./img/catalog/Bonsignori.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Botticini',
+    'country':'italy',
+    'name':'Боттичини, Рафаэлло',
+    'yearsOfLive':'1474 г. - 1525 г.',
+    'image':'./img/catalog/Botticini.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Bramantino',
+    'country':'italy',
+    'name':'Брамантино',
+    'yearsOfLive':'1465г. - 1530г.',
+    'image':'./img/catalog/Bramantino.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Brea',
+    'country':'fr',
+    'name':'Бреа, Людовико',
+    'yearsOfLive':'1450г. - 1523.',
+    'image':'./img/catalog/Brea.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Biagiodantonio',
+    'country':'italy',
+    'name':'Бьяджо д’Антонио Туччи',
+    'yearsOfLive':'1445г. - 1510г.',
+    'image':'./img/catalog/Biagiodantonio.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Vecchietta',
+    'country':'italy',
+    'name':'Веккьетта',
+    'yearsOfLive':'1412г. - 6 июня 1480г.',
+    'image':'./img/catalog/Vecchietta.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Verrocchio',
+    'country':'italy',
+    'name':'Андреа Верроккьо',
+    'yearsOfLive':'1435г. - 1488г.',
+    'image':'./img/catalog/Verrocchio.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Gozzoli',
+    'country':'italy',
+    'name':'Беноццо Гоццоли',
+    'yearsOfLive':'1420г. - 4 октября 1497г.',
+    'image':'./img/catalog/Gozzoli.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Granacci',
+    'country':'italy',
+    'name':'Граначчи, Франческо',
+    'yearsOfLive':'23 июля 1469г. - 30 ноября 1543г.',
+    'image':'./img/catalog/Granacci.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Cecco',
+    'country':'italy',
+    'name':'Грегорио ди Чекко',
+    'yearsOfLive':'1390-е - 1 июля 1424г.',
+    'image':'./img/catalog/Cecco.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'GiovannidaUdine',
+    'country':'italy',
+    'name':'Джованни да Удине',
+    'yearsOfLive':'15 октября 1487г. - 1564г.',
+    'image':'./img/catalog/GiovannidaUdine-new.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Giorgione',
+    'country':'italy',
+    'name':'Джорджоне',
+    'yearsOfLive':'1477/1478г. - 1510г.',
+    'image':'./img/catalog/Giorgione.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  }
+  ,
+  {
+    'id':'BernardoParentino',
+    'country':'italy',
+    'name':'Парентино, Бернардо',
+    'yearsOfLive':'около 1437г. - 28 октября 1531г.',
+    'image':'./img/catalog/BernardoParentino.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'diPaolo',
+    'country':'italy',
+    'name':'Джованни ди Паоло',
+    'yearsOfLive':'1403г. - 1482г.',
+    'image':'./img/catalog/diPaolo.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'pesello',
+    'country':'italy',
+    'name':'Пезеллино',
+    'yearsOfLive':'1422г. - июль 1457г.',
+    'image':'./img/catalog/pesello.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Perugino',
+    'country':'italy',
+    'name':'Пьетро Перуджино',
+    'yearsOfLive':'1448г. - 1523г.',
+    'image':'./img/catalog/Perugino.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'peruzzi',
+    'country':'italy',
+    'name':'Перуцци, Бальдассаре',
+    'yearsOfLive':'7 марта 1481г. - 6 января 1537г.',
+    'image':'./img/catalog/peruzzi.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'pisanello',
+    'country':'italy',
+    'name':'Пизанелло',
+    'yearsOfLive':'1395г - 1455г',
+    'image':'./img/catalog/pisanello.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Pintoricchio',
+    'country':'italy',
+    'name':'Пинтуриккьо',
+    'yearsOfLive':'1454г. - 11 декабря 1513г.',
+    'image':'./img/catalog/Pintoricchio.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Vodka',
+    'country':'rus',
+    'name':'Кузьма Петров-Водкин',
+    'yearsOfLive':'5 ноября 1878 г. - 15 февраля 1939.',
+    'image':'./img/catalog/Red_Horse.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Kranah',
+    'country':'ger',
+    'name':'Лукас Кранах',
+    'yearsOfLive':'1472 г. - 16 октября 1553 г.',
+    'image':'./img/catalog/Lucas_Cranach.jpg',
+    'description':'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, alias atque distinctio nesciunt omnis qui soluta vel. Adipisci alias consectetur eius error est, iure laudantium maiores quia quis quos.',
+  },
+  {
+    'id':'Magrit',
+    'country':'belg',
+    'name':'Рене Магритт',
+    'yearsOfLive':'21 ноября 1898 г. - 15 августа 1967 г.',
+    'image':'./img/catalog/Rene-Margritt.jpg',
+    'description':'Рене́ Франсуа́ Гисле́н Магри́тт — бельгийский художник-сюрреалист. Известен как автор остроумных и вместе с тем поэтически загадочных картин.',
+  }
 ]
+
+class CatalogPainter {
+  constructor(painters) {
+    this.painters = painters;
+  }
+  focusCurrentCountry() {
+    let CatallTabIcon = document.querySelectorAll('.catalog__tab-icon');
+    CatallTabIcon.forEach(function (ell) {
+      ell.addEventListener('click', function (event) {
+        $.each(CatallTabIcon, function () {
+          $(this).removeClass('main-country')
+        })
+        if(event.target.classList.contains('catalog__tab-icon')) {
+          ell.classList.add('main-country');
+        }
+      })
+    })
+  }
+  clickTab() {
+    const tabList = document.querySelector('.catalog__tab-list');
+    const catalogTabText = document.querySelectorAll('.catalog__tab-text');
+    tabList.addEventListener('click', (e) => {
+      const target = e.target;
+      let btn;
+      if(target.closest('.catalog__tab-btn')) {
+        if (target.tagName === 'SPAN') {
+          btn = target.parentElement;
+        } else if(target.tagName === 'BUTTON') {
+          btn = target;
+        }
+        catalogTabText.forEach((el) => {
+          if (btn.dataset.path === el.dataset.target) {
+            this.showCountryPainterList(btn.dataset.path);
+            el.classList.add('tab-active');
+          } else {
+            el.classList.remove('tab-active');
+          }
+        })
+      }
+    })
+  }
+  showCountryPainterList(countryName) {
+    const listItem = document.querySelectorAll('.catalog__painter-item');
+    listItem.forEach((el) => {
+      const btn = el.firstElementChild;
+      if (btn.dataset.country !== countryName) {
+        el.style.display = 'none';
+      } else {
+        el.style.display = 'block';
+      }
+    })
+  }
+  clickBtnPainter() {
+    const listsAccordion = document.querySelectorAll('.catalog__painter-list');
+    listsAccordion.forEach((el) => {
+      el.addEventListener('click',  (e) => {
+        const target = e.target;
+        if (target.closest('.catalog__painter-link')) {
+          this.showPainter(target.dataset.key)
+          event.currentTarget.querySelectorAll('button').forEach((el) => el.classList.remove('main-painter'));
+          target.classList.add('main-painter');
+        }
+      })
+    })
+  }
+  showPainter(id) {
+    const imageContainer = document.querySelector('.catalog__painter-img');
+    const nameContainer = document.querySelector('.catalog__painter-header');
+    const yearsOfLiveContainer = document.querySelector('.catalog__painter-years-lived');
+    const descriptionContainer = document.querySelector('.catalog__discription-painter');
+    this.painters.forEach((el) => {
+      if (el.id === id) {
+        imageContainer.src = el.image;
+        nameContainer.textContent = el.name;
+        yearsOfLiveContainer.textContent = el.yearsOfLive;
+        descriptionContainer.textContent = el.description;
+      }
+    })
+  }
+  initLogic() {
+    this.focusCurrentCountry();
+    this.clickTab();
+    this.showCountryPainterList('italy');
+    this.clickBtnPainter();
+  }
+}
+
+const catalogPainter = new CatalogPainter(catalogImages);
+catalogPainter.initLogic();
 
 let popupTextObj = {
   slide : ['Этот текст принадлежит первому слайду',
