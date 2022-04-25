@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
   <!-- simplebar -->
   <script defer src="js/simplebar.min.js"></script>
   <!-- jquery -->
@@ -892,7 +894,9 @@
 						уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
 						Прежде всего, постоянное <br class="project__br-xm"> информационно-пропагандистское
 						<span class="project__tooltip-box">
-							<button class="project__tooltip tooltip-btn-one" aria-describedby="tooltip-one"></button>
+							<button data-tippy-content="Пример современных тенденций - современная методология разработки"
+									class="project__tooltip tooltip-btn-one" aria-describedby="tooltip-one">
+							</button>
 							<span class="tooltip tooltip-one" id="tooltip-one">
 								<span class="visually-hidden">Тултип:</span>
 								Пример современных тенденций - современная методология разработки
@@ -902,15 +906,23 @@
 						фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия
 						представителей оппозиции могут быть рассмотрены
 						<span class="project__tooltip-box">
-							<button class="project__tooltip tooltip-btn-one" aria-describedby="tooltip-two"></button>
+							<button class="project__tooltip tooltip-btn-one"
+									aria-describedby="tooltip-two"
+									data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">
+							</button>
 							<span class="tooltip tooltip-two" id="tooltip-two">
 								<span class="visually-hidden">Тултип:</span>
 								Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции
 							</span>
 						</span>
 						 исключительно в разрезе маркетинговых и финансовых
-						<span class="project__tooltip-box">
-							<button class="project__tooltip tooltip-btn-one" aria-describedby="tooltip-two"></button>
+						<span class="project__tooltip-box" data-tippy-root>
+							<button class="project__tooltip tooltip-btn-one"
+									aria-describedby="tooltip-three"
+									data-tippy-content="В стремлении повысить качество"
+									data-theme="blanchard"
+							>
+							</button>
 							<span class="tooltip tooltip-three" id="tooltip-three">
 								<span class="visually-hidden">Тултип:</span>
 								В стремлении повысить качество

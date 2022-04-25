@@ -1,6 +1,9 @@
 // Функция ymaps.ready() будет вызвана, когда
 
-
+tippy('[data-tippy-content]');
+tippy('.project__tooltip', {
+  theme: 'blanchard',
+});
 // const { event } = require("jquery");
 
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
@@ -948,7 +951,6 @@ function clickBtnDelete() {
     const target = e.target;
     if (target.closest('.btn-delete')) {
       const textLabelInput = target.parentElement.textContent;
-      console.log(textLabelInput)
       removeCheckAttribute(textLabelInput);
       target.parentElement.parentElement.remove();
     }
@@ -1127,3 +1129,14 @@ class SearchMobile {
 
 const searchMobile = new SearchMobile()
 searchMobile.activeInput();
+
+function checkBlockOutParent(parent,child) {
+  let innerBlock = $(child).offset().top + $(child).outerHeight();
+
+  let block = $(parent).offset().top + $(parent).outerHeight();
+  console.log(innerBlock, block)
+  if(innerBlock > block) {
+    console.log('Блок вышел за пределы')
+  }
+}
+checkBlockOutParent('.project__wrapper-content','.tooltip');
